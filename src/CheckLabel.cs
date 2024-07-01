@@ -22,8 +22,10 @@ public partial class CheckLabel : Label
 		}
 
 		Text = checksCollected+" / "+totalChecks;
-		if (checksCollected == totalChecks) {
+		/*if (checksCollected == totalChecks) {
 			this.Set("theme_override_colors/font_color", new Color(0f, 1f, 0f, 1f));
-		}
+		} else {
+			this.Set("theme_override_colors/font_color", new Color(1f, 1f, 1f, 1f));
+		}*/
 	}
 }

@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://dvluees2b6vw8"]
+[gd_scene load_steps=14 format=3 uid="uid://dvluees2b6vw8"]
 
 [ext_resource type="Script" path="res://src/Initialize.cs" id="1_48g1d"]
 [ext_resource type="Script" path="res://src/MapManager.cs" id="1_rrc4k"]
@@ -12,6 +12,7 @@
 [ext_resource type="Script" path="res://src/CheckLabelScripts/HyruleCastle.cs" id="8_ptjtw"]
 [ext_resource type="Script" path="res://src/CheckSpriteScripts/SickKid.cs" id="9_1exji"]
 [ext_resource type="Script" path="res://src/CheckSpriteScripts/BottleMerchant.cs" id="10_v3jxg"]
+[ext_resource type="Script" path="res://src/CheckLabelScripts/KakWell.cs" id="11_qte54"]
 
 [node name="RootNode" type="Node"]
 script = ExtResource("1_48g1d")
@@ -117,7 +118,7 @@ vertical_alignment = 1
 script = ExtResource("8_ptjtw")
 
 [node name="MazeRace" type="Sprite2D" parent="Node/LightWorld"]
-position = Vector2(-1920, 819)
+position = Vector2(-1886, 816)
 texture = ExtResource("3_omx3a")
 
 [node name="SickKid" type="Sprite2D" parent="Node/LightWorld"]
@@ -126,9 +127,31 @@ texture = ExtResource("3_omx3a")
 script = ExtResource("9_1exji")
 
 [node name="BottleMerchant" type="Sprite2D" parent="Node/LightWorld"]
-position = Vector2(-1658, -145)
+position = Vector2(-1675, -178)
 texture = ExtResource("3_omx3a")
 script = ExtResource("10_v3jxg")
+
+[node name="LabelKakWell" type="Sprite2D" parent="Node/LightWorld"]
+position = Vector2(-1901, -333)
+texture = ExtResource("6_w28mg")
+
+[node name="Label" type="Label" parent="Node/LightWorld/LabelKakWell"]
+texture_filter = 2
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -52.5
+offset_top = -31.5
+offset_right = -19.5
+offset_bottom = -8.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "0 / 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("11_qte54")
 
 [node name="DarkWorld" type="Sprite2D" parent="Node"]
 visible = false
