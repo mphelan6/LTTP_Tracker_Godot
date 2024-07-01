@@ -1,0 +1,109 @@
+[gd_scene load_steps=10 format=3 uid="uid://dvluees2b6vw8"]
+
+[ext_resource type="Script" path="res://Scripts/Initialize.cs" id="1_48g1d"]
+[ext_resource type="Script" path="res://MapManager.cs" id="1_rrc4k"]
+[ext_resource type="Texture2D" uid="uid://cwxttiocwj1p6" path="res://PNG/dark_world.png" id="2_adpej"]
+[ext_resource type="Texture2D" uid="uid://d04xla148c20v" path="res://PNG/light_world.png" id="2_ch5ax"]
+[ext_resource type="Texture2D" uid="uid://dprbc771h62ap" path="res://PNG/not_collected.png" id="3_omx3a"]
+[ext_resource type="Script" path="res://Scripts/CheckSpriteScripts/LinksHouse.cs" id="4_kiedf"]
+[ext_resource type="Texture2D" uid="uid://bmhmncpepng0h" path="res://PNG/label.png" id="6_w28mg"]
+[ext_resource type="Script" path="res://Scripts/CameraControls.cs" id="7_j078h"]
+[ext_resource type="Script" path="res://Scripts/CheckLabelScripts/SecretPassage.cs" id="7_q3ihe"]
+
+[node name="RootNode" type="Node"]
+script = ExtResource("1_48g1d")
+
+[node name="Node" type="Node" parent="."]
+script = ExtResource("1_rrc4k")
+
+[node name="LightWorld" type="Sprite2D" parent="Node"]
+texture_filter = 1
+texture = ExtResource("2_ch5ax")
+
+[node name="CheckLinksHouse" type="Sprite2D" parent="Node/LightWorld"]
+position = Vector2(192, 744)
+texture = ExtResource("3_omx3a")
+script = ExtResource("4_kiedf")
+
+[node name="LabelSecretPassage" type="Sprite2D" parent="Node/LightWorld"]
+position = Vector2(394, -375)
+texture = ExtResource("6_w28mg")
+
+[node name="SecretPassage" type="Label" parent="Node/LightWorld/LabelSecretPassage"]
+texture_filter = 2
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -52.5
+offset_top = -31.5
+offset_right = -19.5
+offset_bottom = -8.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "0 / 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("7_q3ihe")
+
+[node name="LabelSecretPassage2" type="Sprite2D" parent="Node/LightWorld"]
+position = Vector2(209, -328)
+texture = ExtResource("6_w28mg")
+
+[node name="SecretPassage2" type="Label" parent="Node/LightWorld/LabelSecretPassage2"]
+texture_filter = 2
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -52.5
+offset_top = -31.5
+offset_right = -19.5
+offset_bottom = -8.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "0 / 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("7_q3ihe")
+
+[node name="LabelHyruleCastle" type="Sprite2D" parent="Node/LightWorld"]
+position = Vector2(1, -281)
+texture = ExtResource("6_w28mg")
+
+[node name="DarkWorld" type="Sprite2D" parent="Node"]
+visible = false
+texture = ExtResource("2_adpej")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="LightWorld" type="Button" parent="CanvasLayer/Control"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 8.0
+offset_top = 16.0
+offset_right = 108.0
+offset_bottom = 56.0
+text = "Light World"
+
+[node name="DarkWorld" type="Button" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 64.0
+offset_right = 108.0
+offset_bottom = 104.0
+text = "Dark World"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+script = ExtResource("7_j078h")
+
+[connection signal="pressed" from="CanvasLayer/Control/LightWorld" to="Node" method="_on_light_world_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/DarkWorld" to="Node" method="_on_dark_world_pressed"]
