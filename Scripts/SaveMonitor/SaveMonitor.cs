@@ -250,6 +250,18 @@ public class SaveMonitor
 		Checks[(int)Check.Name.MUSHROOM]                                  = new Check(0x411, 0x10);
 		Checks[(int)Check.Name.POTION_SHOP]                               = new Check(0x411, 0x20);
 		Checks[(int)Check.Name.MAGIC_BAT]                                 = new Check(0x411, 0x80);
+		Checks[(int)Check.Name.FLUTE_SPOT]                                = new Check(0x2AA, 0x40);
+		Checks[(int)Check.Name.SUNKEN_TREASURE]                           = new Check(0x2BB, 0x40);
+		Checks[(int)Check.Name.ZORAS_LEDGE]                               = new Check(0x301, 0x40);
+		Checks[(int)Check.Name.LAKE_HYLIA_ISLAND]                         = new Check(0x2B5, 0x40);
+		Checks[(int)Check.Name.MAZE_RACE]                                 = new Check(0x2A8, 0x40);
+		Checks[(int)Check.Name.DESERT_LEDGE]                              = new Check(0x2B0, 0x40);
+		Checks[(int)Check.Name.MASTER_SWORD_PEDESTAL]                     = new Check(0x300, 0x40);
+		Checks[(int)Check.Name.SPECTACLE_ROCK]                            = new Check(0x283, 0x40);
+		Checks[(int)Check.Name.PYRAMID]                                   = new Check(0x2DB, 0x40);
+		Checks[(int)Check.Name.DIGGING_GAME]                              = new Check(0x2E8, 0x40);
+		Checks[(int)Check.Name.BUMPER_CAVE_LEDGE]                         = new Check(0x2CA, 0x40);
+		Checks[(int)Check.Name.FLOATING_ISLAND]                           = new Check(0x285, 0x40);
 
 		Thread SaveMonitorThread = new Thread(() => MonitorSaveData());
 		SaveMonitorThread.Start();

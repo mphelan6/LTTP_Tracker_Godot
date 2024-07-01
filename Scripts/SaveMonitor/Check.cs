@@ -237,9 +237,21 @@ public class Check
 		BLACKSMITH,                                // 233
 		MUSHROOM,                                  // 234
 		POTION_SHOP,                               // 235
-		MAGIC_BAT                                  // 236
+		MAGIC_BAT,                                 // 236
+		FLUTE_SPOT,                                // 237
+		SUNKEN_TREASURE,                           // 238
+		ZORAS_LEDGE,                               // 239
+		LAKE_HYLIA_ISLAND,                         // 240
+		MAZE_RACE,                                 // 241
+		DESERT_LEDGE,                              // 242
+		MASTER_SWORD_PEDESTAL,                     // 243
+		SPECTACLE_ROCK,                            // 244
+		PYRAMID,                                   // 245
+		DIGGING_GAME,                              // 246
+		BUMPER_CAVE_LEDGE,                         // 247
+		FLOATING_ISLAND                            // 248
 	}
-	public const int NUM_CHECKS = 237;
+	public const int NUM_CHECKS = 249;
 
 	public readonly ushort address;
 	public readonly byte mask;

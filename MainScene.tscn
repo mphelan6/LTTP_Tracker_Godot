@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dvluees2b6vw8"]
+[gd_scene load_steps=12 format=3 uid="uid://dvluees2b6vw8"]
 
 [ext_resource type="Script" path="res://Scripts/Initialize.cs" id="1_48g1d"]
 [ext_resource type="Script" path="res://MapManager.cs" id="1_rrc4k"]
@@ -10,6 +10,7 @@
 [ext_resource type="Script" path="res://Scripts/CameraControls.cs" id="7_j078h"]
 [ext_resource type="Script" path="res://Scripts/CheckLabelScripts/SecretPassage.cs" id="7_q3ihe"]
 [ext_resource type="Script" path="res://Scripts/CheckLabelScripts/HyruleCastle.cs" id="8_ptjtw"]
+[ext_resource type="Script" path="res://Scripts/CheckSpriteScripts/MazeRace.cs" id="9_4fcow"]
 
 [node name="RootNode" type="Node"]
 script = ExtResource("1_48g1d")
@@ -113,6 +114,11 @@ text = "0 / 0"
 horizontal_alignment = 1
 vertical_alignment = 1
 script = ExtResource("8_ptjtw")
+
+[node name="MazeRace" type="Sprite2D" parent="Node/LightWorld"]
+position = Vector2(-1920, 819)
+texture = ExtResource("3_omx3a")
+script = ExtResource("9_4fcow")
 
 [node name="DarkWorld" type="Sprite2D" parent="Node"]
 visible = false
