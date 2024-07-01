@@ -2,8 +2,8 @@ using Godot;
 
 public partial class CheckSprite : Sprite2D
 {
-	private CompressedTexture2D collectedTexture     = GD.Load<CompressedTexture2D>("res://PNG/check_collected.png");
-	private CompressedTexture2D notCollectedTexture  = GD.Load<CompressedTexture2D>("res://PNG/not_collected.png");
+	private CompressedTexture2D collectedTexture     = GD.Load<CompressedTexture2D>("res://png/check_collected.png");
+	private CompressedTexture2D notCollectedTexture  = GD.Load<CompressedTexture2D>("res://png/not_collected.png");
 
 	private Check checkToTrack;
 
