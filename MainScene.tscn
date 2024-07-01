@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dvluees2b6vw8"]
+[gd_scene load_steps=13 format=3 uid="uid://dvluees2b6vw8"]
 
 [ext_resource type="Script" path="res://src/Initialize.cs" id="1_48g1d"]
 [ext_resource type="Script" path="res://src/MapManager.cs" id="1_rrc4k"]
@@ -11,6 +11,7 @@
 [ext_resource type="Script" path="res://src/CheckLabelScripts/SecretPassage.cs" id="7_q3ihe"]
 [ext_resource type="Script" path="res://src/CheckLabelScripts/HyruleCastle.cs" id="8_ptjtw"]
 [ext_resource type="Script" path="res://src/CheckSpriteScripts/SickKid.cs" id="9_1exji"]
+[ext_resource type="Script" path="res://src/CheckSpriteScripts/BottleMerchant.cs" id="10_v3jxg"]
 
 [node name="RootNode" type="Node"]
 script = ExtResource("1_48g1d")
@@ -123,6 +124,11 @@ texture = ExtResource("3_omx3a")
 position = Vector2(-1408, 118)
 texture = ExtResource("3_omx3a")
 script = ExtResource("9_1exji")
+
+[node name="BottleMerchant" type="Sprite2D" parent="Node/LightWorld"]
+position = Vector2(-1658, -145)
+texture = ExtResource("3_omx3a")
+script = ExtResource("10_v3jxg")
 
 [node name="DarkWorld" type="Sprite2D" parent="Node"]
 visible = false
