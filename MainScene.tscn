@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dvluees2b6vw8"]
+[gd_scene load_steps=11 format=3 uid="uid://dvluees2b6vw8"]
 
 [ext_resource type="Script" path="res://Scripts/Initialize.cs" id="1_48g1d"]
 [ext_resource type="Script" path="res://MapManager.cs" id="1_rrc4k"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://bmhmncpepng0h" path="res://PNG/label.png" id="6_w28mg"]
 [ext_resource type="Script" path="res://Scripts/CameraControls.cs" id="7_j078h"]
 [ext_resource type="Script" path="res://Scripts/CheckLabelScripts/SecretPassage.cs" id="7_q3ihe"]
+[ext_resource type="Script" path="res://Scripts/CheckLabelScripts/HyruleCastle.cs" id="8_ptjtw"]
 
 [node name="RootNode" type="Node"]
 script = ExtResource("1_48g1d")
@@ -29,7 +30,7 @@ script = ExtResource("4_kiedf")
 position = Vector2(394, -375)
 texture = ExtResource("6_w28mg")
 
-[node name="SecretPassage" type="Label" parent="Node/LightWorld/LabelSecretPassage"]
+[node name="Label" type="Label" parent="Node/LightWorld/LabelSecretPassage"]
 texture_filter = 2
 anchors_preset = 8
 anchor_left = 0.5
@@ -51,7 +52,7 @@ script = ExtResource("7_q3ihe")
 position = Vector2(209, -328)
 texture = ExtResource("6_w28mg")
 
-[node name="SecretPassage2" type="Label" parent="Node/LightWorld/LabelSecretPassage2"]
+[node name="Label" type="Label" parent="Node/LightWorld/LabelSecretPassage2"]
 texture_filter = 2
 anchors_preset = 8
 anchor_left = 0.5
@@ -72,6 +73,46 @@ script = ExtResource("7_q3ihe")
 [node name="LabelHyruleCastle" type="Sprite2D" parent="Node/LightWorld"]
 position = Vector2(1, -281)
 texture = ExtResource("6_w28mg")
+
+[node name="Label" type="Label" parent="Node/LightWorld/LabelHyruleCastle"]
+texture_filter = 2
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -52.5
+offset_top = -31.5
+offset_right = -19.5
+offset_bottom = -8.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "0 / 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("8_ptjtw")
+
+[node name="LabelHyruleCastle2" type="Sprite2D" parent="Node/LightWorld"]
+position = Vector2(-160, -984)
+texture = ExtResource("6_w28mg")
+
+[node name="Label" type="Label" parent="Node/LightWorld/LabelHyruleCastle2"]
+texture_filter = 2
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -52.5
+offset_top = -31.5
+offset_right = -19.5
+offset_bottom = -8.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "0 / 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("8_ptjtw")
 
 [node name="DarkWorld" type="Sprite2D" parent="Node"]
 visible = false
