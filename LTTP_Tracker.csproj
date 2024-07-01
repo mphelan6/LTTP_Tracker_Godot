@@ -5,4 +5,8 @@
     <TargetFramework Condition=" '$(GodotTargetPlatform)' == 'ios' ">net8.0</TargetFramework>
     <EnableDynamicLoading>true</EnableDynamicLoading>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="script_templates/**/*.cs" /> <!-- All .cs files in a directory subtree -->
+  </ItemGroup>
 </Project>

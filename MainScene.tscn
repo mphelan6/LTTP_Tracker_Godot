@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=3 uid="uid://dvluees2b6vw8"]
 
 [ext_resource type="Script" path="res://src/Initialize.cs" id="1_48g1d"]
-[ext_resource type="Script" path="res://MapManager.cs" id="1_rrc4k"]
+[ext_resource type="Script" path="res://src/MapManager.cs" id="1_rrc4k"]
 [ext_resource type="Texture2D" uid="uid://cwxttiocwj1p6" path="res://png/dark_world.png" id="2_adpej"]
 [ext_resource type="Texture2D" uid="uid://d04xla148c20v" path="res://png/light_world.png" id="2_ch5ax"]
 [ext_resource type="Texture2D" uid="uid://dprbc771h62ap" path="res://png/not_collected.png" id="3_omx3a"]
@@ -10,7 +10,7 @@
 [ext_resource type="Script" path="res://src/CameraControls.cs" id="7_j078h"]
 [ext_resource type="Script" path="res://src/CheckLabelScripts/SecretPassage.cs" id="7_q3ihe"]
 [ext_resource type="Script" path="res://src/CheckLabelScripts/HyruleCastle.cs" id="8_ptjtw"]
-[ext_resource type="Script" path="res://src/CheckSpriteScripts/MazeRace.cs" id="9_4fcow"]
+[ext_resource type="Script" path="res://src/CheckSpriteScripts/SickKid.cs" id="9_1exji"]
 
 [node name="RootNode" type="Node"]
 script = ExtResource("1_48g1d")
@@ -118,7 +118,11 @@ script = ExtResource("8_ptjtw")
 [node name="MazeRace" type="Sprite2D" parent="Node/LightWorld"]
 position = Vector2(-1920, 819)
 texture = ExtResource("3_omx3a")
-script = ExtResource("9_4fcow")
+
+[node name="SickKid" type="Sprite2D" parent="Node/LightWorld"]
+position = Vector2(-1408, 118)
+texture = ExtResource("3_omx3a")
+script = ExtResource("9_1exji")
 
 [node name="DarkWorld" type="Sprite2D" parent="Node"]
 visible = false
