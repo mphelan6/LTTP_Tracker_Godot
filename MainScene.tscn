@@ -155,6 +155,7 @@ script = ExtResource("11_qte54")
 
 [node name="DarkWorld" type="Sprite2D" parent="Node"]
 visible = false
+texture_filter = 1
 texture = ExtResource("2_adpej")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
