@@ -1,4 +1,4 @@
-[gd_scene load_steps=99 format=3 uid="uid://dvluees2b6vw8"]
+[gd_scene load_steps=100 format=3 uid="uid://dvluees2b6vw8"]
 
 [ext_resource type="Script" path="res://src/Initialize.cs" id="1_48g1d"]
 [ext_resource type="Script" path="res://src/MapManager.cs" id="1_rrc4k"]
@@ -11,6 +11,7 @@
 [ext_resource type="Script" path="res://src/Overworld/Label/SecretPassage.cs" id="7_q3ihe"]
 [ext_resource type="Script" path="res://src/Overworld/Label/HyruleCastle.cs" id="8_ptjtw"]
 [ext_resource type="Script" path="res://src/Overworld/Sprite/SickKid.cs" id="9_1exji"]
+[ext_resource type="Script" path="res://src/Overworld/Sprite/MazeRace.cs" id="10_cowyx"]
 [ext_resource type="Script" path="res://src/Overworld/Sprite/BottleMerchant.cs" id="10_v3jxg"]
 [ext_resource type="Script" path="res://src/Overworld/Label/KakWell.cs" id="11_qte54"]
 [ext_resource type="Script" path="res://src/Overworld/Label/SahashralasHut.cs" id="12_aoytq"]
@@ -218,6 +219,7 @@ metadata/_edit_use_anchors_ = true
 [node name="MazeRace" type="Sprite2D" parent="Node/LightWorld" groups=["ToScaleWithCamera"]]
 position = Vector2(-1886, 816)
 texture = ExtResource("3_omx3a")
+script = ExtResource("10_cowyx")
 
 [node name="SickKid" type="Sprite2D" parent="Node/LightWorld" groups=["ToScaleWithCamera"]]
 position = Vector2(-1408, 120)
@@ -762,7 +764,7 @@ metadata/_edit_use_anchors_ = true
 [node name="MenuBorder" type="ColorRect" parent="CanvasLayer/Control"]
 texture_filter = 1
 layout_mode = 0
-offset_right = 176.0
+offset_right = 168.0
 offset_bottom = 608.0
 color = Color(0.266575, 0.266575, 0.266575, 1)
 
@@ -794,13 +796,13 @@ layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_left = 110.0
+offset_left = 90.0
 offset_top = -11.5
 offset_right = 150.0
 offset_bottom = 11.5
 grow_vertical = 2
 text = "0 / 0"
-horizontal_alignment = 1
+horizontal_alignment = 2
 vertical_alignment = 1
 script = ExtResource("69_xt3fx")
 
@@ -831,13 +833,13 @@ layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_left = 110.0
+offset_left = 90.0
 offset_top = -11.5
 offset_right = 150.0
 offset_bottom = 11.5
 grow_vertical = 2
 text = "0 / 0"
-horizontal_alignment = 1
+horizontal_alignment = 2
 vertical_alignment = 1
 script = ExtResource("70_bwbmd")
 
@@ -867,13 +869,13 @@ layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_left = 110.0
+offset_left = 90.0
 offset_top = -11.5
 offset_right = 150.0
 offset_bottom = 11.5
 grow_vertical = 2
 text = "0 / 0"
-horizontal_alignment = 1
+horizontal_alignment = 2
 vertical_alignment = 1
 script = ExtResource("71_bh2aw")
 
@@ -904,13 +906,13 @@ layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_left = 110.0
+offset_left = 90.0
 offset_top = -11.5
 offset_right = 150.0
 offset_bottom = 11.5
 grow_vertical = 2
 text = "0 / 0"
-horizontal_alignment = 1
+horizontal_alignment = 2
 vertical_alignment = 1
 script = ExtResource("71_wj0ic")
 
@@ -941,13 +943,13 @@ layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_left = 110.0
+offset_left = 90.0
 offset_top = -11.5
 offset_right = 150.0
 offset_bottom = 11.5
 grow_vertical = 2
 text = "0 / 0"
-horizontal_alignment = 1
+horizontal_alignment = 2
 vertical_alignment = 1
 script = ExtResource("73_qm2um")
 
@@ -978,13 +980,13 @@ layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_left = 110.0
+offset_left = 90.0
 offset_top = -11.5
 offset_right = 150.0
 offset_bottom = 11.5
 grow_vertical = 2
 text = "0 / 0"
-horizontal_alignment = 1
+horizontal_alignment = 2
 vertical_alignment = 1
 script = ExtResource("75_q4j85")
 
@@ -1014,13 +1016,13 @@ layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_left = 110.0
+offset_left = 90.0
 offset_top = -11.5
 offset_right = 150.0
 offset_bottom = 11.5
 grow_vertical = 2
 text = "0 / 0"
-horizontal_alignment = 1
+horizontal_alignment = 2
 vertical_alignment = 1
 script = ExtResource("79_tj51w")
 
@@ -1050,13 +1052,13 @@ layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_left = 110.0
+offset_left = 90.0
 offset_top = -11.5
 offset_right = 150.0
 offset_bottom = 11.5
 grow_vertical = 2
 text = "0 / 0"
-horizontal_alignment = 1
+horizontal_alignment = 2
 vertical_alignment = 1
 script = ExtResource("80_2o4ep")
 
@@ -1086,13 +1088,13 @@ layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_left = 110.0
+offset_left = 90.0
 offset_top = -11.5
 offset_right = 150.0
 offset_bottom = 11.5
 grow_vertical = 2
 text = "0 / 0"
-horizontal_alignment = 1
+horizontal_alignment = 2
 vertical_alignment = 1
 script = ExtResource("81_bjian")
 
@@ -1122,13 +1124,13 @@ layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_left = 110.0
+offset_left = 90.0
 offset_top = -11.5
 offset_right = 150.0
 offset_bottom = 11.5
 grow_vertical = 2
 text = "0 / 0"
-horizontal_alignment = 1
+horizontal_alignment = 2
 vertical_alignment = 1
 script = ExtResource("82_1g782")
 
@@ -1158,13 +1160,13 @@ layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_left = 110.0
+offset_left = 90.0
 offset_top = -11.5
 offset_right = 150.0
 offset_bottom = 11.5
 grow_vertical = 2
 text = "0 / 0"
-horizontal_alignment = 1
+horizontal_alignment = 2
 vertical_alignment = 1
 script = ExtResource("83_paj8b")
 
@@ -1194,13 +1196,13 @@ layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_left = 110.0
+offset_left = 90.0
 offset_top = -11.5
 offset_right = 150.0
 offset_bottom = 11.5
 grow_vertical = 2
 text = "0 / 0"
-horizontal_alignment = 1
+horizontal_alignment = 2
 vertical_alignment = 1
 script = ExtResource("84_a6ueb")
 
@@ -1230,13 +1232,13 @@ layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_left = 110.0
+offset_left = 90.0
 offset_top = -11.5
 offset_right = 150.0
 offset_bottom = 11.5
 grow_vertical = 2
 text = "0 / 0"
-horizontal_alignment = 1
+horizontal_alignment = 2
 vertical_alignment = 1
 script = ExtResource("85_sl8ui")
 
@@ -1266,13 +1268,13 @@ layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_left = 110.0
+offset_left = 90.0
 offset_top = -11.5
 offset_right = 150.0
 offset_bottom = 11.5
 grow_vertical = 2
 text = "0 / 0"
-horizontal_alignment = 1
+horizontal_alignment = 2
 vertical_alignment = 1
 script = ExtResource("86_ufw87")
 
@@ -1302,13 +1304,13 @@ layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_left = 110.0
+offset_left = 90.0
 offset_top = -11.5
 offset_right = 150.0
 offset_bottom = 11.5
 grow_vertical = 2
 text = "0 / 0"
-horizontal_alignment = 1
+horizontal_alignment = 2
 vertical_alignment = 1
 script = ExtResource("87_7612a")
 
@@ -1338,13 +1340,13 @@ layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_left = 110.0
+offset_left = 90.0
 offset_top = -11.5
 offset_right = 150.0
 offset_bottom = 11.5
 grow_vertical = 2
 text = "0 / 0"
-horizontal_alignment = 1
+horizontal_alignment = 2
 vertical_alignment = 1
 script = ExtResource("67_q3dah")
 
