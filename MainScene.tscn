@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://dvluees2b6vw8"]
+[gd_scene load_steps=49 format=3 uid="uid://dvluees2b6vw8"]
 
 [ext_resource type="Script" path="res://src/Initialize.cs" id="1_48g1d"]
 [ext_resource type="Script" path="res://src/MapManager.cs" id="1_rrc4k"]
@@ -13,6 +13,41 @@
 [ext_resource type="Script" path="res://src/CheckSpriteScripts/SickKid.cs" id="9_1exji"]
 [ext_resource type="Script" path="res://src/CheckSpriteScripts/BottleMerchant.cs" id="10_v3jxg"]
 [ext_resource type="Script" path="res://src/CheckLabelScripts/KakWell.cs" id="11_qte54"]
+[ext_resource type="Script" path="res://src/CheckLabelScripts/SahashralasHut.cs" id="12_aoytq"]
+[ext_resource type="Script" path="res://src/CheckLabelScripts/ZorasDomain.cs" id="13_tvo7u"]
+[ext_resource type="Script" path="res://WaterfallFairy.cs" id="14_7ae3i"]
+[ext_resource type="Script" path="res://src/CheckSpriteScripts/MasterSword.cs" id="15_j41jv"]
+[ext_resource type="Script" path="res://src/CheckSpriteScripts/PotionShop.cs" id="15_yrs17"]
+[ext_resource type="Script" path="res://src/CheckSpriteScripts/KingsTomb.cs" id="17_tlxub"]
+[ext_resource type="Script" path="res://src/CheckSpriteScripts/ChickenHut.cs" id="18_fgigr"]
+[ext_resource type="Script" path="res://src/CheckSpriteScripts/KakTavern.cs" id="18_tghd4"]
+[ext_resource type="Script" path="res://src/CheckLabelScripts/BlindsHideout.cs" id="20_kjwme"]
+[ext_resource type="Script" path="res://src/CheckSpriteScripts/BonkRocks.cs" id="21_pwp2m"]
+[ext_resource type="Script" path="res://src/CheckSpriteScripts/MagicBat.cs" id="22_gffdb"]
+[ext_resource type="Script" path="res://src/CheckSpriteScripts/LostWoodsHideout.cs" id="23_f3dy8"]
+[ext_resource type="Script" path="res://src/CheckSpriteScripts/LumberjackCave.cs" id="24_xy8kd"]
+[ext_resource type="Script" path="res://GraveLedge.cs" id="25_cd8vg"]
+[ext_resource type="Script" path="res://Mushroom.cs" id="26_lplu3"]
+[ext_resource type="Script" path="res://src/CheckSpriteScripts/FloodgateChest.cs" id="27_fhu1r"]
+[ext_resource type="Script" path="res://src/CheckSpriteScripts/AginahsCave.cs" id="28_i4jma"]
+[ext_resource type="Script" path="res://src/CheckLabelScripts/MiniMoldormCave.cs" id="29_1ydgv"]
+[ext_resource type="Script" path="res://src/CheckSpriteScripts/IceRodCave.cs" id="30_xlc7x"]
+[ext_resource type="Script" path="res://src/CheckSpriteScripts/Hobo.cs" id="31_y7utn"]
+[ext_resource type="Script" path="res://src/CheckSpriteScripts/Bombos.cs" id="32_mi4g5"]
+[ext_resource type="Script" path="res://src/CheckSpriteScripts/Cave45.cs" id="33_lmhfh"]
+[ext_resource type="Script" path="res://src/CheckSpriteScripts/CheckerCave.cs" id="34_jsveg"]
+[ext_resource type="Script" path="res://src/CheckSpriteScripts/Library.cs" id="35_g8vf1"]
+[ext_resource type="Script" path="res://src/CheckSpriteScripts/DesertLedge.cs" id="36_13p35"]
+[ext_resource type="Script" path="res://src/CheckSpriteScripts/LakeHyliaIsland.cs" id="37_yqmtn"]
+[ext_resource type="Script" path="res://src/CheckSpriteScripts/SunkenTreasure.cs" id="38_qqlhp"]
+[ext_resource type="Script" path="res://src/CheckSpriteScripts/Flute.cs" id="39_po2x1"]
+[ext_resource type="Script" path="res://src/CheckSpriteScripts/OldMan.cs" id="40_vg5j3"]
+[ext_resource type="Script" path="res://src/CheckSpriteScripts/SpectacleCave.cs" id="41_gy0k2"]
+[ext_resource type="Script" path="res://src/CheckSpriteScripts/EtherTablet.cs" id="42_r80ld"]
+[ext_resource type="Script" path="res://src/CheckSpriteScripts/SpectacleRock.cs" id="43_3rmfm"]
+[ext_resource type="Script" path="res://src/CheckSpriteScripts/SpiralCave.cs" id="44_781lj"]
+[ext_resource type="Script" path="res://src/CheckSpriteScripts/MimicCave.cs" id="45_dbsqt"]
+[ext_resource type="Script" path="res://src/CheckLabelScripts/ParadoxCave.cs" id="46_r1m8n"]
 
 [node name="RootNode" type="Node"]
 script = ExtResource("1_48g1d")
@@ -122,12 +157,12 @@ position = Vector2(-1886, 816)
 texture = ExtResource("3_omx3a")
 
 [node name="SickKid" type="Sprite2D" parent="Node/LightWorld"]
-position = Vector2(-1408, 118)
+position = Vector2(-1408, 120)
 texture = ExtResource("3_omx3a")
 script = ExtResource("9_1exji")
 
 [node name="BottleMerchant" type="Sprite2D" parent="Node/LightWorld"]
-position = Vector2(-1675, -178)
+position = Vector2(-1675, -182)
 texture = ExtResource("3_omx3a")
 script = ExtResource("10_v3jxg")
 
@@ -152,6 +187,310 @@ text = "0 / 0"
 horizontal_alignment = 1
 vertical_alignment = 1
 script = ExtResource("11_qte54")
+
+[node name="SahashralasHut" type="Sprite2D" parent="Node/LightWorld"]
+position = Vector2(1272, -230)
+texture = ExtResource("6_w28mg")
+
+[node name="Label" type="Label" parent="Node/LightWorld/SahashralasHut"]
+texture_filter = 2
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -52.5
+offset_top = -31.5
+offset_right = -19.5
+offset_bottom = -8.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "0 / 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("12_aoytq")
+
+[node name="ZorasDomain" type="Sprite2D" parent="Node/LightWorld"]
+position = Vector2(1867, -1492)
+texture = ExtResource("6_w28mg")
+
+[node name="Label" type="Label" parent="Node/LightWorld/ZorasDomain"]
+texture_filter = 2
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -52.5
+offset_top = -31.5
+offset_right = -19.5
+offset_bottom = -8.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "0 / 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("13_tvo7u")
+
+[node name="WaterfallFairy" type="Sprite2D" parent="Node/LightWorld"]
+position = Vector2(1639, -1527)
+texture = ExtResource("6_w28mg")
+
+[node name="Label" type="Label" parent="Node/LightWorld/WaterfallFairy"]
+texture_filter = 2
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -52.5
+offset_top = -31.5
+offset_right = -19.5
+offset_bottom = -8.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "0 / 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("14_7ae3i")
+
+[node name="MasterSword" type="Sprite2D" parent="Node/LightWorld"]
+position = Vector2(-1879, -1864)
+texture = ExtResource("3_omx3a")
+script = ExtResource("15_j41jv")
+
+[node name="PotionShop" type="Sprite2D" parent="Node/LightWorld"]
+position = Vector2(1232, -706)
+texture = ExtResource("3_omx3a")
+script = ExtResource("15_yrs17")
+
+[node name="KingsTomb" type="Sprite2D" parent="Node/LightWorld"]
+position = Vector2(417, -857)
+texture = ExtResource("3_omx3a")
+script = ExtResource("17_tlxub")
+
+[node name="ChickenHut" type="Sprite2D" parent="Node/LightWorld"]
+position = Vector2(-1648, 132)
+texture = ExtResource("3_omx3a")
+script = ExtResource("18_fgigr")
+
+[node name="KakTavern" type="Sprite2D" parent="Node/LightWorld"]
+position = Vector2(-1392, 339)
+texture = ExtResource("3_omx3a")
+script = ExtResource("18_tghd4")
+
+[node name="BlindsHideout" type="Sprite2D" parent="Node/LightWorld"]
+position = Vector2(-1520, -361)
+texture = ExtResource("6_w28mg")
+
+[node name="Label" type="Label" parent="Node/LightWorld/BlindsHideout"]
+texture_filter = 2
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -52.5
+offset_top = -31.5
+offset_right = -19.5
+offset_bottom = -8.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "0 / 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("20_kjwme")
+
+[node name="BonkRocks" type="Sprite2D" parent="Node/LightWorld"]
+position = Vector2(-448, -878)
+texture = ExtResource("3_omx3a")
+script = ExtResource("21_pwp2m")
+
+[node name="MagicBat" type="Sprite2D" parent="Node/LightWorld"]
+position = Vector2(-720, 224)
+texture = ExtResource("3_omx3a")
+script = ExtResource("22_gffdb")
+
+[node name="LostWoodsHideout" type="Sprite2D" parent="Node/LightWorld"]
+position = Vector2(-1272, -1535)
+texture = ExtResource("3_omx3a")
+script = ExtResource("23_f3dy8")
+
+[node name="LumberjackCave" type="Sprite2D" parent="Node/LightWorld"]
+position = Vector2(-816, -1775)
+texture = ExtResource("3_omx3a")
+script = ExtResource("24_xy8kd")
+
+[node name="GraveLedge" type="Sprite2D" parent="Node/LightWorld"]
+position = Vector2(288, -946)
+texture = ExtResource("3_omx3a")
+script = ExtResource("25_cd8vg")
+
+[node name="Mushroom" type="Sprite2D" parent="Node/LightWorld"]
+position = Vector2(-1560, -1705)
+texture = ExtResource("3_omx3a")
+script = ExtResource("26_lplu3")
+
+[node name="FloodgateChest" type="Sprite2D" parent="Node/LightWorld"]
+position = Vector2(-127, 1762)
+texture = ExtResource("3_omx3a")
+script = ExtResource("27_fhu1r")
+
+[node name="AginahsCave" type="Sprite2D" parent="Node/LightWorld"]
+position = Vector2(-1232, 1305)
+texture = ExtResource("3_omx3a")
+script = ExtResource("28_i4jma")
+
+[node name="MiniMoldormCave" type="Sprite2D" parent="Node/LightWorld"]
+position = Vector2(624, 1770)
+texture = ExtResource("6_w28mg")
+
+[node name="Label" type="Label" parent="Node/LightWorld/MiniMoldormCave"]
+texture_filter = 2
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -52.5
+offset_top = -31.5
+offset_right = -19.5
+offset_bottom = -8.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "0 / 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("29_1ydgv")
+
+[node name="IceRodCave" type="Sprite2D" parent="Node/LightWorld"]
+position = Vector2(1617, 1089)
+texture = ExtResource("3_omx3a")
+script = ExtResource("30_xlc7x")
+
+[node name="Hobo" type="Sprite2D" parent="Node/LightWorld"]
+position = Vector2(879, 805)
+texture = ExtResource("3_omx3a")
+script = ExtResource("31_y7utn")
+
+[node name="Bombos" type="Sprite2D" parent="Node/LightWorld"]
+position = Vector2(-1124, 1704)
+texture = ExtResource("3_omx3a")
+script = ExtResource("32_mi4g5")
+
+[node name="Cave45" type="Sprite2D" parent="Node/LightWorld"]
+position = Vector2(-960, 1305)
+texture = ExtResource("3_omx3a")
+script = ExtResource("33_lmhfh")
+
+[node name="CheckerCave" type="Sprite2D" parent="Node/LightWorld"]
+position = Vector2(-1328, 1108)
+texture = ExtResource("3_omx3a")
+script = ExtResource("34_jsveg")
+
+[node name="Library" type="Sprite2D" parent="Node/LightWorld"]
+position = Vector2(-1408, 617)
+texture = ExtResource("3_omx3a")
+script = ExtResource("35_g8vf1")
+
+[node name="DesertLedge" type="Sprite2D" parent="Node/LightWorld"]
+position = Vector2(-1951, 1682)
+texture = ExtResource("3_omx3a")
+script = ExtResource("36_13p35")
+
+[node name="LakeHyliaIsland" type="Sprite2D" parent="Node/LightWorld"]
+position = Vector2(911, 1375)
+texture = ExtResource("3_omx3a")
+script = ExtResource("37_yqmtn")
+
+[node name="SunkenTreasure" type="Sprite2D" parent="Node/LightWorld"]
+position = Vector2(-192, 1746)
+texture = ExtResource("3_omx3a")
+script = ExtResource("38_qqlhp")
+
+[node name="Flute" type="Sprite2D" parent="Node/LightWorld"]
+position = Vector2(-869, 643)
+texture = ExtResource("3_omx3a")
+script = ExtResource("39_po2x1")
+
+[node name="OldMan" type="Sprite2D" parent="Node/LightWorld"]
+position = Vector2(-592, -1344)
+texture = ExtResource("3_omx3a")
+script = ExtResource("40_vg5j3")
+
+[node name="OldMan2" type="Sprite2D" parent="Node/LightWorld"]
+position = Vector2(-384, -1297)
+texture = ExtResource("3_omx3a")
+script = ExtResource("40_vg5j3")
+
+[node name="SpectacleCave" type="Sprite2D" parent="Node/LightWorld"]
+position = Vector2(-48, -1482)
+texture = ExtResource("3_omx3a")
+script = ExtResource("41_gy0k2")
+
+[node name="EtherTablet" type="Sprite2D" parent="Node/LightWorld"]
+position = Vector2(-299, -1988)
+texture = ExtResource("3_omx3a")
+script = ExtResource("42_r80ld")
+
+[node name="SpectacleRock" type="Sprite2D" parent="Node/LightWorld"]
+position = Vector2(21, -1706)
+texture = ExtResource("3_omx3a")
+script = ExtResource("43_3rmfm")
+
+[node name="SpiralCave" type="Sprite2D" parent="Node/LightWorld"]
+position = Vector2(1216, -1705)
+texture = ExtResource("3_omx3a")
+script = ExtResource("44_781lj")
+
+[node name="MimicCave" type="Sprite2D" parent="Node/LightWorld"]
+position = Vector2(1408, -1705)
+texture = ExtResource("3_omx3a")
+script = ExtResource("45_dbsqt")
+
+[node name="ParadoxCave" type="Sprite2D" parent="Node/LightWorld"]
+position = Vector2(1456, -1487)
+texture = ExtResource("6_w28mg")
+
+[node name="Label" type="Label" parent="Node/LightWorld/ParadoxCave"]
+texture_filter = 2
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -52.5
+offset_top = -31.5
+offset_right = -19.5
+offset_bottom = -8.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "0 / 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("46_r1m8n")
+
+[node name="ParadoxCave2" type="Sprite2D" parent="Node/LightWorld"]
+position = Vector2(1488, -1203)
+texture = ExtResource("6_w28mg")
+
+[node name="Label" type="Label" parent="Node/LightWorld/ParadoxCave2"]
+texture_filter = 2
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -52.5
+offset_top = -31.5
+offset_right = -19.5
+offset_bottom = -8.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "0 / 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("46_r1m8n")
 
 [node name="DarkWorld" type="Sprite2D" parent="Node"]
 visible = false

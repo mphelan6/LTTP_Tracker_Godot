@@ -4,7 +4,6 @@ public partial class _CLASS_ : CheckLabel
 	public override void _Ready()
 	{
 		Check[] toTrack = {
-/*
 			SaveMonitor.Checks[(int)Check.Name.HYRULE_CASTLE_BOOMERANG_CHEST],
 			SaveMonitor.Checks[(int)Check.Name.HYRULE_CASTLE_BOOMERANG_GUARD_KEY_DROP],
 			SaveMonitor.Checks[(int)Check.Name.HYRULE_CASTLE_MAP_CHEST],
@@ -17,7 +16,6 @@ public partial class _CLASS_ : CheckLabel
 			SaveMonitor.Checks[(int)Check.Name.SEWERS_SECRET_ROOM_MIDDLE],
 			SaveMonitor.Checks[(int)Check.Name.SEWERS_SECRET_ROOM_RIGHT],
 			SaveMonitor.Checks[(int)Check.Name.SANCTUARY]
-*/
 		};
 
 		StartTracking(toTrack);

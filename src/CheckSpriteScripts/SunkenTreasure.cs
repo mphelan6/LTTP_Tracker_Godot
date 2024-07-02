@@ -1,8 +1,8 @@
-public partial class _CLASS_ : CheckSprite
+public partial class SunkenTreasure : CheckSprite
 {
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
-		StartTracking((int)Check.Name.LINKS_HOUSE);
+		StartTracking((int)Check.Name.SUNKEN_TREASURE);
 	}
 }
