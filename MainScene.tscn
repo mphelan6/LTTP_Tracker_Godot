@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=3 uid="uid://dvluees2b6vw8"]
+[gd_scene load_steps=66 format=3 uid="uid://dvluees2b6vw8"]
 
 [ext_resource type="Script" path="res://src/Initialize.cs" id="1_48g1d"]
 [ext_resource type="Script" path="res://src/MapManager.cs" id="1_rrc4k"]
@@ -48,6 +48,23 @@
 [ext_resource type="Script" path="res://src/CheckSpriteScripts/SpiralCave.cs" id="44_781lj"]
 [ext_resource type="Script" path="res://src/CheckSpriteScripts/MimicCave.cs" id="45_dbsqt"]
 [ext_resource type="Script" path="res://src/CheckLabelScripts/ParadoxCave.cs" id="46_r1m8n"]
+[ext_resource type="Script" path="res://src/CheckSpriteScripts/FloatingIsland.cs" id="47_k4d5j"]
+[ext_resource type="Script" path="res://src/CheckLabelScripts/SuperbunnyCave.cs" id="48_2xr4p"]
+[ext_resource type="Texture2D" uid="uid://osdey4lm3a1c" path="res://png/shop.png" id="48_6tg7r"]
+[ext_resource type="Script" path="res://src/CheckLabelScripts/HookshotCave.cs" id="50_lxiqo"]
+[ext_resource type="Script" path="res://src/CheckSpriteScripts/SpikeCave.cs" id="51_rpgby"]
+[ext_resource type="Script" path="res://src/CheckSpriteScripts/Catfish.cs" id="52_xon3t"]
+[ext_resource type="Script" path="res://src/CheckSpriteScripts/Pyramid.cs" id="53_kpkid"]
+[ext_resource type="Script" path="res://src/CheckLabelScripts/PyramidFairy.cs" id="54_i5q0q"]
+[ext_resource type="Script" path="res://src/CheckSpriteScripts/Brewery.cs" id="55_qh0kn"]
+[ext_resource type="Script" path="res://src/CheckSpriteScripts/CShapedHouse.cs" id="56_noq0r"]
+[ext_resource type="Script" path="res://src/CheckSpriteScripts/ChestGame.cs" id="57_b8gxb"]
+[ext_resource type="Script" path="res://src/CheckSpriteScripts/PegCave.cs" id="58_3yra7"]
+[ext_resource type="Script" path="res://src/CheckSpriteScripts/PurpleChest.cs" id="59_ceto2"]
+[ext_resource type="Script" path="res://src/CheckSpriteScripts/Stumpy.cs" id="60_w2333"]
+[ext_resource type="Script" path="res://src/CheckSpriteScripts/DiggingGame.cs" id="61_ko3a5"]
+[ext_resource type="Script" path="res://src/CheckLabelScripts/HypeCave.cs" id="62_r4k0r"]
+[ext_resource type="Script" path="res://src/CheckLabelScripts/MireShed.cs" id="64_h4f8i"]
 
 [node name="RootNode" type="Node"]
 script = ExtResource("1_48g1d")
@@ -56,6 +73,7 @@ script = ExtResource("1_48g1d")
 script = ExtResource("1_rrc4k")
 
 [node name="LightWorld" type="Sprite2D" parent="Node"]
+visible = false
 texture_filter = 1
 texture = ExtResource("2_ch5ax")
 
@@ -492,10 +510,206 @@ horizontal_alignment = 1
 vertical_alignment = 1
 script = ExtResource("46_r1m8n")
 
+[node name="FloatingIsland" type="Sprite2D" parent="Node/LightWorld"]
+position = Vector2(1267, -1967)
+texture = ExtResource("3_omx3a")
+script = ExtResource("47_k4d5j")
+
+[node name="Shop" type="Sprite2D" parent="Node/LightWorld"]
+position = Vector2(1496, -1436)
+texture = ExtResource("48_6tg7r")
+
+[node name="Shop2" type="Sprite2D" parent="Node/LightWorld"]
+position = Vector2(-1601, 299)
+texture = ExtResource("48_6tg7r")
+
+[node name="Shop3" type="Sprite2D" parent="Node/LightWorld"]
+position = Vector2(928, 1051)
+texture = ExtResource("48_6tg7r")
+
 [node name="DarkWorld" type="Sprite2D" parent="Node"]
-visible = false
 texture_filter = 1
 texture = ExtResource("2_adpej")
+
+[node name="SuperbunnyCave" type="Sprite2D" parent="Node/DarkWorld"]
+position = Vector2(1408, -1491)
+texture = ExtResource("6_w28mg")
+
+[node name="Label" type="Label" parent="Node/DarkWorld/SuperbunnyCave"]
+texture_filter = 2
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -52.5
+offset_top = -31.5
+offset_right = -19.5
+offset_bottom = -8.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "0 / 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("48_2xr4p")
+
+[node name="HookshotCave" type="Sprite2D" parent="Node/DarkWorld"]
+position = Vector2(1361, -1813)
+texture = ExtResource("6_w28mg")
+
+[node name="Label" type="Label" parent="Node/DarkWorld/HookshotCave"]
+texture_filter = 2
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -52.5
+offset_top = -31.5
+offset_right = -19.5
+offset_bottom = -8.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "0 / 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("50_lxiqo")
+
+[node name="SpikeCave" type="Sprite2D" parent="Node/DarkWorld"]
+position = Vector2(304, -1483)
+texture = ExtResource("3_omx3a")
+script = ExtResource("51_rpgby")
+
+[node name="Catfish" type="Sprite2D" parent="Node/DarkWorld"]
+position = Vector2(1639, -1362)
+texture = ExtResource("3_omx3a")
+script = ExtResource("52_xon3t")
+
+[node name="Pyramid" type="Sprite2D" parent="Node/DarkWorld"]
+position = Vector2(346, -235)
+texture = ExtResource("3_omx3a")
+script = ExtResource("53_kpkid")
+
+[node name="PyramidFairy" type="Sprite2D" parent="Node/DarkWorld"]
+position = Vector2(-128, -87)
+texture = ExtResource("6_w28mg")
+
+[node name="Label" type="Label" parent="Node/DarkWorld/PyramidFairy"]
+texture_filter = 2
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -52.5
+offset_top = -31.5
+offset_right = -19.5
+offset_bottom = -8.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "0 / 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("54_i5q0q")
+
+[node name="Brewery" type="Sprite2D" parent="Node/DarkWorld"]
+position = Vector2(-1600, 313)
+texture = ExtResource("3_omx3a")
+script = ExtResource("55_qh0kn")
+
+[node name="CShapedHouse" type="Sprite2D" parent="Node/DarkWorld"]
+position = Vector2(-1200, -102)
+texture = ExtResource("3_omx3a")
+script = ExtResource("56_noq0r")
+
+[node name="ChestGame" type="Sprite2D" parent="Node/DarkWorld"]
+position = Vector2(-1840, -168)
+texture = ExtResource("3_omx3a")
+script = ExtResource("57_b8gxb")
+
+[node name="PegCave" type="Sprite2D" parent="Node/DarkWorld"]
+position = Vector2(-752, 405)
+texture = ExtResource("3_omx3a")
+script = ExtResource("58_3yra7")
+
+[node name="PurpleChest" type="Sprite2D" parent="Node/DarkWorld"]
+position = Vector2(-800, 104)
+texture = ExtResource("3_omx3a")
+script = ExtResource("59_ceto2")
+
+[node name="Stumpy" type="Sprite2D" parent="Node/DarkWorld"]
+position = Vector2(-758, 733)
+texture = ExtResource("3_omx3a")
+script = ExtResource("60_w2333")
+
+[node name="DiggingGame" type="Sprite2D" parent="Node/DarkWorld"]
+position = Vector2(-1841, 765)
+texture = ExtResource("3_omx3a")
+script = ExtResource("61_ko3a5")
+
+[node name="HypeCave" type="Sprite2D" parent="Node/DarkWorld"]
+position = Vector2(401, 1113)
+texture = ExtResource("6_w28mg")
+
+[node name="Label" type="Label" parent="Node/DarkWorld/HypeCave"]
+texture_filter = 2
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -52.5
+offset_top = -31.5
+offset_right = -19.5
+offset_bottom = -8.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "0 / 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("62_r4k0r")
+
+[node name="MireShed" type="Sprite2D" parent="Node/DarkWorld"]
+position = Vector2(-1888, 1202)
+texture = ExtResource("6_w28mg")
+
+[node name="Label" type="Label" parent="Node/DarkWorld/MireShed"]
+texture_filter = 2
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -52.5
+offset_top = -31.5
+offset_right = -19.5
+offset_bottom = -8.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "0 / 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("64_h4f8i")
+
+[node name="Shop" type="Sprite2D" parent="Node/DarkWorld"]
+position = Vector2(-672, -1862)
+texture = ExtResource("48_6tg7r")
+
+[node name="Shop2" type="Sprite2D" parent="Node/DarkWorld"]
+position = Vector2(1496, -1454)
+texture = ExtResource("48_6tg7r")
+
+[node name="Shop3" type="Sprite2D" parent="Node/DarkWorld"]
+position = Vector2(1248, -710)
+texture = ExtResource("48_6tg7r")
+
+[node name="Shop4" type="Sprite2D" parent="Node/DarkWorld"]
+position = Vector2(-688, -218)
+texture = ExtResource("48_6tg7r")
+
+[node name="Shop5" type="Sprite2D" parent="Node/DarkWorld"]
+position = Vector2(-1215, 89)
+texture = ExtResource("48_6tg7r")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
