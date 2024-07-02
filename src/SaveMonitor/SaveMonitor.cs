@@ -5,7 +5,30 @@ using System.Threading;
 
 public class SaveMonitor
 {
+	// every check
 	public static Check[] Checks;
+
+	// checks for each level
+	public static Check[] Checks_LW;
+	public static Check[] Checks_DW;
+
+	public static Check[] Checks_CA;
+
+	public static Check[] Checks_L1;
+	public static Check[] Checks_L2;
+	public static Check[] Checks_L3;
+
+	public static Check[] Checks_AG;
+
+	public static Check[] Checks_D1;
+	public static Check[] Checks_D2;
+	public static Check[] Checks_D3;
+	public static Check[] Checks_D4;
+	public static Check[] Checks_D5;
+	public static Check[] Checks_D6;
+	public static Check[] Checks_D7;
+
+	public static Check[] Checks_GT;
 
 	public static void StartupSaveMonitor()
 	{
@@ -262,6 +285,285 @@ public class SaveMonitor
 		Checks[(int)Check.Name.DIGGING_GAME]                              = new Check(0x2E8, 0x40);
 		Checks[(int)Check.Name.BUMPER_CAVE_LEDGE]                         = new Check(0x2CA, 0x40);
 		Checks[(int)Check.Name.FLOATING_ISLAND]                           = new Check(0x285, 0x40);
+
+		Checks_LW = new Check[] {
+			SaveMonitor.Checks[(int)Check.Name.BLINDS_HIDEOUT_TOP],
+			SaveMonitor.Checks[(int)Check.Name.BLINDS_HIDEOUT_LEFT],
+			SaveMonitor.Checks[(int)Check.Name.BLINDS_HIDEOUT_RIGHT],
+			SaveMonitor.Checks[(int)Check.Name.BLINDS_HIDEOUT_FAR_LEFT],
+			SaveMonitor.Checks[(int)Check.Name.BLINDS_HIDEOUT_FAR_RIGHT],
+			SaveMonitor.Checks[(int)Check.Name.WATERFALL_FAIRY_LEFT],
+			SaveMonitor.Checks[(int)Check.Name.WATERFALL_FAIRY_RIGHT],
+			SaveMonitor.Checks[(int)Check.Name.KINGS_TOMB],
+			SaveMonitor.Checks[(int)Check.Name.FLOODGATE_CHEST],
+			SaveMonitor.Checks[(int)Check.Name.LINKS_HOUSE],
+			SaveMonitor.Checks[(int)Check.Name.KAKARIKO_TAVERN],
+			SaveMonitor.Checks[(int)Check.Name.CHICKEN_HOUSE],
+			SaveMonitor.Checks[(int)Check.Name.AGINAHS_CAVE],
+			SaveMonitor.Checks[(int)Check.Name.SAHASRAHLAS_HUT_LEFT],
+			SaveMonitor.Checks[(int)Check.Name.SAHASRAHLAS_HUT_MIDDLE],
+			SaveMonitor.Checks[(int)Check.Name.SAHASRAHLAS_HUT_RIGHT],
+			SaveMonitor.Checks[(int)Check.Name.KAKARIKO_WELL_TOP],
+			SaveMonitor.Checks[(int)Check.Name.KAKARIKO_WELL_LEFT],
+			SaveMonitor.Checks[(int)Check.Name.KAKARIKO_WELL_MIDDLE],
+			SaveMonitor.Checks[(int)Check.Name.KAKARIKO_WELL_RIGHT],
+			SaveMonitor.Checks[(int)Check.Name.KAKARIKO_WELL_BOTTOM],
+			SaveMonitor.Checks[(int)Check.Name.LOST_WOODS_HIDEOUT],
+			SaveMonitor.Checks[(int)Check.Name.LUMBERJACK_TREE],
+			SaveMonitor.Checks[(int)Check.Name.CAVE_45],
+			SaveMonitor.Checks[(int)Check.Name.GRAVEYARD_CAVE],
+			SaveMonitor.Checks[(int)Check.Name.CHECKERBOARD_CAVE],
+			SaveMonitor.Checks[(int)Check.Name.MINI_MOLDORM_CAVE_FAR_LEFT],
+			SaveMonitor.Checks[(int)Check.Name.MINI_MOLDORM_CAVE_LEFT],
+			SaveMonitor.Checks[(int)Check.Name.MINI_MOLDORM_CAVE_RIGHT],
+			SaveMonitor.Checks[(int)Check.Name.MINI_MOLDORM_CAVE_FAR_RIGHT],
+			SaveMonitor.Checks[(int)Check.Name.MINI_MOLDORM_CAVE_GENEROUS_GUY],
+			SaveMonitor.Checks[(int)Check.Name.ICE_ROD_CAVE],
+			SaveMonitor.Checks[(int)Check.Name.BONK_ROCK_CAVE],
+			SaveMonitor.Checks[(int)Check.Name.SECRET_PASSAGE],
+			SaveMonitor.Checks[(int)Check.Name.SPECTACLE_ROCK_CAVE],
+			SaveMonitor.Checks[(int)Check.Name.PARADOX_CAVE_LOWER_FAR_LEFT],
+			SaveMonitor.Checks[(int)Check.Name.PARADOX_CAVE_LOWER_LEFT],
+			SaveMonitor.Checks[(int)Check.Name.PARADOX_CAVE_LOWER_RIGHT],
+			SaveMonitor.Checks[(int)Check.Name.PARADOX_CAVE_LOWER_FAR_RIGHT],
+			SaveMonitor.Checks[(int)Check.Name.PARADOX_CAVE_LOWER_MIDDLE],
+			SaveMonitor.Checks[(int)Check.Name.PARADOX_CAVE_UPPER_LEFT],
+			SaveMonitor.Checks[(int)Check.Name.PARADOX_CAVE_UPPER_RIGHT],
+			SaveMonitor.Checks[(int)Check.Name.SPIRAL_CAVE],
+			SaveMonitor.Checks[(int)Check.Name.MIMIC_CAVE],
+			SaveMonitor.Checks[(int)Check.Name.BOTTLE_MERCHANT],
+			SaveMonitor.Checks[(int)Check.Name.LINKS_UNCLE],
+			SaveMonitor.Checks[(int)Check.Name.HOBO],
+			SaveMonitor.Checks[(int)Check.Name.OLD_MAN],
+			SaveMonitor.Checks[(int)Check.Name.KING_ZORA],
+			SaveMonitor.Checks[(int)Check.Name.SICK_KID],
+			SaveMonitor.Checks[(int)Check.Name.SAHASRAHLA],
+			SaveMonitor.Checks[(int)Check.Name.LIBRARY],
+			SaveMonitor.Checks[(int)Check.Name.ETHER_TABLET],
+			SaveMonitor.Checks[(int)Check.Name.BOMBOS_TABLET],
+			SaveMonitor.Checks[(int)Check.Name.MUSHROOM],
+			SaveMonitor.Checks[(int)Check.Name.POTION_SHOP],
+			SaveMonitor.Checks[(int)Check.Name.MAGIC_BAT],
+			SaveMonitor.Checks[(int)Check.Name.FLUTE_SPOT],
+			SaveMonitor.Checks[(int)Check.Name.SUNKEN_TREASURE],
+			SaveMonitor.Checks[(int)Check.Name.ZORAS_LEDGE],
+			SaveMonitor.Checks[(int)Check.Name.LAKE_HYLIA_ISLAND],
+			SaveMonitor.Checks[(int)Check.Name.MAZE_RACE],
+			SaveMonitor.Checks[(int)Check.Name.DESERT_LEDGE],
+			SaveMonitor.Checks[(int)Check.Name.MASTER_SWORD_PEDESTAL],
+			SaveMonitor.Checks[(int)Check.Name.SPECTACLE_ROCK],
+			SaveMonitor.Checks[(int)Check.Name.BUMPER_CAVE_LEDGE],
+			SaveMonitor.Checks[(int)Check.Name.FLOATING_ISLAND]
+		};
+
+		Checks_DW = new Check[] {
+			SaveMonitor.Checks[(int)Check.Name.SUPERBUNNY_CAVE_TOP],
+			SaveMonitor.Checks[(int)Check.Name.SUPERBUNNY_CAVE_BOTTOM],
+			SaveMonitor.Checks[(int)Check.Name.HOOKSHOT_CAVE_TOP_RIGHT],
+			SaveMonitor.Checks[(int)Check.Name.HOOKSHOT_CAVE_TOP_LEFT],
+			SaveMonitor.Checks[(int)Check.Name.HOOKSHOT_CAVE_BOTTOM_RIGHT],
+			SaveMonitor.Checks[(int)Check.Name.HOOKSHOT_CAVE_BOTTOM_LEFT],
+			SaveMonitor.Checks[(int)Check.Name.SPIKE_CAVE],
+			SaveMonitor.Checks[(int)Check.Name.CATFISH],
+			SaveMonitor.Checks[(int)Check.Name.PYRAMID],
+			SaveMonitor.Checks[(int)Check.Name.HYPE_CAVE_TOP],
+			SaveMonitor.Checks[(int)Check.Name.HYPE_CAVE_MIDDLE_RIGHT],
+			SaveMonitor.Checks[(int)Check.Name.HYPE_CAVE_MIDDLE_LEFT],
+			SaveMonitor.Checks[(int)Check.Name.HYPE_CAVE_BOTTOM],
+			SaveMonitor.Checks[(int)Check.Name.HYPE_CAVE_GENEROUS_GUY],
+			SaveMonitor.Checks[(int)Check.Name.PEG_CAVE],
+			SaveMonitor.Checks[(int)Check.Name.PYRAMID_FAIRY_LEFT],
+			SaveMonitor.Checks[(int)Check.Name.PYRAMID_FAIRY_RIGHT],
+			SaveMonitor.Checks[(int)Check.Name.BREWERY],
+			SaveMonitor.Checks[(int)Check.Name.CSHAPED_HOUSE],
+			SaveMonitor.Checks[(int)Check.Name.CHEST_GAME],
+			SaveMonitor.Checks[(int)Check.Name.MIRE_SHED_LEFT],
+			SaveMonitor.Checks[(int)Check.Name.MIRE_SHED_RIGHT],
+			SaveMonitor.Checks[(int)Check.Name.PURPLE_CHEST],
+			SaveMonitor.Checks[(int)Check.Name.STUMPY],
+			SaveMonitor.Checks[(int)Check.Name.DIGGING_GAME],
+			SaveMonitor.Checks[(int)Check.Name.BLACKSMITH]
+		};
+
+		Checks_L1 = new Check[] {
+			SaveMonitor.Checks[(int)Check.Name.EASTERN_PALACE_COMPASS_CHEST],
+			SaveMonitor.Checks[(int)Check.Name.EASTERN_PALACE_BIG_CHEST],
+			SaveMonitor.Checks[(int)Check.Name.EASTERN_PALACE_DARK_SQUARE_POT_KEY],
+			SaveMonitor.Checks[(int)Check.Name.EASTERN_PALACE_DARK_EYEGORE_KEY_DROP],
+			SaveMonitor.Checks[(int)Check.Name.EASTERN_PALACE_CANNONBALL_CHEST],
+			SaveMonitor.Checks[(int)Check.Name.EASTERN_PALACE_BIG_KEY_CHEST],
+			SaveMonitor.Checks[(int)Check.Name.EASTERN_PALACE_MAP_CHEST],
+			SaveMonitor.Checks[(int)Check.Name.EASTERN_PALACE_BOSS]
+		};
+
+		Checks_L2 = new Check[] {
+			SaveMonitor.Checks[(int)Check.Name.DESERT_PALACE_BIG_CHEST],
+			SaveMonitor.Checks[(int)Check.Name.DESERT_PALACE_TORCH],
+			SaveMonitor.Checks[(int)Check.Name.DESERT_PALACE_MAP_CHEST],
+			SaveMonitor.Checks[(int)Check.Name.DESERT_PALACE_COMPASS_CHEST],
+			SaveMonitor.Checks[(int)Check.Name.DESERT_PALACE_BIG_KEY_CHEST],
+			SaveMonitor.Checks[(int)Check.Name.DESERT_PALACE_DESERT_TILES_1_POT_KEY],
+			SaveMonitor.Checks[(int)Check.Name.DESERT_PALACE_BEAMOS_HALL_POT_KEY],
+			SaveMonitor.Checks[(int)Check.Name.DESERT_PALACE_DESERT_TILES_2_POT_KEY],
+			SaveMonitor.Checks[(int)Check.Name.DESERT_PALACE_BOSS]
+		};
+
+		Checks_L3 = new Check[] {
+			SaveMonitor.Checks[(int)Check.Name.TOWER_OF_HERA_BASEMENT_CAGE],
+			SaveMonitor.Checks[(int)Check.Name.TOWER_OF_HERA_MAP_CHEST],
+			SaveMonitor.Checks[(int)Check.Name.TOWER_OF_HERA_BIG_KEY_CHEST],
+			SaveMonitor.Checks[(int)Check.Name.TOWER_OF_HERA_COMPASS_CHEST],
+			SaveMonitor.Checks[(int)Check.Name.TOWER_OF_HERA_BIG_CHEST],
+			SaveMonitor.Checks[(int)Check.Name.TOWER_OF_HERA_BOSS]
+		};
+
+		Checks_AG = new Check[] {
+			SaveMonitor.Checks[(int)Check.Name.CASTLE_TOWER_ROOM_03],
+			SaveMonitor.Checks[(int)Check.Name.CASTLE_TOWER_DARK_MAZE],
+			SaveMonitor.Checks[(int)Check.Name.CASTLE_TOWER_DARK_ARCHER_KEY_DROP],
+			SaveMonitor.Checks[(int)Check.Name.CASTLE_TOWER_CIRCLE_OF_POTS_KEY_DROP]
+		};
+
+		Checks_D1 = new Check[] {
+			SaveMonitor.Checks[(int)Check.Name.PALACE_OF_DARKNESS_SHOOTER_ROOM],
+			SaveMonitor.Checks[(int)Check.Name.PALACE_OF_DARKNESS_THE_ARENA_BRIDGE],
+			SaveMonitor.Checks[(int)Check.Name.PALACE_OF_DARKNESS_STALFOS_BASEMENT],
+			SaveMonitor.Checks[(int)Check.Name.PALACE_OF_DARKNESS_BIG_KEY_CHEST],
+			SaveMonitor.Checks[(int)Check.Name.PALACE_OF_DARKNESS_THE_ARENA_LEDGE],
+			SaveMonitor.Checks[(int)Check.Name.PALACE_OF_DARKNESS_MAP_CHEST],
+			SaveMonitor.Checks[(int)Check.Name.PALACE_OF_DARKNESS_COMPASS_CHEST],
+			SaveMonitor.Checks[(int)Check.Name.PALACE_OF_DARKNESS_DARK_BASEMENT_LEFT],
+			SaveMonitor.Checks[(int)Check.Name.PALACE_OF_DARKNESS_DARK_BASEMENT_RIGHT],
+			SaveMonitor.Checks[(int)Check.Name.PALACE_OF_DARKNESS_DARK_MAZE_TOP],
+			SaveMonitor.Checks[(int)Check.Name.PALACE_OF_DARKNESS_DARK_MAZE_BOTTOM],
+			SaveMonitor.Checks[(int)Check.Name.PALACE_OF_DARKNESS_BIG_CHEST],
+			SaveMonitor.Checks[(int)Check.Name.PALACE_OF_DARKNESS_HARMLESS_HELLWAY],
+			SaveMonitor.Checks[(int)Check.Name.PALACE_OF_DARKNESS_BOSS]
+		};
+
+		Checks_D2 = new Check[] {
+			SaveMonitor.Checks[(int)Check.Name.SWAMP_PALACE_ENTRANCE],
+			SaveMonitor.Checks[(int)Check.Name.SWAMP_PALACE_MAP_CHEST],
+			SaveMonitor.Checks[(int)Check.Name.SWAMP_PALACE_POT_ROW_POT_KEY],
+			SaveMonitor.Checks[(int)Check.Name.SWAMP_PALACE_TRENCH_1_POT_KEY],
+			SaveMonitor.Checks[(int)Check.Name.SWAMP_PALACE_HOOKSHOT_POT_KEY],
+			SaveMonitor.Checks[(int)Check.Name.SWAMP_PALACE_BIG_CHEST],
+			SaveMonitor.Checks[(int)Check.Name.SWAMP_PALACE_COMPASS_CHEST],
+			SaveMonitor.Checks[(int)Check.Name.SWAMP_PALACE_TRENCH_2_POT_KEY],
+			SaveMonitor.Checks[(int)Check.Name.SWAMP_PALACE_BIG_KEY_CHEST],
+			SaveMonitor.Checks[(int)Check.Name.SWAMP_PALACE_WEST_CHEST],
+			SaveMonitor.Checks[(int)Check.Name.SWAMP_PALACE_FLOODED_ROOM_LEFT],
+			SaveMonitor.Checks[(int)Check.Name.SWAMP_PALACE_FLOODED_ROOM_RIGHT],
+			SaveMonitor.Checks[(int)Check.Name.SWAMP_PALACE_WATERFALL_ROOM],
+			SaveMonitor.Checks[(int)Check.Name.SWAMP_PALACE_WATERWAY_POT_KEY],
+			SaveMonitor.Checks[(int)Check.Name.SWAMP_PALACE_BOSS]
+		};
+
+		Checks_D3 = new Check[] {
+			SaveMonitor.Checks[(int)Check.Name.SKULL_WOODS_COMPASS_CHEST],
+			SaveMonitor.Checks[(int)Check.Name.SKULL_WOODS_MAP_CHEST],
+			SaveMonitor.Checks[(int)Check.Name.SKULL_WOODS_BIG_CHEST],
+			SaveMonitor.Checks[(int)Check.Name.SKULL_WOODS_POT_PRISON],
+			SaveMonitor.Checks[(int)Check.Name.SKULL_WOODS_PINBALL_ROOM],
+			SaveMonitor.Checks[(int)Check.Name.SKULL_WOODS_BIG_KEY_CHEST],
+			SaveMonitor.Checks[(int)Check.Name.SKULL_WOODS_WEST_LOBBY_POT_KEY],
+			SaveMonitor.Checks[(int)Check.Name.SKULL_WOODS_BRIDGE_ROOM],
+			SaveMonitor.Checks[(int)Check.Name.SKULL_WOODS_SPIKE_CORNER_KEY_DROP],
+			SaveMonitor.Checks[(int)Check.Name.SKULL_WOODS_BOSS]
+		};
+
+		Checks_D4 = new Check[] {
+			SaveMonitor.Checks[(int)Check.Name.THIEVES_TOWN_BIG_KEY_CHEST],
+			SaveMonitor.Checks[(int)Check.Name.THIEVES_TOWN_MAP_CHEST],
+			SaveMonitor.Checks[(int)Check.Name.THIEVES_TOWN_COMPASS_CHEST],
+			SaveMonitor.Checks[(int)Check.Name.THIEVES_TOWN_AMBUSH_CHEST],
+			SaveMonitor.Checks[(int)Check.Name.THIEVES_TOWN_HALLWAY_POT_KEY],
+			SaveMonitor.Checks[(int)Check.Name.THIEVES_TOWN_SPIKE_SWITCH_POT_KEY],
+			SaveMonitor.Checks[(int)Check.Name.THIEVES_TOWN_ATTIC],
+			SaveMonitor.Checks[(int)Check.Name.THIEVES_TOWN_BIG_CHEST],
+			SaveMonitor.Checks[(int)Check.Name.THIEVES_TOWN_BLINDS_CELL],
+			SaveMonitor.Checks[(int)Check.Name.THIEVES_TOWN_BOSS]
+		};
+
+		Checks_D5 = new Check[] {
+			SaveMonitor.Checks[(int)Check.Name.ICE_PALACE_JELLY_KEY_DROP],
+			SaveMonitor.Checks[(int)Check.Name.ICE_PALACE_COMPASS_CHEST],
+			SaveMonitor.Checks[(int)Check.Name.ICE_PALACE_CONVEYOR_KEY_DROP],
+			SaveMonitor.Checks[(int)Check.Name.ICE_PALACE_FREEZOR_CHEST],
+			SaveMonitor.Checks[(int)Check.Name.ICE_PALACE_BIG_CHEST],
+			SaveMonitor.Checks[(int)Check.Name.ICE_PALACE_ICED_T_ROOM],
+			SaveMonitor.Checks[(int)Check.Name.ICE_PALACE_MANY_POTS_POT_KEY],
+			SaveMonitor.Checks[(int)Check.Name.ICE_PALACE_SPIKE_ROOM],
+			SaveMonitor.Checks[(int)Check.Name.ICE_PALACE_BIG_KEY_CHEST],
+			SaveMonitor.Checks[(int)Check.Name.ICE_PALACE_HAMMER_BLOCK_KEY_DROP],
+			SaveMonitor.Checks[(int)Check.Name.ICE_PALACE_MAP_CHEST],
+			SaveMonitor.Checks[(int)Check.Name.ICE_PALACE_BOSS]
+		};
+
+		Checks_D6 = new Check[] {
+			SaveMonitor.Checks[(int)Check.Name.MISERY_MIRE_BIG_CHEST],
+			SaveMonitor.Checks[(int)Check.Name.MISERY_MIRE_MAP_CHEST],
+			SaveMonitor.Checks[(int)Check.Name.MISERY_MIRE_MAIN_LOBBY],
+			SaveMonitor.Checks[(int)Check.Name.MISERY_MIRE_BRIDGE_CHEST],
+			SaveMonitor.Checks[(int)Check.Name.MISERY_MIRE_SPIKES_POT_KEY],
+			SaveMonitor.Checks[(int)Check.Name.MISERY_MIRE_SPIKE_CHEST],
+			SaveMonitor.Checks[(int)Check.Name.MISERY_MIRE_FISHBONE_POT_KEY],
+			SaveMonitor.Checks[(int)Check.Name.MISERY_MIRE_CONVEYOR_CRYSTAL_KEY_DROP],
+			SaveMonitor.Checks[(int)Check.Name.MISERY_MIRE_COMPASS_CHEST],
+			SaveMonitor.Checks[(int)Check.Name.MISERY_MIRE_BIG_KEY_CHEST],
+			SaveMonitor.Checks[(int)Check.Name.MISERY_MIRE_BOSS]
+		};
+
+		Checks_D7 = new Check[] {
+			SaveMonitor.Checks[(int)Check.Name.TURTLE_ROCK_COMPASS_CHEST],
+			SaveMonitor.Checks[(int)Check.Name.TURTLE_ROCK_ROLLER_ROOM_LEFT],
+			SaveMonitor.Checks[(int)Check.Name.TURTLE_ROCK_ROLLER_ROOM_RIGHT],
+			SaveMonitor.Checks[(int)Check.Name.TURTLE_ROCK_POKEY_1_KEY_DROP],
+			SaveMonitor.Checks[(int)Check.Name.TURTLE_ROCK_CHAIN_CHOMPS],
+			SaveMonitor.Checks[(int)Check.Name.TURTLE_ROCK_POKEY_2_KEY_DROP],
+			SaveMonitor.Checks[(int)Check.Name.TURTLE_ROCK_BIG_KEY_CHEST],
+			SaveMonitor.Checks[(int)Check.Name.TURTLE_ROCK_BIG_CHEST],
+			SaveMonitor.Checks[(int)Check.Name.TURTLE_ROCK_CRYSTAROLLER_ROOM],
+			SaveMonitor.Checks[(int)Check.Name.TURTLE_ROCK_EYE_BRIDGE_BOTTOM_LEFT],
+			SaveMonitor.Checks[(int)Check.Name.TURTLE_ROCK_EYE_BRIDGE_BOTTOM_RIGHT],
+			SaveMonitor.Checks[(int)Check.Name.TURTLE_ROCK_EYE_BRIDGE_TOP_LEFT],
+			SaveMonitor.Checks[(int)Check.Name.TURTLE_ROCK_EYE_BRIDGE_TOP_RIGHT],
+			SaveMonitor.Checks[(int)Check.Name.TURTLE_ROCK_BOSS]
+		};
+
+		Checks_GT = new Check[] {
+			SaveMonitor.Checks[(int)Check.Name.GANONS_TOWER_CONVEYOR_CROSS_POT_KEY],
+			SaveMonitor.Checks[(int)Check.Name.GANONS_TOWER_BOBS_TORCH],
+			SaveMonitor.Checks[(int)Check.Name.GANONS_TOWER_HOPE_ROOM_LEFT],
+			SaveMonitor.Checks[(int)Check.Name.GANONS_TOWER_HOPE_ROOM_RIGHT],
+			SaveMonitor.Checks[(int)Check.Name.GANONS_TOWER_TILE_ROOM],
+			SaveMonitor.Checks[(int)Check.Name.GANONS_TOWER_COMPASS_ROOM_TOP_LEFT],
+			SaveMonitor.Checks[(int)Check.Name.GANONS_TOWER_COMPASS_ROOM_TOP_RIGHT],
+			SaveMonitor.Checks[(int)Check.Name.GANONS_TOWER_COMPASS_ROOM_BOTTOM_LEFT],
+			SaveMonitor.Checks[(int)Check.Name.GANONS_TOWER_COMPASS_ROOM_BOTTOM_RIGHT],
+			SaveMonitor.Checks[(int)Check.Name.GANONS_TOWER_CONVEYOR_STAR_PITS_POT_KEY],
+			SaveMonitor.Checks[(int)Check.Name.GANONS_TOWER_DMS_ROOM_TOP_LEFT],
+			SaveMonitor.Checks[(int)Check.Name.GANONS_TOWER_DMS_ROOM_TOP_RIGHT],
+			SaveMonitor.Checks[(int)Check.Name.GANONS_TOWER_DMS_ROOM_BOTTOM_LEFT],
+			SaveMonitor.Checks[(int)Check.Name.GANONS_TOWER_DMS_ROOM_BOTTOM_RIGHT],
+			SaveMonitor.Checks[(int)Check.Name.GANONS_TOWER_MAP_CHEST],
+			SaveMonitor.Checks[(int)Check.Name.GANONS_TOWER_DOUBLE_SWITCH_POT_KEY],
+			SaveMonitor.Checks[(int)Check.Name.GANONS_TOWER_FIRESNAKE_ROOM],
+			SaveMonitor.Checks[(int)Check.Name.GANONS_TOWER_RANDOMIZER_ROOM_TOP_LEFT],
+			SaveMonitor.Checks[(int)Check.Name.GANONS_TOWER_RANDOMIZER_ROOM_TOP_RIGHT],
+			SaveMonitor.Checks[(int)Check.Name.GANONS_TOWER_RANDOMIZER_ROOM_BOTTOM_LEFT],
+			SaveMonitor.Checks[(int)Check.Name.GANONS_TOWER_RANDOMIZER_ROOM_BOTTOM_RIGHT],
+			SaveMonitor.Checks[(int)Check.Name.GANONS_TOWER_BOBS_CHEST],
+			SaveMonitor.Checks[(int)Check.Name.GANONS_TOWER_BIG_CHEST],
+			SaveMonitor.Checks[(int)Check.Name.GANONS_TOWER_BIG_KEY_ROOM_LEFT],
+			SaveMonitor.Checks[(int)Check.Name.GANONS_TOWER_BIG_KEY_ROOM_RIGHT],
+			SaveMonitor.Checks[(int)Check.Name.GANONS_TOWER_BIG_KEY_CHEST],
+			SaveMonitor.Checks[(int)Check.Name.GANONS_TOWER_MINI_HELMASAUR_ROOM_LEFT],
+			SaveMonitor.Checks[(int)Check.Name.GANONS_TOWER_MINI_HELMASAUR_ROOM_RIGHT],
+			SaveMonitor.Checks[(int)Check.Name.GANONS_TOWER_MINI_HELMASAUR_KEY_DROP],
+			SaveMonitor.Checks[(int)Check.Name.GANONS_TOWER_PREMOLDORM_CHEST],
+			SaveMonitor.Checks[(int)Check.Name.GANONS_TOWER_VALIDATION_CHEST]
+		};
 
 		Thread SaveMonitorThread = new Thread(() => MonitorSaveData());
 		SaveMonitorThread.Start();

@@ -3,6 +3,11 @@ using System;
 
 public partial class MapManager : Node
 {
+	private String[] maps = {
+		"LightWorld",
+		"DarkWorld"
+	};
+
 	private void SetVisibleMap(String mapNodeName)
 	{
 		foreach (Node child in GetChildren()) {
@@ -14,13 +19,7 @@ public partial class MapManager : Node
 		}
 	}
 
-	private void _on_light_world_pressed()
-	{
-		SetVisibleMap("LightWorld");
-	}
-
-	private void _on_dark_world_pressed()
-	{
-		SetVisibleMap("DarkWorld");
+	private void _on_map_select_item_selected (int index) {
+		SetVisibleMap(maps[index]);
 	}
 }

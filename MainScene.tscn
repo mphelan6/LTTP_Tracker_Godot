@@ -1,12 +1,12 @@
-[gd_scene load_steps=66 format=3 uid="uid://dvluees2b6vw8"]
+[gd_scene load_steps=70 format=3 uid="uid://dvluees2b6vw8"]
 
 [ext_resource type="Script" path="res://src/Initialize.cs" id="1_48g1d"]
 [ext_resource type="Script" path="res://src/MapManager.cs" id="1_rrc4k"]
-[ext_resource type="Texture2D" uid="uid://cwxttiocwj1p6" path="res://png/dark_world.png" id="2_adpej"]
-[ext_resource type="Texture2D" uid="uid://d04xla148c20v" path="res://png/light_world.png" id="2_ch5ax"]
-[ext_resource type="Texture2D" uid="uid://dprbc771h62ap" path="res://png/not_collected.png" id="3_omx3a"]
+[ext_resource type="Texture2D" uid="uid://cwxttiocwj1p6" path="res://png/maps/dark_world.png" id="2_adpej"]
+[ext_resource type="Texture2D" uid="uid://d04xla148c20v" path="res://png/maps/light_world.png" id="2_ch5ax"]
+[ext_resource type="Texture2D" uid="uid://dprbc771h62ap" path="res://png/mapUI/not_collected.png" id="3_omx3a"]
 [ext_resource type="Script" path="res://src/Overworld/Sprite/LinksHouse.cs" id="4_kiedf"]
-[ext_resource type="Texture2D" uid="uid://bmhmncpepng0h" path="res://png/label.png" id="6_w28mg"]
+[ext_resource type="Texture2D" uid="uid://bmhmncpepng0h" path="res://png/mapUI/label.png" id="6_w28mg"]
 [ext_resource type="Script" path="res://src/CameraControls.cs" id="7_j078h"]
 [ext_resource type="Script" path="res://src/Overworld/Label/SecretPassage.cs" id="7_q3ihe"]
 [ext_resource type="Script" path="res://src/Overworld/Label/HyruleCastle.cs" id="8_ptjtw"]
@@ -50,7 +50,7 @@
 [ext_resource type="Script" path="res://src/Overworld/Label/ParadoxCave.cs" id="46_r1m8n"]
 [ext_resource type="Script" path="res://src/Overworld/Sprite/FloatingIsland.cs" id="47_k4d5j"]
 [ext_resource type="Script" path="res://src/Overworld/Label/SuperbunnyCave.cs" id="48_2xr4p"]
-[ext_resource type="Texture2D" uid="uid://osdey4lm3a1c" path="res://png/shop.png" id="48_6tg7r"]
+[ext_resource type="Texture2D" uid="uid://osdey4lm3a1c" path="res://png/mapUI/shop.png" id="48_6tg7r"]
 [ext_resource type="Script" path="res://src/Overworld/Label/HookshotCave.cs" id="50_lxiqo"]
 [ext_resource type="Script" path="res://src/Overworld/Sprite/SpikeCave.cs" id="51_rpgby"]
 [ext_resource type="Script" path="res://src/Overworld/Sprite/Catfish.cs" id="52_xon3t"]
@@ -65,6 +65,10 @@
 [ext_resource type="Script" path="res://src/Overworld/Sprite/DiggingGame.cs" id="61_ko3a5"]
 [ext_resource type="Script" path="res://src/Overworld/Label/HypeCave.cs" id="62_r4k0r"]
 [ext_resource type="Script" path="res://src/Overworld/Label/MireShed.cs" id="64_h4f8i"]
+[ext_resource type="Texture2D" uid="uid://cjmdhpvmnw0oi" path="res://png/chicken.png" id="65_2ehbt"]
+[ext_resource type="Script" path="res://src/Overworld/Sprite/Blacksmith.cs" id="65_6xrrj"]
+[ext_resource type="Texture2D" uid="uid://bgfujdb8ulhoh" path="res://png/dark_chicken.png" id="66_lbpr3"]
+[ext_resource type="Script" path="res://src/GUI/Total.cs" id="67_q3dah"]
 
 [node name="RootNode" type="Node"]
 script = ExtResource("1_48g1d")
@@ -76,15 +80,15 @@ script = ExtResource("1_rrc4k")
 texture_filter = 1
 texture = ExtResource("2_ch5ax")
 
-[node name="Shop" type="Sprite2D" parent="Node/LightWorld"]
+[node name="Shop" type="Sprite2D" parent="Node/LightWorld" groups=["ToScaleWithCamera"]]
 position = Vector2(1496, -1436)
 texture = ExtResource("48_6tg7r")
 
-[node name="Shop2" type="Sprite2D" parent="Node/LightWorld"]
+[node name="Shop2" type="Sprite2D" parent="Node/LightWorld" groups=["ToScaleWithCamera"]]
 position = Vector2(-1601, 299)
 texture = ExtResource("48_6tg7r")
 
-[node name="Shop3" type="Sprite2D" parent="Node/LightWorld"]
+[node name="Shop3" type="Sprite2D" parent="Node/LightWorld" groups=["ToScaleWithCamera"]]
 position = Vector2(928, 1051)
 texture = ExtResource("48_6tg7r")
 
@@ -532,23 +536,23 @@ visible = false
 texture_filter = 1
 texture = ExtResource("2_adpej")
 
-[node name="Shop" type="Sprite2D" parent="Node/DarkWorld"]
+[node name="Shop" type="Sprite2D" parent="Node/DarkWorld" groups=["ToScaleWithCamera"]]
 position = Vector2(-672, -1862)
 texture = ExtResource("48_6tg7r")
 
-[node name="Shop2" type="Sprite2D" parent="Node/DarkWorld"]
+[node name="Shop2" type="Sprite2D" parent="Node/DarkWorld" groups=["ToScaleWithCamera"]]
 position = Vector2(1496, -1454)
 texture = ExtResource("48_6tg7r")
 
-[node name="Shop3" type="Sprite2D" parent="Node/DarkWorld"]
+[node name="Shop3" type="Sprite2D" parent="Node/DarkWorld" groups=["ToScaleWithCamera"]]
 position = Vector2(1248, -710)
 texture = ExtResource("48_6tg7r")
 
-[node name="Shop4" type="Sprite2D" parent="Node/DarkWorld"]
+[node name="Shop4" type="Sprite2D" parent="Node/DarkWorld" groups=["ToScaleWithCamera"]]
 position = Vector2(-688, -218)
 texture = ExtResource("48_6tg7r")
 
-[node name="Shop5" type="Sprite2D" parent="Node/DarkWorld"]
+[node name="Shop5" type="Sprite2D" parent="Node/DarkWorld" groups=["ToScaleWithCamera"]]
 position = Vector2(-1215, 89)
 texture = ExtResource("48_6tg7r")
 
@@ -712,6 +716,11 @@ horizontal_alignment = 1
 vertical_alignment = 1
 script = ExtResource("64_h4f8i")
 
+[node name="Blacksmith" type="Sprite2D" parent="Node/DarkWorld" groups=["ToScaleWithCamera"]]
+position = Vector2(-1456, 640)
+texture = ExtResource("3_omx3a")
+script = ExtResource("65_6xrrj")
+
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Control" type="Control" parent="CanvasLayer"]
@@ -721,30 +730,44 @@ offset_right = 40.0
 offset_bottom = 40.0
 metadata/_edit_use_anchors_ = true
 
-[node name="LightWorld" type="Button" parent="CanvasLayer/Control"]
-texture_filter = 1
+[node name="MenuBorder" type="ColorRect" parent="CanvasLayer/Control"]
 layout_mode = 0
-offset_left = 8.0
-offset_top = 16.0
-offset_right = 108.0
-offset_bottom = 56.0
-focus_mode = 1
-text = "Light World"
-metadata/_edit_use_anchors_ = true
+offset_right = 168.0
+offset_bottom = 312.0
+color = Color(0.266575, 0.266575, 0.266575, 1)
 
-[node name="DarkWorld" type="Button" parent="CanvasLayer/Control"]
-texture_filter = 1
+[node name="MapSelect" type="OptionButton" parent="CanvasLayer/Control/MenuBorder"]
 layout_mode = 0
 offset_left = 8.0
-offset_top = 64.0
-offset_right = 108.0
-offset_bottom = 104.0
-focus_mode = 1
-text = "Dark World"
-metadata/_edit_use_anchors_ = true
+offset_top = 8.0
+offset_right = 161.0
+offset_bottom = 48.0
+item_count = 2
+selected = 0
+popup/item_0/text = "Light World"
+popup/item_0/icon = ExtResource("65_2ehbt")
+popup/item_0/id = 0
+popup/item_1/text = "Dark World"
+popup/item_1/icon = ExtResource("66_lbpr3")
+popup/item_1/id = 1
+
+[node name="Total" type="Label" parent="CanvasLayer/Control/MenuBorder"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 56.0
+offset_right = 56.0
+offset_bottom = 79.0
+text = "Total: "
+
+[node name="Total_Count" type="Label" parent="CanvasLayer/Control/MenuBorder"]
+offset_left = 56.0
+offset_top = 56.0
+offset_right = 104.0
+offset_bottom = 79.0
+text = "Total: "
+script = ExtResource("67_q3dah")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 script = ExtResource("7_j078h")
 
-[connection signal="pressed" from="CanvasLayer/Control/LightWorld" to="Node" method="_on_light_world_pressed"]
-[connection signal="pressed" from="CanvasLayer/Control/DarkWorld" to="Node" method="_on_dark_world_pressed"]
+[connection signal="item_selected" from="CanvasLayer/Control/MenuBorder/MapSelect" to="Node" method="_on_map_select_item_selected"]

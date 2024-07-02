@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bws5t1dnr7qdy"
-path="res://.godot/imported/check_collected.png-84e0a5696d4b9bc2c7d3f638a9beb03e.ctex"
+uid="uid://d04xla148c20v"
+path="res://.godot/imported/light_world.png-90c25e2b56996bfd7a3163ee782de499.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://png/check_collected.png"
-dest_files=["res://.godot/imported/check_collected.png-84e0a5696d4b9bc2c7d3f638a9beb03e.ctex"]
+source_file="res://png/maps/light_world.png"
+dest_files=["res://.godot/imported/light_world.png-90c25e2b56996bfd7a3163ee782de499.ctex"]
 
 [params]
 
@@ -21,7 +21,7 @@ compress/lossy_quality=0.7
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=true
+mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
@@ -31,4 +31,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=0
+detect_3d/compress_to=1

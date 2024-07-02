@@ -1,0 +1,6 @@
+SaveMonitor.Checks[(int)Check.Name.TOWER_OF_HERA_BASEMENT_CAGE],
+SaveMonitor.Checks[(int)Check.Name.TOWER_OF_HERA_MAP_CHEST],
+SaveMonitor.Checks[(int)Check.Name.TOWER_OF_HERA_BIG_KEY_CHEST],
+SaveMonitor.Checks[(int)Check.Name.TOWER_OF_HERA_COMPASS_CHEST],
+SaveMonitor.Checks[(int)Check.Name.TOWER_OF_HERA_BIG_CHEST],
+SaveMonitor.Checks[(int)Check.Name.TOWER_OF_HERA_BOSS],

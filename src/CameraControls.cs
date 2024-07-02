@@ -1,3 +1,4 @@
+using System.Drawing;
 using Godot;
 using Godot.Collections;
 
@@ -9,6 +10,9 @@ public partial class CameraControls : Camera2D
 	private Vector2 mouseStartingDragPos;
 	private Vector2 currentMousePos;
 	private MouseButton dragButtonPressed;
+
+	// for preventing starting a camera drag while mouse is on the UI
+	private bool isMouseOverUI = false;
 
 	// variables for zooming
 	protected Vector2 minimumZoom = new Vector2(0.2f, 0.2f);
@@ -36,16 +40,20 @@ public partial class CameraControls : Camera2D
 			Vector2 NewPosition = cameraStartingDragPos + offset;
 
 			// clamp position of camera
-			if (NewPosition.X > 2000f) {
+			if (NewPosition.X > 2000f)
+			{
 				NewPosition.X = 2000f;
 			}
-			if (NewPosition.X < -2000f) {
+			if (NewPosition.X < -2000f)
+			{
 				NewPosition.X = -2000f;
 			}
-			if (NewPosition.Y > 2000f) {
+			if (NewPosition.Y > 2000f)
+			{
 				NewPosition.Y = 2000f;
 			}
-			if (NewPosition.Y < -2000f) {
+			if (NewPosition.Y < -2000f)
+			{
 				NewPosition.Y = -2000f;
 			}
 
@@ -54,16 +62,21 @@ public partial class CameraControls : Camera2D
 	}
 
 	// scale UI element with camera zoom
-	private void adjustScaleWithCamera() {
+	private void adjustScaleWithCamera()
+	{
 		Vector2 newScale = Vector2.One;
-		if (Zoom >= Vector2.One) {
+		if (Zoom >= Vector2.One)
+		{
 			newScale = Vector2.One;
-		} else {
+		}
+		else
+		{
 			float newScaleVal = -3.5f * Zoom.X + 4.5f;
 			newScale = new Vector2(newScaleVal, newScaleVal);
 		}
 
-		foreach (Node toScale in toScaleWithCamera) {
+		foreach (Node toScale in toScaleWithCamera)
+		{
 			toScale.Set("scale", newScale);
 		}
 	}
@@ -72,8 +85,7 @@ public partial class CameraControls : Camera2D
 	// button used for the dragging operation
 	private bool IsDragButton(MouseButton button)
 	{
-		if (button.Equals(MouseButton.Left) ||
-			button.Equals(MouseButton.Right) ||
+		if (button.Equals(MouseButton.Right) ||
 			button.Equals(MouseButton.Middle))
 		{
 			return true;
@@ -89,6 +101,11 @@ public partial class CameraControls : Camera2D
 			// logic to startup the dragging operation
 			if (!isDragging && eventMouseButton.IsPressed() && IsDragButton(eventMouseButton.ButtonIndex))
 			{
+				// don't start a drag while the mouse is over the UI
+				if (isMouseOverUI) {
+					return;
+				}
+
 				isDragging = true;
 				cameraStartingDragPos = Position;
 				currentMousePos = GetLocalMousePosition();
@@ -102,25 +119,32 @@ public partial class CameraControls : Camera2D
 			}
 
 			// zoom out
-			if (eventMouseButton.IsPressed() && eventMouseButton.ButtonIndex.Equals(MouseButton.WheelDown)) {
+			if (eventMouseButton.IsPressed() && eventMouseButton.ButtonIndex.Equals(MouseButton.WheelDown))
+			{
 				Zoom = Zoom * zoomOutFactor;
-				if (Zoom < minimumZoom) {
+				if (Zoom < minimumZoom)
+				{
 					Zoom = minimumZoom;
 				}
 				adjustScaleWithCamera();
 			}
 
 			// zoom in
-			if (eventMouseButton.IsPressed() && eventMouseButton.ButtonIndex.Equals(MouseButton.WheelUp)) {
+			if (eventMouseButton.IsPressed() && eventMouseButton.ButtonIndex.Equals(MouseButton.WheelUp))
+			{
 				Zoom = Zoom * zoomInFactor;
-				if (Zoom > maximumZoom) {
+				if (Zoom > maximumZoom)
+				{
 					Zoom = maximumZoom;
 				}
 				adjustScaleWithCamera();
 			}
-		} else if (@event is InputEventKey eventKeyboardKey) {
+		}
+		else if (@event is InputEventKey eventKeyboardKey)
+		{
 			// zoom reset
-			if (eventKeyboardKey.KeyLabel.Equals(Key.Space)) {
+			if (eventKeyboardKey.KeyLabel.Equals(Key.Space))
+			{
 				Position = new Vector2(0f, 0f);
 				Zoom = Vector2.One;
 				adjustScaleWithCamera();
@@ -128,3 +152,6 @@ public partial class CameraControls : Camera2D
 		}
 	}
 }
+
+
+

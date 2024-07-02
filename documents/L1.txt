@@ -1,0 +1,8 @@
+SaveMonitor.Checks[(int)Check.Name.EASTERN_PALACE_COMPASS_CHEST],
+SaveMonitor.Checks[(int)Check.Name.EASTERN_PALACE_BIG_CHEST],
+SaveMonitor.Checks[(int)Check.Name.EASTERN_PALACE_DARK_SQUARE_POT_KEY],
+SaveMonitor.Checks[(int)Check.Name.EASTERN_PALACE_DARK_EYEGORE_KEY_DROP],
+SaveMonitor.Checks[(int)Check.Name.EASTERN_PALACE_CANNONBALL_CHEST],
+SaveMonitor.Checks[(int)Check.Name.EASTERN_PALACE_BIG_KEY_CHEST],
+SaveMonitor.Checks[(int)Check.Name.EASTERN_PALACE_MAP_CHEST],
+SaveMonitor.Checks[(int)Check.Name.EASTERN_PALACE_BOSS],

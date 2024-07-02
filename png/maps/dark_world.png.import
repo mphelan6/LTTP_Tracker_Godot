@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dprbc771h62ap"
-path="res://.godot/imported/not_collected.png-b2e01809696884168c060ba3685ea178.ctex"
+uid="uid://cwxttiocwj1p6"
+path="res://.godot/imported/dark_world.png-ac7062a30176eb2440b7f28a88d33c98.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://png/not_collected.png"
-dest_files=["res://.godot/imported/not_collected.png-b2e01809696884168c060ba3685ea178.ctex"]
+source_file="res://png/maps/dark_world.png"
+dest_files=["res://.godot/imported/dark_world.png-ac7062a30176eb2440b7f28a88d33c98.ctex"]
 
 [params]
 
@@ -31,4 +31,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=0
+detect_3d/compress_to=1

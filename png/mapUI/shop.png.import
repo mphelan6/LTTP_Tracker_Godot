@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cwxttiocwj1p6"
-path="res://.godot/imported/dark_world.png-342ccf3d24655878f97eedfd1cba9203.ctex"
+uid="uid://osdey4lm3a1c"
+path="res://.godot/imported/shop.png-a2314c4dc01e04b7ddb81e23a2d15fbc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://png/dark_world.png"
-dest_files=["res://.godot/imported/dark_world.png-342ccf3d24655878f97eedfd1cba9203.ctex"]
+source_file="res://png/mapUI/shop.png"
+dest_files=["res://.godot/imported/shop.png-a2314c4dc01e04b7ddb81e23a2d15fbc.ctex"]
 
 [params]
 

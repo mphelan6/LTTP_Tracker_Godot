@@ -1,0 +1,4 @@
+SaveMonitor.Checks[(int)Check.Name.CASTLE_TOWER_ROOM_03],
+SaveMonitor.Checks[(int)Check.Name.CASTLE_TOWER_DARK_MAZE],
+SaveMonitor.Checks[(int)Check.Name.CASTLE_TOWER_DARK_ARCHER_KEY_DROP],
+SaveMonitor.Checks[(int)Check.Name.CASTLE_TOWER_CIRCLE_OF_POTS_KEY_DROP]
