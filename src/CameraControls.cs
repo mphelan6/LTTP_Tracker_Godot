@@ -1,6 +1,5 @@
 using Godot;
-using System;
-using System.Runtime.CompilerServices;
+using Godot.Collections;
 
 public partial class CameraControls : Camera2D
 {
@@ -17,9 +16,13 @@ public partial class CameraControls : Camera2D
 	private float zoomOutFactor = 0.9f;
 	private float zoomInFactor = 1.1f;
 
+	// array of UI nodes to scale with zoom
+	private Array<Node> toScaleWithCamera;
+
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
+		toScaleWithCamera = GetTree().GetNodesInGroup("ToScaleWithCamera");
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -47,6 +50,21 @@ public partial class CameraControls : Camera2D
 			}
 
 			Position = NewPosition;
+		}
+	}
+
+	// scale UI element with camera zoom
+	private void adjustScaleWithCamera() {
+		Vector2 newScale = Vector2.One;
+		if (Zoom >= Vector2.One) {
+			newScale = Vector2.One;
+		} else {
+			float newScaleVal = -3.5f * Zoom.X + 4.5f;
+			newScale = new Vector2(newScaleVal, newScaleVal);
+		}
+
+		foreach (Node toScale in toScaleWithCamera) {
+			toScale.Set("scale", newScale);
 		}
 	}
 
@@ -89,6 +107,7 @@ public partial class CameraControls : Camera2D
 				if (Zoom < minimumZoom) {
 					Zoom = minimumZoom;
 				}
+				adjustScaleWithCamera();
 			}
 
 			// zoom in
@@ -97,12 +116,14 @@ public partial class CameraControls : Camera2D
 				if (Zoom > maximumZoom) {
 					Zoom = maximumZoom;
 				}
+				adjustScaleWithCamera();
 			}
 		} else if (@event is InputEventKey eventKeyboardKey) {
 			// zoom reset
 			if (eventKeyboardKey.KeyLabel.Equals(Key.Space)) {
 				Position = new Vector2(0f, 0f);
 				Zoom = Vector2.One;
+				adjustScaleWithCamera();
 			}
 		}
 	}
