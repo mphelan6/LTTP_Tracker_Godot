@@ -1,4 +1,4 @@
-[gd_scene load_steps=70 format=3 uid="uid://dvluees2b6vw8"]
+[gd_scene load_steps=99 format=3 uid="uid://dvluees2b6vw8"]
 
 [ext_resource type="Script" path="res://src/Initialize.cs" id="1_48g1d"]
 [ext_resource type="Script" path="res://src/MapManager.cs" id="1_rrc4k"]
@@ -69,6 +69,35 @@
 [ext_resource type="Script" path="res://src/Overworld/Sprite/Blacksmith.cs" id="65_6xrrj"]
 [ext_resource type="Texture2D" uid="uid://bgfujdb8ulhoh" path="res://png/dark_chicken.png" id="66_lbpr3"]
 [ext_resource type="Script" path="res://src/GUI/Total.cs" id="67_q3dah"]
+[ext_resource type="Script" path="res://src/GUI/LightWorld.cs" id="69_xt3fx"]
+[ext_resource type="Texture2D" uid="uid://dca4cgul2qen4" path="res://png/Zelda.png" id="70_2kg5u"]
+[ext_resource type="Script" path="res://src/GUI/DarkWorld.cs" id="70_bwbmd"]
+[ext_resource type="Texture2D" uid="uid://da8yd6vcj7s65" path="res://png/L1_boss.png" id="70_lerh2"]
+[ext_resource type="Texture2D" uid="uid://cx2e40c5xnajt" path="res://png/L2_boss.png" id="71_02cpt"]
+[ext_resource type="Script" path="res://src/GUI/CA.cs" id="71_bh2aw"]
+[ext_resource type="Script" path="res://src/GUI/L1.cs" id="71_wj0ic"]
+[ext_resource type="Texture2D" uid="uid://du2ggiirnfdvh" path="res://png/L3_boss.png" id="72_lb34s"]
+[ext_resource type="Script" path="res://src/GUI/L2.cs" id="73_qm2um"]
+[ext_resource type="Script" path="res://src/GUI/L3.cs" id="75_q4j85"]
+[ext_resource type="Texture2D" uid="uid://j168otwyprye" path="res://png/AG_boss.png" id="78_oieeo"]
+[ext_resource type="Script" path="res://src/GUI/AG.cs" id="79_tj51w"]
+[ext_resource type="Script" path="res://src/GUI/D1.cs" id="80_2o4ep"]
+[ext_resource type="Texture2D" uid="uid://bi6ad7h8varr" path="res://png/D1_boss.png" id="80_mpnm7"]
+[ext_resource type="Script" path="res://src/GUI/D2.cs" id="81_bjian"]
+[ext_resource type="Script" path="res://src/GUI/D3.cs" id="82_1g782"]
+[ext_resource type="Texture2D" uid="uid://xo7s638vu1s8" path="res://png/D2_boss.png" id="82_xmrof"]
+[ext_resource type="Script" path="res://src/GUI/D4.cs" id="83_paj8b"]
+[ext_resource type="Script" path="res://src/GUI/D5.cs" id="84_a6ueb"]
+[ext_resource type="Texture2D" uid="uid://bnrij0noyxhge" path="res://png/D3_boss.png" id="84_yuppn"]
+[ext_resource type="Script" path="res://src/GUI/D6.cs" id="85_sl8ui"]
+[ext_resource type="Texture2D" uid="uid://r1mcn0gotg5k" path="res://png/D4_boss.png" id="86_cmf7s"]
+[ext_resource type="Script" path="res://src/GUI/D7.cs" id="86_ufw87"]
+[ext_resource type="Script" path="res://src/GUI/GT.cs" id="87_7612a"]
+[ext_resource type="Texture2D" uid="uid://ceiu1c26ubsqs" path="res://png/D5_boss.png" id="88_woe6c"]
+[ext_resource type="Texture2D" uid="uid://1dpbj4ri4ph2" path="res://png/D6_boss.png" id="90_p5dt8"]
+[ext_resource type="Texture2D" uid="uid://bi2xflan3qp87" path="res://png/D7_boss.png" id="92_deoii"]
+[ext_resource type="Texture2D" uid="uid://cokrh6y7txhn6" path="res://png/GT_boss.png" id="94_wo3rm"]
+[ext_resource type="Texture2D" uid="uid://bws5t1dnr7qdy" path="res://png/mapUI/check_collected.png" id="96_7wdpv"]
 
 [node name="RootNode" type="Node"]
 script = ExtResource("1_48g1d")
@@ -731,9 +760,10 @@ offset_bottom = 40.0
 metadata/_edit_use_anchors_ = true
 
 [node name="MenuBorder" type="ColorRect" parent="CanvasLayer/Control"]
+texture_filter = 1
 layout_mode = 0
-offset_right = 168.0
-offset_bottom = 312.0
+offset_right = 176.0
+offset_bottom = 608.0
 color = Color(0.266575, 0.266575, 0.266575, 1)
 
 [node name="MapSelect" type="OptionButton" parent="CanvasLayer/Control/MenuBorder"]
@@ -751,21 +781,585 @@ popup/item_1/text = "Dark World"
 popup/item_1/icon = ExtResource("66_lbpr3")
 popup/item_1/id = 1
 
-[node name="Total" type="Label" parent="CanvasLayer/Control/MenuBorder"]
+[node name="LW" type="TextureRect" parent="CanvasLayer/Control/MenuBorder"]
 layout_mode = 0
 offset_left = 8.0
 offset_top = 56.0
-offset_right = 56.0
-offset_bottom = 79.0
-text = "Total: "
+offset_right = 40.0
+offset_bottom = 88.0
+texture = ExtResource("65_2ehbt")
 
-[node name="Total_Count" type="Label" parent="CanvasLayer/Control/MenuBorder"]
-offset_left = 56.0
-offset_top = 56.0
-offset_right = 104.0
-offset_bottom = 79.0
-text = "Total: "
+[node name="Label" type="Label" parent="CanvasLayer/Control/MenuBorder/LW"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 110.0
+offset_top = -11.5
+offset_right = 150.0
+offset_bottom = 11.5
+grow_vertical = 2
+text = "0 / 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("69_xt3fx")
+
+[node name="Label2" type="Label" parent="CanvasLayer/Control/MenuBorder/LW"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 35.0
+offset_top = -11.5
+offset_right = 74.9998
+offset_bottom = 11.5
+grow_vertical = 2
+text = "LW  :"
+vertical_alignment = 1
+
+[node name="DW" type="TextureRect" parent="CanvasLayer/Control/MenuBorder"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 88.0
+offset_right = 40.0
+offset_bottom = 120.0
+texture = ExtResource("66_lbpr3")
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/MenuBorder/DW"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 110.0
+offset_top = -11.5
+offset_right = 150.0
+offset_bottom = 11.5
+grow_vertical = 2
+text = "0 / 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("70_bwbmd")
+
+[node name="Label2" type="Label" parent="CanvasLayer/Control/MenuBorder/DW"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 35.0
+offset_top = -11.5
+offset_right = 74.9998
+offset_bottom = 11.5
+grow_vertical = 2
+text = "DW :"
+vertical_alignment = 1
+
+[node name="CA" type="TextureRect" parent="CanvasLayer/Control/MenuBorder"]
+offset_left = 8.0
+offset_top = 120.0
+offset_right = 40.0
+offset_bottom = 152.0
+texture = ExtResource("70_2kg5u")
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/MenuBorder/CA"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 110.0
+offset_top = -11.5
+offset_right = 150.0
+offset_bottom = 11.5
+grow_vertical = 2
+text = "0 / 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("71_bh2aw")
+
+[node name="Label2" type="Label" parent="CanvasLayer/Control/MenuBorder/CA"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 35.0
+offset_top = -11.5
+offset_right = 74.9998
+offset_bottom = 11.5
+grow_vertical = 2
+text = "CA  :"
+vertical_alignment = 1
+
+[node name="L1" type="TextureRect" parent="CanvasLayer/Control/MenuBorder"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 152.0
+offset_right = 40.0
+offset_bottom = 184.0
+texture = ExtResource("70_lerh2")
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/MenuBorder/L1"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 110.0
+offset_top = -11.5
+offset_right = 150.0
+offset_bottom = 11.5
+grow_vertical = 2
+text = "0 / 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("71_wj0ic")
+
+[node name="Label2" type="Label" parent="CanvasLayer/Control/MenuBorder/L1"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 35.0
+offset_top = -11.5
+offset_right = 74.9998
+offset_bottom = 11.5
+grow_vertical = 2
+text = "L1   :"
+vertical_alignment = 1
+
+[node name="L2" type="TextureRect" parent="CanvasLayer/Control/MenuBorder"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 184.0
+offset_right = 40.0
+offset_bottom = 216.0
+texture = ExtResource("71_02cpt")
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/MenuBorder/L2"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 110.0
+offset_top = -11.5
+offset_right = 150.0
+offset_bottom = 11.5
+grow_vertical = 2
+text = "0 / 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("73_qm2um")
+
+[node name="Label2" type="Label" parent="CanvasLayer/Control/MenuBorder/L2"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 35.0
+offset_top = -11.5
+offset_right = 74.9998
+offset_bottom = 11.5
+grow_vertical = 2
+text = "L2   :"
+vertical_alignment = 1
+
+[node name="L3" type="TextureRect" parent="CanvasLayer/Control/MenuBorder"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 216.0
+offset_right = 40.0
+offset_bottom = 248.0
+texture = ExtResource("72_lb34s")
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/MenuBorder/L3"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 110.0
+offset_top = -11.5
+offset_right = 150.0
+offset_bottom = 11.5
+grow_vertical = 2
+text = "0 / 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("75_q4j85")
+
+[node name="Label2" type="Label" parent="CanvasLayer/Control/MenuBorder/L3"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 35.0
+offset_top = -11.5
+offset_right = 74.9998
+offset_bottom = 11.5
+grow_vertical = 2
+text = "L3   :"
+vertical_alignment = 1
+
+[node name="AG" type="TextureRect" parent="CanvasLayer/Control/MenuBorder"]
+offset_left = 8.0
+offset_top = 248.0
+offset_right = 40.0
+offset_bottom = 280.0
+texture = ExtResource("78_oieeo")
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/MenuBorder/AG"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 110.0
+offset_top = -11.5
+offset_right = 150.0
+offset_bottom = 11.5
+grow_vertical = 2
+text = "0 / 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("79_tj51w")
+
+[node name="Label2" type="Label" parent="CanvasLayer/Control/MenuBorder/AG"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 35.0
+offset_top = -11.5
+offset_right = 74.9998
+offset_bottom = 11.5
+grow_vertical = 2
+text = "AG  :"
+vertical_alignment = 1
+
+[node name="D1" type="TextureRect" parent="CanvasLayer/Control/MenuBorder"]
+offset_left = 8.0
+offset_top = 280.0
+offset_right = 40.0
+offset_bottom = 312.0
+texture = ExtResource("80_mpnm7")
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/MenuBorder/D1"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 110.0
+offset_top = -11.5
+offset_right = 150.0
+offset_bottom = 11.5
+grow_vertical = 2
+text = "0 / 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("80_2o4ep")
+
+[node name="Label2" type="Label" parent="CanvasLayer/Control/MenuBorder/D1"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 35.0
+offset_top = -11.5
+offset_right = 74.9998
+offset_bottom = 11.5
+grow_vertical = 2
+text = "D1  :"
+vertical_alignment = 1
+
+[node name="D2" type="TextureRect" parent="CanvasLayer/Control/MenuBorder"]
+offset_left = 8.0
+offset_top = 312.0
+offset_right = 40.0
+offset_bottom = 344.0
+texture = ExtResource("82_xmrof")
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/MenuBorder/D2"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 110.0
+offset_top = -11.5
+offset_right = 150.0
+offset_bottom = 11.5
+grow_vertical = 2
+text = "0 / 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("81_bjian")
+
+[node name="Label2" type="Label" parent="CanvasLayer/Control/MenuBorder/D2"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 35.0
+offset_top = -11.5
+offset_right = 74.9998
+offset_bottom = 11.5
+grow_vertical = 2
+text = "D2  :"
+vertical_alignment = 1
+
+[node name="D3" type="TextureRect" parent="CanvasLayer/Control/MenuBorder"]
+offset_left = 8.0
+offset_top = 344.0
+offset_right = 40.0
+offset_bottom = 376.0
+texture = ExtResource("84_yuppn")
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/MenuBorder/D3"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 110.0
+offset_top = -11.5
+offset_right = 150.0
+offset_bottom = 11.5
+grow_vertical = 2
+text = "0 / 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("82_1g782")
+
+[node name="Label2" type="Label" parent="CanvasLayer/Control/MenuBorder/D3"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 35.0
+offset_top = -11.5
+offset_right = 74.9998
+offset_bottom = 11.5
+grow_vertical = 2
+text = "D3  :"
+vertical_alignment = 1
+
+[node name="D4" type="TextureRect" parent="CanvasLayer/Control/MenuBorder"]
+offset_left = 8.0
+offset_top = 376.0
+offset_right = 40.0
+offset_bottom = 408.0
+texture = ExtResource("86_cmf7s")
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/MenuBorder/D4"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 110.0
+offset_top = -11.5
+offset_right = 150.0
+offset_bottom = 11.5
+grow_vertical = 2
+text = "0 / 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("83_paj8b")
+
+[node name="Label2" type="Label" parent="CanvasLayer/Control/MenuBorder/D4"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 35.0
+offset_top = -11.5
+offset_right = 74.9998
+offset_bottom = 11.5
+grow_vertical = 2
+text = "D4  :"
+vertical_alignment = 1
+
+[node name="D5" type="TextureRect" parent="CanvasLayer/Control/MenuBorder"]
+offset_left = 8.0
+offset_top = 408.0
+offset_right = 40.0
+offset_bottom = 440.0
+texture = ExtResource("88_woe6c")
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/MenuBorder/D5"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 110.0
+offset_top = -11.5
+offset_right = 150.0
+offset_bottom = 11.5
+grow_vertical = 2
+text = "0 / 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("84_a6ueb")
+
+[node name="Label2" type="Label" parent="CanvasLayer/Control/MenuBorder/D5"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 35.0
+offset_top = -11.5
+offset_right = 74.9998
+offset_bottom = 11.5
+grow_vertical = 2
+text = "D5  :"
+vertical_alignment = 1
+
+[node name="D6" type="TextureRect" parent="CanvasLayer/Control/MenuBorder"]
+offset_left = 8.0
+offset_top = 440.0
+offset_right = 40.0
+offset_bottom = 472.0
+texture = ExtResource("90_p5dt8")
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/MenuBorder/D6"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 110.0
+offset_top = -11.5
+offset_right = 150.0
+offset_bottom = 11.5
+grow_vertical = 2
+text = "0 / 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("85_sl8ui")
+
+[node name="Label2" type="Label" parent="CanvasLayer/Control/MenuBorder/D6"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 35.0
+offset_top = -11.5
+offset_right = 74.9998
+offset_bottom = 11.5
+grow_vertical = 2
+text = "D6  :"
+vertical_alignment = 1
+
+[node name="D7" type="TextureRect" parent="CanvasLayer/Control/MenuBorder"]
+offset_left = 8.0
+offset_top = 472.0
+offset_right = 40.0
+offset_bottom = 504.0
+texture = ExtResource("92_deoii")
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/MenuBorder/D7"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 110.0
+offset_top = -11.5
+offset_right = 150.0
+offset_bottom = 11.5
+grow_vertical = 2
+text = "0 / 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("86_ufw87")
+
+[node name="Label2" type="Label" parent="CanvasLayer/Control/MenuBorder/D7"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 35.0
+offset_top = -11.5
+offset_right = 74.9998
+offset_bottom = 11.5
+grow_vertical = 2
+text = "D7  :"
+vertical_alignment = 1
+
+[node name="GT" type="TextureRect" parent="CanvasLayer/Control/MenuBorder"]
+offset_left = 8.0
+offset_top = 504.0
+offset_right = 40.0
+offset_bottom = 536.0
+texture = ExtResource("94_wo3rm")
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/MenuBorder/GT"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 110.0
+offset_top = -11.5
+offset_right = 150.0
+offset_bottom = 11.5
+grow_vertical = 2
+text = "0 / 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("87_7612a")
+
+[node name="Label2" type="Label" parent="CanvasLayer/Control/MenuBorder/GT"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 35.0
+offset_top = -11.5
+offset_right = 74.9998
+offset_bottom = 11.5
+grow_vertical = 2
+text = "GT  :"
+vertical_alignment = 1
+
+[node name="Total" type="TextureRect" parent="CanvasLayer/Control/MenuBorder"]
+offset_left = 8.0
+offset_top = 568.0
+offset_right = 40.0
+offset_bottom = 600.0
+texture = ExtResource("96_7wdpv")
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/MenuBorder/Total"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 110.0
+offset_top = -11.5
+offset_right = 150.0
+offset_bottom = 11.5
+grow_vertical = 2
+text = "0 / 0"
+horizontal_alignment = 1
+vertical_alignment = 1
 script = ExtResource("67_q3dah")
+
+[node name="Label2" type="Label" parent="CanvasLayer/Control/MenuBorder/Total"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 35.0
+offset_top = -11.5
+offset_right = 74.9998
+offset_bottom = 11.5
+grow_vertical = 2
+text = " Total: "
+vertical_alignment = 1
 
 [node name="Camera2D" type="Camera2D" parent="."]
 script = ExtResource("7_j078h")
