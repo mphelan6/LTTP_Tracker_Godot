@@ -256,10 +256,10 @@ public class SaveMonitor
 		Checks[(int)Check.Name.GANONS_TOWER_MINI_HELMASAUR_KEY_DROP]      = new Check(0x07B, 0x04);
 		Checks[(int)Check.Name.GANONS_TOWER_PREMOLDORM_CHEST]             = new Check(0x07A, 0x40);
 		Checks[(int)Check.Name.GANONS_TOWER_VALIDATION_CHEST]             = new Check(0x09A, 0x10);
-		Checks[(int)Check.Name.BOTTLE_MERCHANT]                           = new Check(0x3c9, 0x02);
-		Checks[(int)Check.Name.PURPLE_CHEST]                              = new Check(0x3c9, 0x10);
-		Checks[(int)Check.Name.LINKS_UNCLE]                               = new Check(0x3c6, 0x01);
-		Checks[(int)Check.Name.HOBO]                                      = new Check(0x3c9, 0x01);
+		Checks[(int)Check.Name.BOTTLE_MERCHANT]                           = new Check(0x3C9, 0x02);
+		Checks[(int)Check.Name.PURPLE_CHEST]                              = new Check(0x3C9, 0x10);
+		Checks[(int)Check.Name.LINKS_UNCLE]                               = new Check(0x3C6, 0x01);
+		Checks[(int)Check.Name.HOBO]                                      = new Check(0x3C9, 0x01);
 		Checks[(int)Check.Name.OLD_MAN]                                   = new Check(0x410, 0x1);
 		Checks[(int)Check.Name.KING_ZORA]                                 = new Check(0x410, 0x2);
 		Checks[(int)Check.Name.SICK_KID]                                  = new Check(0x410, 0x4);

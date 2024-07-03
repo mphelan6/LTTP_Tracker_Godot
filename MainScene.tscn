@@ -1,4 +1,4 @@
-[gd_scene load_steps=100 format=3 uid="uid://dvluees2b6vw8"]
+[gd_scene load_steps=172 format=3 uid="uid://dvluees2b6vw8"]
 
 [ext_resource type="Script" path="res://src/Initialize.cs" id="1_48g1d"]
 [ext_resource type="Script" path="res://src/MapManager.cs" id="1_rrc4k"]
@@ -69,36 +69,108 @@
 [ext_resource type="Texture2D" uid="uid://cjmdhpvmnw0oi" path="res://png/chicken.png" id="65_2ehbt"]
 [ext_resource type="Script" path="res://src/Overworld/Sprite/Blacksmith.cs" id="65_6xrrj"]
 [ext_resource type="Texture2D" uid="uid://bgfujdb8ulhoh" path="res://png/dark_chicken.png" id="66_lbpr3"]
+[ext_resource type="Texture2D" uid="uid://c4dfn1b1lykf4" path="res://png/maps/CA/B3.png" id="67_6ebva"]
+[ext_resource type="Texture2D" uid="uid://codr5eklgntty" path="res://png/maps/L1/2F.png" id="67_18k6f"]
 [ext_resource type="Script" path="res://src/GUI/Total.cs" id="67_q3dah"]
+[ext_resource type="Texture2D" uid="uid://c7sxgysmr8t2x" path="res://png/maps/CA/B2.png" id="68_0jrll"]
+[ext_resource type="Script" path="res://src/L1/L1_Boss.cs" id="68_t1mcc"]
+[ext_resource type="Script" path="res://src/L1/L1_CannonballChest.cs" id="69_me78a"]
+[ext_resource type="Texture2D" uid="uid://bj5uf4sqnxp8b" path="res://png/maps/L1/B1.png" id="69_ur0wf"]
+[ext_resource type="Texture2D" uid="uid://cswmkact8tx2" path="res://png/maps/CA/B1.png" id="69_x37ps"]
 [ext_resource type="Script" path="res://src/GUI/LightWorld.cs" id="69_xt3fx"]
 [ext_resource type="Texture2D" uid="uid://dca4cgul2qen4" path="res://png/Zelda.png" id="70_2kg5u"]
+[ext_resource type="Texture2D" uid="uid://bbab3hk1hkqn" path="res://png/maps/CA/1F.png" id="70_3tjc5"]
 [ext_resource type="Script" path="res://src/GUI/DarkWorld.cs" id="70_bwbmd"]
+[ext_resource type="Script" path="res://src/L1/L1_BigKey.cs" id="70_j6liq"]
 [ext_resource type="Texture2D" uid="uid://da8yd6vcj7s65" path="res://png/L1_boss.png" id="70_lerh2"]
 [ext_resource type="Texture2D" uid="uid://cx2e40c5xnajt" path="res://png/L2_boss.png" id="71_02cpt"]
 [ext_resource type="Script" path="res://src/GUI/CA.cs" id="71_bh2aw"]
+[ext_resource type="Script" path="res://src/L1/L1_Map.cs" id="71_cdavd"]
+[ext_resource type="Texture2D" uid="uid://cncqodevwea4a" path="res://png/maps/CA/2F.png" id="71_rhxyo"]
 [ext_resource type="Script" path="res://src/GUI/L1.cs" id="71_wj0ic"]
+[ext_resource type="Script" path="res://src/L1/L1_PotKey.cs" id="72_epqnb"]
 [ext_resource type="Texture2D" uid="uid://du2ggiirnfdvh" path="res://png/L3_boss.png" id="72_lb34s"]
 [ext_resource type="Script" path="res://src/GUI/L2.cs" id="73_qm2um"]
+[ext_resource type="Script" path="res://src/L1/L1_BigChest.cs" id="73_sid87"]
+[ext_resource type="Script" path="res://src/L1/L1_EyegoreKey.cs" id="74_u20xn"]
 [ext_resource type="Script" path="res://src/GUI/L3.cs" id="75_q4j85"]
+[ext_resource type="Script" path="res://src/L1/L1_Compass.cs" id="75_x7jyl"]
+[ext_resource type="Script" path="res://src/GUI/FloorSelectBorder.cs" id="78_a331i"]
 [ext_resource type="Texture2D" uid="uid://j168otwyprye" path="res://png/AG_boss.png" id="78_oieeo"]
+[ext_resource type="Script" path="res://src/GUI/FloorSelect.cs" id="79_tg6ot"]
 [ext_resource type="Script" path="res://src/GUI/AG.cs" id="79_tj51w"]
 [ext_resource type="Script" path="res://src/GUI/D1.cs" id="80_2o4ep"]
 [ext_resource type="Texture2D" uid="uid://bi6ad7h8varr" path="res://png/D1_boss.png" id="80_mpnm7"]
+[ext_resource type="Texture2D" uid="uid://dphvdftj4ik0c" path="res://png/L1_icon.png" id="80_qyk53"]
 [ext_resource type="Script" path="res://src/GUI/D2.cs" id="81_bjian"]
 [ext_resource type="Script" path="res://src/GUI/D3.cs" id="82_1g782"]
+[ext_resource type="Texture2D" uid="uid://dyasxcvu7oaev" path="res://png/CA_icon.png" id="82_prc6a"]
 [ext_resource type="Texture2D" uid="uid://xo7s638vu1s8" path="res://png/D2_boss.png" id="82_xmrof"]
+[ext_resource type="Texture2D" uid="uid://dpgui3sb2k4ea" path="res://png/maps/L2/1F.png" id="83_4ogbi"]
 [ext_resource type="Script" path="res://src/GUI/D4.cs" id="83_paj8b"]
 [ext_resource type="Script" path="res://src/GUI/D5.cs" id="84_a6ueb"]
+[ext_resource type="Texture2D" uid="uid://b2h8ointmn26i" path="res://png/maps/L2/2F.png" id="84_h22fc"]
 [ext_resource type="Texture2D" uid="uid://bnrij0noyxhge" path="res://png/D3_boss.png" id="84_yuppn"]
+[ext_resource type="Texture2D" uid="uid://hflm558usqv4" path="res://png/maps/L2/B1.png" id="85_c0drw"]
 [ext_resource type="Script" path="res://src/GUI/D6.cs" id="85_sl8ui"]
+[ext_resource type="Texture2D" uid="uid://cglue55oxcko4" path="res://png/maps/L3/1F.png" id="86_8o83r"]
 [ext_resource type="Texture2D" uid="uid://r1mcn0gotg5k" path="res://png/D4_boss.png" id="86_cmf7s"]
 [ext_resource type="Script" path="res://src/GUI/D7.cs" id="86_ufw87"]
 [ext_resource type="Script" path="res://src/GUI/GT.cs" id="87_7612a"]
+[ext_resource type="Texture2D" uid="uid://cpixlst3kfn28" path="res://png/maps/L3/2F.png" id="87_uttgm"]
+[ext_resource type="Texture2D" uid="uid://dt4dhma5kkny1" path="res://png/maps/L3/3F.png" id="88_4ud8h"]
 [ext_resource type="Texture2D" uid="uid://ceiu1c26ubsqs" path="res://png/D5_boss.png" id="88_woe6c"]
+[ext_resource type="Texture2D" uid="uid://bu7c7ow3nprpb" path="res://png/maps/L3/4F.png" id="89_3j3eh"]
+[ext_resource type="Texture2D" uid="uid://5s5cdxwmsoiy" path="res://png/maps/L3/5F.png" id="90_o2qkt"]
 [ext_resource type="Texture2D" uid="uid://1dpbj4ri4ph2" path="res://png/D6_boss.png" id="90_p5dt8"]
+[ext_resource type="Texture2D" uid="uid://blk7mexwfuesy" path="res://png/maps/L3/6F.png" id="91_w08ii"]
 [ext_resource type="Texture2D" uid="uid://bi2xflan3qp87" path="res://png/D7_boss.png" id="92_deoii"]
+[ext_resource type="Texture2D" uid="uid://cgdp2yrdyy4ih" path="res://png/L2_icon.png" id="92_fbabw"]
+[ext_resource type="Texture2D" uid="uid://bpilf0e5sbspx" path="res://png/maps/L3/B1.png" id="92_lojd8"]
+[ext_resource type="Texture2D" uid="uid://bliryavv87niq" path="res://png/maps/AG/2F.png" id="93_jklwa"]
+[ext_resource type="Texture2D" uid="uid://cw8vvxvphunp7" path="res://png/maps/AG/3F.png" id="94_akbly"]
 [ext_resource type="Texture2D" uid="uid://cokrh6y7txhn6" path="res://png/GT_boss.png" id="94_wo3rm"]
+[ext_resource type="Texture2D" uid="uid://cx8fv8ndobjr6" path="res://png/maps/AG/4F.png" id="95_7xnij"]
 [ext_resource type="Texture2D" uid="uid://bws5t1dnr7qdy" path="res://png/mapUI/check_collected.png" id="96_7wdpv"]
+[ext_resource type="Texture2D" uid="uid://bh20b4hrp08g6" path="res://png/maps/AG/5F.png" id="96_vaom3"]
+[ext_resource type="Texture2D" uid="uid://fno5vn54gpdm" path="res://png/maps/AG/6F.png" id="97_71x24"]
+[ext_resource type="Texture2D" uid="uid://0ewrcid4k2g7" path="res://png/maps/AG/7F.png" id="98_utvyo"]
+[ext_resource type="Texture2D" uid="uid://bv8il2i6vsoai" path="res://png/maps/D1/1F.png" id="99_8cvpl"]
+[ext_resource type="Texture2D" uid="uid://h8i76he2k4vr" path="res://png/maps/D1/B1.png" id="100_2dbxg"]
+[ext_resource type="Texture2D" uid="uid://nkekkm8hcdme" path="res://png/L3_icon.png" id="100_a0w7q"]
+[ext_resource type="Texture2D" uid="uid://bkrsyxih5dkq" path="res://png/maps/L1/1F.png" id="100_ckhcg"]
+[ext_resource type="Texture2D" uid="uid://dgxxfgocvqp8a" path="res://png/maps/D2/1F.png" id="101_h0jc0"]
+[ext_resource type="Texture2D" uid="uid://cegwe5ts0rhsi" path="res://png/crystal_icon.png" id="101_ps4k0"]
+[ext_resource type="Texture2D" uid="uid://bo2w17xj5djgj" path="res://png/maps/D2/B1.png" id="102_3xrh0"]
+[ext_resource type="Texture2D" uid="uid://bpf0i7ml3pwy1" path="res://png/maps/D2/B2.png" id="103_qvve0"]
+[ext_resource type="Texture2D" uid="uid://deuear7y113cp" path="res://png/maps/D3/B1.png" id="104_0ka0d"]
+[ext_resource type="Texture2D" uid="uid://dmeof1wt8js2s" path="res://png/maps/D3/B2.png" id="105_elpbt"]
+[ext_resource type="Texture2D" uid="uid://b602nxofpqw5x" path="res://png/maps/D4/1F.png" id="106_blohr"]
+[ext_resource type="Texture2D" uid="uid://dqcuhqj3k8xg2" path="res://png/maps/D4/B1.png" id="107_b7s5t"]
+[ext_resource type="Texture2D" uid="uid://cy64q5vles8ml" path="res://png/maps/D4/B2.png" id="108_6xjsq"]
+[ext_resource type="Texture2D" uid="uid://b68035vsr6i4y" path="res://png/maps/D5/1F.png" id="109_7y8s3"]
+[ext_resource type="Texture2D" uid="uid://cey5otdiy8qge" path="res://png/maps/D5/B1.png" id="110_evqim"]
+[ext_resource type="Texture2D" uid="uid://b46qmwsstt32h" path="res://png/maps/D5/B2.png" id="111_hgyfy"]
+[ext_resource type="Texture2D" uid="uid://bge5cvgftv2c5" path="res://png/maps/D5/B3.png" id="112_ygr4x"]
+[ext_resource type="Texture2D" uid="uid://b7dsqy05127ja" path="res://png/maps/D5/B4.png" id="113_i2xr0"]
+[ext_resource type="Texture2D" uid="uid://cpqj38ofcmaqw" path="res://png/maps/D5/B5.png" id="114_3a7ad"]
+[ext_resource type="Texture2D" uid="uid://8rhrj8ylirm3" path="res://png/maps/D5/B6.png" id="115_bomkw"]
+[ext_resource type="Texture2D" uid="uid://y8jdujj7p5ye" path="res://png/maps/D5/B7.png" id="116_ocrqp"]
+[ext_resource type="Texture2D" uid="uid://day3wvwdb84sh" path="res://png/maps/D6/1F.png" id="117_dcuwe"]
+[ext_resource type="Texture2D" uid="uid://btleukjou6loi" path="res://png/maps/D6/B1.png" id="118_0l6dy"]
+[ext_resource type="Texture2D" uid="uid://c0ngxxxglp6ka" path="res://png/maps/D6/B2.png" id="119_upwj3"]
+[ext_resource type="Texture2D" uid="uid://bp5fm3txa82dr" path="res://png/maps/D7/1F.png" id="120_nceid"]
+[ext_resource type="Texture2D" uid="uid://bowyi2cares5l" path="res://png/maps/D7/B1.png" id="121_03ekt"]
+[ext_resource type="Texture2D" uid="uid://dvrjru5psnrvr" path="res://png/maps/D7/B2.png" id="122_xk62i"]
+[ext_resource type="Texture2D" uid="uid://crbiff550kqax" path="res://png/maps/D7/B3.png" id="123_pjr1p"]
+[ext_resource type="Texture2D" uid="uid://c376exji7n41c" path="res://png/maps/GT/7F.png" id="124_a6k2m"]
+[ext_resource type="Texture2D" uid="uid://bd0aqbwo0hfmo" path="res://png/maps/GT/6F.png" id="125_y0dhq"]
+[ext_resource type="Texture2D" uid="uid://dhhx2wg3wmr6q" path="res://png/maps/GT/5F.png" id="126_svyou"]
+[ext_resource type="Texture2D" uid="uid://41d2ap3ku3ix" path="res://png/maps/GT/4F.png" id="127_ahd6y"]
+[ext_resource type="Texture2D" uid="uid://loyfid156ufa" path="res://png/maps/GT/3F.png" id="128_gapxv"]
+[ext_resource type="Texture2D" uid="uid://b1yb1wgo0s8o7" path="res://png/maps/GT/2F.png" id="129_4gm7n"]
+[ext_resource type="Texture2D" uid="uid://c0lbjdv2edjci" path="res://png/maps/GT/1F.png" id="130_j6qa7"]
+[ext_resource type="Texture2D" uid="uid://b282lnm44lgua" path="res://png/maps/GT/B1.png" id="131_cy31m"]
 
 [node name="RootNode" type="Node"]
 script = ExtResource("1_48g1d")
@@ -752,6 +824,333 @@ position = Vector2(-1456, 640)
 texture = ExtResource("3_omx3a")
 script = ExtResource("65_6xrrj")
 
+[node name="CA" type="Node2D" parent="Node"]
+visible = false
+texture_filter = 1
+
+[node name="0" type="Sprite2D" parent="Node/CA"]
+visible = false
+texture = ExtResource("71_rhxyo")
+
+[node name="1" type="Sprite2D" parent="Node/CA"]
+visible = false
+texture = ExtResource("70_3tjc5")
+
+[node name="2" type="Sprite2D" parent="Node/CA"]
+visible = false
+texture = ExtResource("69_x37ps")
+
+[node name="3" type="Sprite2D" parent="Node/CA"]
+visible = false
+texture = ExtResource("68_0jrll")
+
+[node name="4" type="Sprite2D" parent="Node/CA"]
+visible = false
+texture = ExtResource("67_6ebva")
+
+[node name="L1" type="Node2D" parent="Node"]
+visible = false
+texture_filter = 1
+
+[node name="0" type="Sprite2D" parent="Node/L1"]
+visible = false
+texture_filter = 1
+texture = ExtResource("67_18k6f")
+
+[node name="Boss" type="Sprite2D" parent="Node/L1/0" groups=["ToScaleWithCamera"]]
+position = Vector2(-640, -847)
+texture = ExtResource("3_omx3a")
+script = ExtResource("68_t1mcc")
+
+[node name="1" type="Sprite2D" parent="Node/L1"]
+visible = false
+texture_filter = 1
+texture = ExtResource("100_ckhcg")
+
+[node name="CannonballChest" type="Sprite2D" parent="Node/L1/1" groups=["ToScaleWithCamera"]]
+position = Vector2(408, 574)
+texture = ExtResource("3_omx3a")
+script = ExtResource("69_me78a")
+
+[node name="BigKey" type="Sprite2D" parent="Node/L1/1" groups=["ToScaleWithCamera"]]
+position = Vector2(-120, 414)
+texture = ExtResource("3_omx3a")
+script = ExtResource("70_j6liq")
+
+[node name="Map" type="Sprite2D" parent="Node/L1/1" groups=["ToScaleWithCamera"]]
+position = Vector2(952, 142)
+texture = ExtResource("3_omx3a")
+script = ExtResource("71_cdavd")
+
+[node name="PotKey" type="Sprite2D" parent="Node/L1/1" groups=["ToScaleWithCamera"]]
+position = Vector2(968, 380)
+texture = ExtResource("3_omx3a")
+script = ExtResource("72_epqnb")
+
+[node name="BigChest" type="Sprite2D" parent="Node/L1/1" groups=["ToScaleWithCamera"]]
+position = Vector2(256, -11)
+texture = ExtResource("3_omx3a")
+script = ExtResource("73_sid87")
+
+[node name="EyegoreKey" type="Sprite2D" parent="Node/L1/1" groups=["ToScaleWithCamera"]]
+position = Vector2(280, -363)
+texture = ExtResource("3_omx3a")
+script = ExtResource("74_u20xn")
+
+[node name="Compass" type="Sprite2D" parent="Node/L1/1" groups=["ToScaleWithCamera"]]
+position = Vector2(-400, -155)
+texture = ExtResource("3_omx3a")
+script = ExtResource("75_x7jyl")
+
+[node name="2" type="Sprite2D" parent="Node/L1"]
+visible = false
+texture_filter = 1
+texture = ExtResource("69_ur0wf")
+
+[node name="L2" type="Node2D" parent="Node"]
+visible = false
+texture_filter = 1
+
+[node name="0" type="Sprite2D" parent="Node/L2"]
+texture = ExtResource("84_h22fc")
+
+[node name="1" type="Sprite2D" parent="Node/L2"]
+texture = ExtResource("83_4ogbi")
+
+[node name="2" type="Sprite2D" parent="Node/L2"]
+texture = ExtResource("85_c0drw")
+
+[node name="L3" type="Node2D" parent="Node"]
+visible = false
+texture_filter = 1
+
+[node name="0" type="Sprite2D" parent="Node/L3"]
+visible = false
+position = Vector2(152, -56)
+texture = ExtResource("91_w08ii")
+
+[node name="1" type="Sprite2D" parent="Node/L3"]
+visible = false
+position = Vector2(152, -56)
+texture = ExtResource("90_o2qkt")
+
+[node name="2" type="Sprite2D" parent="Node/L3"]
+visible = false
+position = Vector2(152, -56)
+texture = ExtResource("89_3j3eh")
+
+[node name="3" type="Sprite2D" parent="Node/L3"]
+visible = false
+position = Vector2(152, -56)
+texture = ExtResource("88_4ud8h")
+
+[node name="4" type="Sprite2D" parent="Node/L3"]
+visible = false
+position = Vector2(152, -56)
+texture = ExtResource("87_uttgm")
+
+[node name="5" type="Sprite2D" parent="Node/L3"]
+visible = false
+position = Vector2(152, -56)
+texture = ExtResource("86_8o83r")
+
+[node name="6" type="Sprite2D" parent="Node/L3"]
+visible = false
+position = Vector2(152, -56)
+texture = ExtResource("92_lojd8")
+
+[node name="AG" type="Node2D" parent="Node"]
+visible = false
+texture_filter = 1
+
+[node name="0" type="Sprite2D" parent="Node/AG"]
+visible = false
+texture = ExtResource("98_utvyo")
+
+[node name="1" type="Sprite2D" parent="Node/AG"]
+visible = false
+texture = ExtResource("97_71x24")
+
+[node name="2" type="Sprite2D" parent="Node/AG"]
+visible = false
+texture = ExtResource("96_vaom3")
+
+[node name="3" type="Sprite2D" parent="Node/AG"]
+visible = false
+texture = ExtResource("95_7xnij")
+
+[node name="4" type="Sprite2D" parent="Node/AG"]
+visible = false
+texture = ExtResource("94_akbly")
+
+[node name="5" type="Sprite2D" parent="Node/AG"]
+visible = false
+texture = ExtResource("93_jklwa")
+
+[node name="D1" type="Node2D" parent="Node"]
+visible = false
+texture_filter = 1
+
+[node name="0" type="Sprite2D" parent="Node/D1"]
+visible = false
+texture = ExtResource("99_8cvpl")
+
+[node name="1" type="Sprite2D" parent="Node/D1"]
+visible = false
+texture = ExtResource("100_2dbxg")
+
+[node name="D2" type="Node2D" parent="Node"]
+visible = false
+texture_filter = 1
+
+[node name="0" type="Sprite2D" parent="Node/D2"]
+visible = false
+texture = ExtResource("101_h0jc0")
+
+[node name="1" type="Sprite2D" parent="Node/D2"]
+visible = false
+texture = ExtResource("102_3xrh0")
+
+[node name="2" type="Sprite2D" parent="Node/D2"]
+visible = false
+texture = ExtResource("103_qvve0")
+
+[node name="D3" type="Node2D" parent="Node"]
+visible = false
+texture_filter = 1
+
+[node name="0" type="Sprite2D" parent="Node/D3"]
+visible = false
+texture = ExtResource("104_0ka0d")
+
+[node name="1" type="Sprite2D" parent="Node/D3"]
+visible = false
+texture = ExtResource("105_elpbt")
+
+[node name="D4" type="Node2D" parent="Node"]
+visible = false
+texture_filter = 1
+
+[node name="0" type="Sprite2D" parent="Node/D4"]
+visible = false
+texture = ExtResource("106_blohr")
+
+[node name="1" type="Sprite2D" parent="Node/D4"]
+visible = false
+texture = ExtResource("107_b7s5t")
+
+[node name="2" type="Sprite2D" parent="Node/D4"]
+visible = false
+texture = ExtResource("108_6xjsq")
+
+[node name="D5" type="Node2D" parent="Node"]
+visible = false
+texture_filter = 1
+
+[node name="0" type="Sprite2D" parent="Node/D5"]
+visible = false
+texture = ExtResource("109_7y8s3")
+
+[node name="1" type="Sprite2D" parent="Node/D5"]
+visible = false
+texture = ExtResource("110_evqim")
+
+[node name="2" type="Sprite2D" parent="Node/D5"]
+visible = false
+texture = ExtResource("111_hgyfy")
+
+[node name="3" type="Sprite2D" parent="Node/D5"]
+visible = false
+texture = ExtResource("112_ygr4x")
+
+[node name="4" type="Sprite2D" parent="Node/D5"]
+visible = false
+texture = ExtResource("113_i2xr0")
+
+[node name="5" type="Sprite2D" parent="Node/D5"]
+visible = false
+texture = ExtResource("114_3a7ad")
+
+[node name="6" type="Sprite2D" parent="Node/D5"]
+visible = false
+texture = ExtResource("115_bomkw")
+
+[node name="7" type="Sprite2D" parent="Node/D5"]
+visible = false
+texture = ExtResource("116_ocrqp")
+
+[node name="D6" type="Node2D" parent="Node"]
+visible = false
+texture_filter = 1
+
+[node name="0" type="Sprite2D" parent="Node/D6"]
+visible = false
+texture = ExtResource("117_dcuwe")
+
+[node name="1" type="Sprite2D" parent="Node/D6"]
+visible = false
+texture = ExtResource("118_0l6dy")
+
+[node name="2" type="Sprite2D" parent="Node/D6"]
+visible = false
+texture = ExtResource("119_upwj3")
+
+[node name="D7" type="Node2D" parent="Node"]
+visible = false
+texture_filter = 1
+
+[node name="0" type="Sprite2D" parent="Node/D7"]
+visible = false
+texture = ExtResource("120_nceid")
+
+[node name="1" type="Sprite2D" parent="Node/D7"]
+visible = false
+texture = ExtResource("121_03ekt")
+
+[node name="2" type="Sprite2D" parent="Node/D7"]
+visible = false
+texture = ExtResource("122_xk62i")
+
+[node name="3" type="Sprite2D" parent="Node/D7"]
+visible = false
+texture = ExtResource("123_pjr1p")
+
+[node name="GT" type="Node2D" parent="Node"]
+visible = false
+texture_filter = 1
+
+[node name="0" type="Sprite2D" parent="Node/GT"]
+visible = false
+texture = ExtResource("124_a6k2m")
+
+[node name="1" type="Sprite2D" parent="Node/GT"]
+visible = false
+texture = ExtResource("125_y0dhq")
+
+[node name="2" type="Sprite2D" parent="Node/GT"]
+visible = false
+texture = ExtResource("126_svyou")
+
+[node name="3" type="Sprite2D" parent="Node/GT"]
+visible = false
+texture = ExtResource("127_ahd6y")
+
+[node name="4" type="Sprite2D" parent="Node/GT"]
+visible = false
+texture = ExtResource("128_gapxv")
+
+[node name="5" type="Sprite2D" parent="Node/GT"]
+visible = false
+texture = ExtResource("129_4gm7n")
+
+[node name="6" type="Sprite2D" parent="Node/GT"]
+visible = false
+texture = ExtResource("130_j6qa7")
+
+[node name="7" type="Sprite2D" parent="Node/GT"]
+visible = false
+texture = ExtResource("131_cy31m")
+
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Control" type="Control" parent="CanvasLayer"]
@@ -764,17 +1163,37 @@ metadata/_edit_use_anchors_ = true
 [node name="MenuBorder" type="ColorRect" parent="CanvasLayer/Control"]
 texture_filter = 1
 layout_mode = 0
-offset_right = 168.0
+offset_right = 208.0
 offset_bottom = 608.0
 color = Color(0.266575, 0.266575, 0.266575, 1)
+
+[node name="FloorSelectBorder" type="ColorRect" parent="CanvasLayer/Control/MenuBorder"]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = 208.0
+offset_right = 344.0
+offset_bottom = 56.0
+color = Color(0.266575, 0.266575, 0.266575, 1)
+script = ExtResource("78_a331i")
+
+[node name="FloorSelect" type="OptionButton" parent="CanvasLayer/Control/MenuBorder/FloorSelectBorder"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 128.0
+offset_bottom = 48.0
+theme_override_font_sizes/font_size = 14
+script = ExtResource("79_tg6ot")
 
 [node name="MapSelect" type="OptionButton" parent="CanvasLayer/Control/MenuBorder"]
 layout_mode = 0
 offset_left = 8.0
 offset_top = 8.0
-offset_right = 161.0
+offset_right = 176.0
 offset_bottom = 48.0
-item_count = 2
+theme_override_font_sizes/font_size = 14
+item_count = 15
 selected = 0
 popup/item_0/text = "Light World"
 popup/item_0/icon = ExtResource("65_2ehbt")
@@ -782,6 +1201,45 @@ popup/item_0/id = 0
 popup/item_1/text = "Dark World"
 popup/item_1/icon = ExtResource("66_lbpr3")
 popup/item_1/id = 1
+popup/item_2/text = "Hyrule Castle"
+popup/item_2/icon = ExtResource("82_prc6a")
+popup/item_2/id = 2
+popup/item_3/text = "Eastern Palace"
+popup/item_3/icon = ExtResource("80_qyk53")
+popup/item_3/id = 3
+popup/item_4/text = "Desert Palace"
+popup/item_4/icon = ExtResource("92_fbabw")
+popup/item_4/id = 4
+popup/item_5/text = "Tower of Hera"
+popup/item_5/icon = ExtResource("100_a0w7q")
+popup/item_5/id = 5
+popup/item_6/text = "Agahnim's Tower"
+popup/item_6/icon = ExtResource("82_prc6a")
+popup/item_6/id = 6
+popup/item_7/text = "Palace of Darkness"
+popup/item_7/icon = ExtResource("101_ps4k0")
+popup/item_7/id = 7
+popup/item_8/text = "Swamp Palace"
+popup/item_8/icon = ExtResource("101_ps4k0")
+popup/item_8/id = 8
+popup/item_9/text = "Skull Woods"
+popup/item_9/icon = ExtResource("101_ps4k0")
+popup/item_9/id = 9
+popup/item_10/text = "Thieve's Town"
+popup/item_10/icon = ExtResource("101_ps4k0")
+popup/item_10/id = 10
+popup/item_11/text = "Ice Palace"
+popup/item_11/icon = ExtResource("101_ps4k0")
+popup/item_11/id = 11
+popup/item_12/text = "Misery Mire"
+popup/item_12/icon = ExtResource("101_ps4k0")
+popup/item_12/id = 12
+popup/item_13/text = "Turtle Rock"
+popup/item_13/icon = ExtResource("101_ps4k0")
+popup/item_13/id = 13
+popup/item_14/text = "Ganon's Tower"
+popup/item_14/icon = ExtResource("82_prc6a")
+popup/item_14/id = 14
 
 [node name="LW" type="TextureRect" parent="CanvasLayer/Control/MenuBorder"]
 layout_mode = 0
@@ -796,9 +1254,9 @@ layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_left = 90.0
+offset_left = 110.0
 offset_top = -11.5
-offset_right = 150.0
+offset_right = 170.0
 offset_bottom = 11.5
 grow_vertical = 2
 text = "0 / 0"
@@ -833,9 +1291,9 @@ layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_left = 90.0
+offset_left = 110.0
 offset_top = -11.5
-offset_right = 150.0
+offset_right = 170.0
 offset_bottom = 11.5
 grow_vertical = 2
 text = "0 / 0"
@@ -857,6 +1315,7 @@ text = "DW :"
 vertical_alignment = 1
 
 [node name="CA" type="TextureRect" parent="CanvasLayer/Control/MenuBorder"]
+layout_mode = 0
 offset_left = 8.0
 offset_top = 120.0
 offset_right = 40.0
@@ -869,9 +1328,9 @@ layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_left = 90.0
+offset_left = 110.0
 offset_top = -11.5
-offset_right = 150.0
+offset_right = 170.0
 offset_bottom = 11.5
 grow_vertical = 2
 text = "0 / 0"
@@ -906,9 +1365,9 @@ layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_left = 90.0
+offset_left = 110.0
 offset_top = -11.5
-offset_right = 150.0
+offset_right = 170.0
 offset_bottom = 11.5
 grow_vertical = 2
 text = "0 / 0"
@@ -943,9 +1402,9 @@ layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_left = 90.0
+offset_left = 110.0
 offset_top = -11.5
-offset_right = 150.0
+offset_right = 170.0
 offset_bottom = 11.5
 grow_vertical = 2
 text = "0 / 0"
@@ -980,9 +1439,9 @@ layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_left = 90.0
+offset_left = 110.0
 offset_top = -11.5
-offset_right = 150.0
+offset_right = 170.0
 offset_bottom = 11.5
 grow_vertical = 2
 text = "0 / 0"
@@ -1004,6 +1463,7 @@ text = "L3   :"
 vertical_alignment = 1
 
 [node name="AG" type="TextureRect" parent="CanvasLayer/Control/MenuBorder"]
+layout_mode = 0
 offset_left = 8.0
 offset_top = 248.0
 offset_right = 40.0
@@ -1016,9 +1476,9 @@ layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_left = 90.0
+offset_left = 110.0
 offset_top = -11.5
-offset_right = 150.0
+offset_right = 170.0
 offset_bottom = 11.5
 grow_vertical = 2
 text = "0 / 0"
@@ -1040,6 +1500,7 @@ text = "AG  :"
 vertical_alignment = 1
 
 [node name="D1" type="TextureRect" parent="CanvasLayer/Control/MenuBorder"]
+layout_mode = 0
 offset_left = 8.0
 offset_top = 280.0
 offset_right = 40.0
@@ -1052,9 +1513,9 @@ layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_left = 90.0
+offset_left = 110.0
 offset_top = -11.5
-offset_right = 150.0
+offset_right = 170.0
 offset_bottom = 11.5
 grow_vertical = 2
 text = "0 / 0"
@@ -1076,6 +1537,7 @@ text = "D1  :"
 vertical_alignment = 1
 
 [node name="D2" type="TextureRect" parent="CanvasLayer/Control/MenuBorder"]
+layout_mode = 0
 offset_left = 8.0
 offset_top = 312.0
 offset_right = 40.0
@@ -1088,9 +1550,9 @@ layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_left = 90.0
+offset_left = 110.0
 offset_top = -11.5
-offset_right = 150.0
+offset_right = 170.0
 offset_bottom = 11.5
 grow_vertical = 2
 text = "0 / 0"
@@ -1112,6 +1574,7 @@ text = "D2  :"
 vertical_alignment = 1
 
 [node name="D3" type="TextureRect" parent="CanvasLayer/Control/MenuBorder"]
+layout_mode = 0
 offset_left = 8.0
 offset_top = 344.0
 offset_right = 40.0
@@ -1124,9 +1587,9 @@ layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_left = 90.0
+offset_left = 110.0
 offset_top = -11.5
-offset_right = 150.0
+offset_right = 170.0
 offset_bottom = 11.5
 grow_vertical = 2
 text = "0 / 0"
@@ -1148,6 +1611,7 @@ text = "D3  :"
 vertical_alignment = 1
 
 [node name="D4" type="TextureRect" parent="CanvasLayer/Control/MenuBorder"]
+layout_mode = 0
 offset_left = 8.0
 offset_top = 376.0
 offset_right = 40.0
@@ -1160,9 +1624,9 @@ layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_left = 90.0
+offset_left = 110.0
 offset_top = -11.5
-offset_right = 150.0
+offset_right = 170.0
 offset_bottom = 11.5
 grow_vertical = 2
 text = "0 / 0"
@@ -1184,6 +1648,7 @@ text = "D4  :"
 vertical_alignment = 1
 
 [node name="D5" type="TextureRect" parent="CanvasLayer/Control/MenuBorder"]
+layout_mode = 0
 offset_left = 8.0
 offset_top = 408.0
 offset_right = 40.0
@@ -1196,9 +1661,9 @@ layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_left = 90.0
+offset_left = 110.0
 offset_top = -11.5
-offset_right = 150.0
+offset_right = 170.0
 offset_bottom = 11.5
 grow_vertical = 2
 text = "0 / 0"
@@ -1220,6 +1685,7 @@ text = "D5  :"
 vertical_alignment = 1
 
 [node name="D6" type="TextureRect" parent="CanvasLayer/Control/MenuBorder"]
+layout_mode = 0
 offset_left = 8.0
 offset_top = 440.0
 offset_right = 40.0
@@ -1232,9 +1698,9 @@ layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_left = 90.0
+offset_left = 110.0
 offset_top = -11.5
-offset_right = 150.0
+offset_right = 170.0
 offset_bottom = 11.5
 grow_vertical = 2
 text = "0 / 0"
@@ -1256,6 +1722,7 @@ text = "D6  :"
 vertical_alignment = 1
 
 [node name="D7" type="TextureRect" parent="CanvasLayer/Control/MenuBorder"]
+layout_mode = 0
 offset_left = 8.0
 offset_top = 472.0
 offset_right = 40.0
@@ -1268,9 +1735,9 @@ layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_left = 90.0
+offset_left = 110.0
 offset_top = -11.5
-offset_right = 150.0
+offset_right = 170.0
 offset_bottom = 11.5
 grow_vertical = 2
 text = "0 / 0"
@@ -1292,6 +1759,7 @@ text = "D7  :"
 vertical_alignment = 1
 
 [node name="GT" type="TextureRect" parent="CanvasLayer/Control/MenuBorder"]
+layout_mode = 0
 offset_left = 8.0
 offset_top = 504.0
 offset_right = 40.0
@@ -1304,9 +1772,9 @@ layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_left = 90.0
+offset_left = 110.0
 offset_top = -11.5
-offset_right = 150.0
+offset_right = 170.0
 offset_bottom = 11.5
 grow_vertical = 2
 text = "0 / 0"
@@ -1328,6 +1796,7 @@ text = "GT  :"
 vertical_alignment = 1
 
 [node name="Total" type="TextureRect" parent="CanvasLayer/Control/MenuBorder"]
+layout_mode = 0
 offset_left = 8.0
 offset_top = 568.0
 offset_right = 40.0
@@ -1340,9 +1809,9 @@ layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_left = 90.0
+offset_left = 100.0
 offset_top = -11.5
-offset_right = 150.0
+offset_right = 160.0
 offset_bottom = 11.5
 grow_vertical = 2
 text = "0 / 0"
@@ -1366,4 +1835,7 @@ vertical_alignment = 1
 [node name="Camera2D" type="Camera2D" parent="."]
 script = ExtResource("7_j078h")
 
+[connection signal="item_selected" from="CanvasLayer/Control/MenuBorder/FloorSelectBorder/FloorSelect" to="Node" method="_on_floor_select_item_selected"]
 [connection signal="item_selected" from="CanvasLayer/Control/MenuBorder/MapSelect" to="Node" method="_on_map_select_item_selected"]
+[connection signal="item_selected" from="CanvasLayer/Control/MenuBorder/MapSelect" to="CanvasLayer/Control/MenuBorder/FloorSelectBorder" method="_on_map_select_item_selected"]
+[connection signal="item_selected" from="CanvasLayer/Control/MenuBorder/MapSelect" to="CanvasLayer/Control/MenuBorder/FloorSelectBorder/FloorSelect" method="_on_map_select_item_selected"]
