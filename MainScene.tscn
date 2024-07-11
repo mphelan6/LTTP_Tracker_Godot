@@ -1,4 +1,4 @@
-[gd_scene load_steps=233 format=3 uid="uid://dvluees2b6vw8"]
+[gd_scene load_steps=253 format=3 uid="uid://dvluees2b6vw8"]
 
 [ext_resource type="Script" path="res://src/Initialize.cs" id="1_48g1d"]
 [ext_resource type="Script" path="res://src/MapManager.cs" id="1_rrc4k"]
@@ -232,6 +232,26 @@
 [ext_resource type="Script" path="res://src/D2/D2_FloodedRoomRight.cs" id="173_t34lb"]
 [ext_resource type="Script" path="res://src/D2/D2_FloodedRoomLeft.cs" id="174_xdt3e"]
 [ext_resource type="Script" path="res://src/D2/D2_WaterfallRoom.cs" id="176_n6kxd"]
+[ext_resource type="Script" path="res://src/D3/D3_BigChest.cs" id="178_ep2l6"]
+[ext_resource type="Script" path="res://src/D3/D3_Boss.cs" id="179_ne0ie"]
+[ext_resource type="Script" path="res://src/D3/D3_MapChest.cs" id="179_raagw"]
+[ext_resource type="Script" path="res://src/D3/D3_PotPrison.cs" id="180_10fpj"]
+[ext_resource type="Script" path="res://src/D3/D3_Pinball.cs" id="181_2tbec"]
+[ext_resource type="Script" path="res://src/D3/D3_Compass.cs" id="182_2lp1c"]
+[ext_resource type="Script" path="res://src/D3/D3_BigKeyChest.cs" id="183_g1bpo"]
+[ext_resource type="Script" path="res://src/D3/D3_WestLobby.cs" id="184_gfisu"]
+[ext_resource type="Script" path="res://src/D3/D3_BridgeKeyChest.cs" id="185_rgv1w"]
+[ext_resource type="Script" path="res://src/D3/D3_GibdoKey.cs" id="186_b7max"]
+[ext_resource type="Script" path="res://src/D4/D4_Attic.cs" id="190_gnm6l"]
+[ext_resource type="Script" path="res://src/D4/D4_Boss.cs" id="192_78bvg"]
+[ext_resource type="Script" path="res://src/D4/D4_HallwayPot.cs" id="193_q2ki2"]
+[ext_resource type="Script" path="res://src/D4/D4_MapChest.cs" id="194_3es4k"]
+[ext_resource type="Script" path="res://src/D4/D4_BigKeyChest.cs" id="195_47quc"]
+[ext_resource type="Script" path="res://src/D4/D4_Compass.cs" id="196_u007j"]
+[ext_resource type="Script" path="res://src/D4/D4_Ambush.cs" id="197_fh0gs"]
+[ext_resource type="Script" path="res://src/D4/D4_SpikeSwitch.cs" id="198_4bl2x"]
+[ext_resource type="Script" path="res://src/D4/D4_BlindChest.cs" id="199_ydvjc"]
+[ext_resource type="Script" path="res://src/D4/D4_BigChest.cs" id="200_u2j3t"]
 
 [node name="RootNode" type="Node"]
 script = ExtResource("1_48g1d")
@@ -1428,7 +1448,7 @@ texture = ExtResource("97_71x24")
 [node name="2" type="Sprite2D" parent="Node/AG"]
 texture = ExtResource("96_vaom3")
 
-[node name="GuardDrop" type="Sprite2D" parent="Node/AG/2"]
+[node name="GuardDrop" type="Sprite2D" parent="Node/AG/2" groups=["ToScaleWithCamera"]]
 position = Vector2(-140, 373)
 texture = ExtResource("3_omx3a")
 script = ExtResource("136_aim5o")
@@ -1437,7 +1457,7 @@ script = ExtResource("136_aim5o")
 visible = false
 texture = ExtResource("95_7xnij")
 
-[node name="DarkArcher" type="Sprite2D" parent="Node/AG/3"]
+[node name="DarkArcher" type="Sprite2D" parent="Node/AG/3" groups=["ToScaleWithCamera"]]
 position = Vector2(53, 163)
 texture = ExtResource("3_omx3a")
 script = ExtResource("138_lf43u")
@@ -1446,7 +1466,7 @@ script = ExtResource("138_lf43u")
 visible = false
 texture = ExtResource("94_akbly")
 
-[node name="DarkMaze" type="Sprite2D" parent="Node/AG/4"]
+[node name="DarkMaze" type="Sprite2D" parent="Node/AG/4" groups=["ToScaleWithCamera"]]
 position = Vector2(-217, 203)
 texture = ExtResource("3_omx3a")
 script = ExtResource("140_oulmg")
@@ -1455,7 +1475,7 @@ script = ExtResource("140_oulmg")
 visible = false
 texture = ExtResource("93_jklwa")
 
-[node name="Room03" type="Sprite2D" parent="Node/AG/5"]
+[node name="Room03" type="Sprite2D" parent="Node/AG/5" groups=["ToScaleWithCamera"]]
 position = Vector2(169, 174)
 texture = ExtResource("3_omx3a")
 script = ExtResource("142_0b05a")
@@ -1469,47 +1489,47 @@ position = Vector2(2, 0)
 visible = false
 texture = ExtResource("99_8cvpl")
 
-[node name="BigKeyChest" type="Sprite2D" parent="Node/D1/0"]
+[node name="BigKeyChest" type="Sprite2D" parent="Node/D1/0" groups=["ToScaleWithCamera"]]
 position = Vector2(-19, 398)
 texture = ExtResource("3_omx3a")
 script = ExtResource("144_lt3mk")
 
-[node name="MapChest" type="Sprite2D" parent="Node/D1/0"]
+[node name="MapChest" type="Sprite2D" parent="Node/D1/0" groups=["ToScaleWithCamera"]]
 position = Vector2(363, 139)
 texture = ExtResource("3_omx3a")
 script = ExtResource("145_qwk1t")
 
-[node name="ArenaLedge" type="Sprite2D" parent="Node/D1/0"]
+[node name="ArenaLedge" type="Sprite2D" parent="Node/D1/0" groups=["ToScaleWithCamera"]]
 position = Vector2(182, 100)
 texture = ExtResource("3_omx3a")
 script = ExtResource("146_y7k17")
 
-[node name="ArenaBridge" type="Sprite2D" parent="Node/D1/0"]
+[node name="ArenaBridge" type="Sprite2D" parent="Node/D1/0" groups=["ToScaleWithCamera"]]
 position = Vector2(103, 91)
 texture = ExtResource("3_omx3a")
 script = ExtResource("147_1rxt6")
 
-[node name="Compass" type="Sprite2D" parent="Node/D1/0"]
+[node name="Compass" type="Sprite2D" parent="Node/D1/0" groups=["ToScaleWithCamera"]]
 position = Vector2(107, -642)
 texture = ExtResource("3_omx3a")
 script = ExtResource("148_n6exf")
 
-[node name="BigChest" type="Sprite2D" parent="Node/D1/0"]
+[node name="BigChest" type="Sprite2D" parent="Node/D1/0" groups=["ToScaleWithCamera"]]
 position = Vector2(-200, -521)
 texture = ExtResource("3_omx3a")
 script = ExtResource("149_un6y5")
 
-[node name="DarkMazeTop" type="Sprite2D" parent="Node/D1/0"]
+[node name="DarkMazeTop" type="Sprite2D" parent="Node/D1/0" groups=["ToScaleWithCamera"]]
 position = Vector2(-512, -699)
 texture = ExtResource("3_omx3a")
 script = ExtResource("150_h863b")
 
-[node name="DarkMazeBottom" type="Sprite2D" parent="Node/D1/0"]
+[node name="DarkMazeBottom" type="Sprite2D" parent="Node/D1/0" groups=["ToScaleWithCamera"]]
 position = Vector2(-332, -349)
 texture = ExtResource("3_omx3a")
 script = ExtResource("151_e65pb")
 
-[node name="Hallway" type="Sprite2D" parent="Node/D1/0"]
+[node name="Hallway" type="Sprite2D" parent="Node/D1/0" groups=["ToScaleWithCamera"]]
 position = Vector2(46, -393)
 texture = ExtResource("3_omx3a")
 script = ExtResource("152_vsk7p")
@@ -1517,27 +1537,27 @@ script = ExtResource("152_vsk7p")
 [node name="1" type="Sprite2D" parent="Node/D1"]
 texture = ExtResource("100_2dbxg")
 
-[node name="Boss" type="Sprite2D" parent="Node/D1/1"]
+[node name="Boss" type="Sprite2D" parent="Node/D1/1" groups=["ToScaleWithCamera"]]
 position = Vector2(99, -966)
 texture = ExtResource("3_omx3a")
 script = ExtResource("154_p6jiq")
 
-[node name="BasementLeft" type="Sprite2D" parent="Node/D1/1"]
+[node name="BasementLeft" type="Sprite2D" parent="Node/D1/1" groups=["ToScaleWithCamera"]]
 position = Vector2(39, -403)
 texture = ExtResource("3_omx3a")
 script = ExtResource("155_mk0rw")
 
-[node name="BasementRight" type="Sprite2D" parent="Node/D1/1"]
+[node name="BasementRight" type="Sprite2D" parent="Node/D1/1" groups=["ToScaleWithCamera"]]
 position = Vector2(184, -401)
 texture = ExtResource("3_omx3a")
 script = ExtResource("156_otjc7")
 
-[node name="StalfosBasement" type="Sprite2D" parent="Node/D1/1"]
+[node name="StalfosBasement" type="Sprite2D" parent="Node/D1/1" groups=["ToScaleWithCamera"]]
 position = Vector2(-24, 438)
 texture = ExtResource("3_omx3a")
 script = ExtResource("157_46n3i")
 
-[node name="ShooterRoom" type="Sprite2D" parent="Node/D1/1"]
+[node name="ShooterRoom" type="Sprite2D" parent="Node/D1/1" groups=["ToScaleWithCamera"]]
 position = Vector2(-72, 942)
 texture = ExtResource("3_omx3a")
 script = ExtResource("158_cdh86")
@@ -1550,7 +1570,7 @@ texture_filter = 1
 visible = false
 texture = ExtResource("101_h0jc0")
 
-[node name="Entrance" type="Sprite2D" parent="Node/D2/0"]
+[node name="Entrance" type="Sprite2D" parent="Node/D2/0" groups=["ToScaleWithCamera"]]
 position = Vector2(935, 348)
 texture = ExtResource("3_omx3a")
 script = ExtResource("160_5fly1")
@@ -1559,57 +1579,57 @@ script = ExtResource("160_5fly1")
 visible = false
 texture = ExtResource("102_3xrh0")
 
-[node name="BigChest" type="Sprite2D" parent="Node/D2/1"]
+[node name="BigChest" type="Sprite2D" parent="Node/D2/1" groups=["ToScaleWithCamera"]]
 position = Vector2(-24, 472)
 texture = ExtResource("3_omx3a")
 script = ExtResource("162_bn1pj")
 
-[node name="MapChest" type="Sprite2D" parent="Node/D2/1"]
+[node name="MapChest" type="Sprite2D" parent="Node/D2/1" groups=["ToScaleWithCamera"]]
 position = Vector2(556, 378)
 texture = ExtResource("3_omx3a")
 script = ExtResource("163_rx3mt")
 
-[node name="BigKeyChest" type="Sprite2D" parent="Node/D2/1"]
+[node name="BigKeyChest" type="Sprite2D" parent="Node/D2/1" groups=["ToScaleWithCamera"]]
 position = Vector2(-594, 382)
 texture = ExtResource("3_omx3a")
 script = ExtResource("164_de267")
 
-[node name="PotRowPotKey" type="Sprite2D" parent="Node/D2/1"]
+[node name="PotRowPotKey" type="Sprite2D" parent="Node/D2/1" groups=["ToScaleWithCamera"]]
 position = Vector2(901, 569)
 texture = ExtResource("3_omx3a")
 script = ExtResource("165_vfa8y")
 
-[node name="Compass" type="Sprite2D" parent="Node/D2/1"]
+[node name="Compass" type="Sprite2D" parent="Node/D2/1" groups=["ToScaleWithCamera"]]
 position = Vector2(-155, 843)
 texture = ExtResource("3_omx3a")
 script = ExtResource("165_fw0y4")
 
-[node name="HookshotPot" type="Sprite2D" parent="Node/D2/1"]
+[node name="HookshotPot" type="Sprite2D" parent="Node/D2/1" groups=["ToScaleWithCamera"]]
 position = Vector2(189, 512)
 texture = ExtResource("3_omx3a")
 script = ExtResource("167_2uhf8")
 
-[node name="Trench1" type="Sprite2D" parent="Node/D2/1"]
+[node name="Trench1" type="Sprite2D" parent="Node/D2/1" groups=["ToScaleWithCamera"]]
 position = Vector2(487, 352)
 texture = ExtResource("3_omx3a")
 script = ExtResource("166_40g7f")
 
-[node name="WaterfallPot" type="Sprite2D" parent="Node/D2/1"]
+[node name="WaterfallPot" type="Sprite2D" parent="Node/D2/1" groups=["ToScaleWithCamera"]]
 position = Vector2(183, -460)
 texture = ExtResource("3_omx3a")
 script = ExtResource("169_8k5mu")
 
-[node name="Boss" type="Sprite2D" parent="Node/D2/1"]
+[node name="Boss" type="Sprite2D" parent="Node/D2/1" groups=["ToScaleWithCamera"]]
 position = Vector2(-157, -943)
 texture = ExtResource("3_omx3a")
 script = ExtResource("166_wuu35")
 
-[node name="Trench2" type="Sprite2D" parent="Node/D2/1"]
+[node name="Trench2" type="Sprite2D" parent="Node/D2/1" groups=["ToScaleWithCamera"]]
 position = Vector2(-539, 350)
 texture = ExtResource("3_omx3a")
 script = ExtResource("168_2cdhm")
 
-[node name="WestChest" type="Sprite2D" parent="Node/D2/1"]
+[node name="WestChest" type="Sprite2D" parent="Node/D2/1" groups=["ToScaleWithCamera"]]
 position = Vector2(-1104, 383)
 texture = ExtResource("3_omx3a")
 script = ExtResource("171_2svvi")
@@ -1618,17 +1638,17 @@ script = ExtResource("171_2svvi")
 visible = false
 texture = ExtResource("103_qvve0")
 
-[node name="FloodedRoomRight" type="Sprite2D" parent="Node/D2/2"]
+[node name="FloodedRoomRight" type="Sprite2D" parent="Node/D2/2" groups=["ToScaleWithCamera"]]
 position = Vector2(117, 76)
 texture = ExtResource("3_omx3a")
 script = ExtResource("173_t34lb")
 
-[node name="FloodedRoomLeft" type="Sprite2D" parent="Node/D2/2"]
+[node name="FloodedRoomLeft" type="Sprite2D" parent="Node/D2/2" groups=["ToScaleWithCamera"]]
 position = Vector2(70, 76)
 texture = ExtResource("3_omx3a")
 script = ExtResource("174_xdt3e")
 
-[node name="WaterfallRoom" type="Sprite2D" parent="Node/D2/2"]
+[node name="WaterfallRoom" type="Sprite2D" parent="Node/D2/2" groups=["ToScaleWithCamera"]]
 position = Vector2(8, -387)
 texture = ExtResource("3_omx3a")
 script = ExtResource("176_n6kxd")
@@ -1641,9 +1661,59 @@ texture_filter = 1
 visible = false
 texture = ExtResource("104_0ka0d")
 
+[node name="BigChest" type="Sprite2D" parent="Node/D3/0" groups=["ToScaleWithCamera"]]
+position = Vector2(623, 598)
+texture = ExtResource("3_omx3a")
+script = ExtResource("178_ep2l6")
+
+[node name="MapChest" type="Sprite2D" parent="Node/D3/0" groups=["ToScaleWithCamera"]]
+position = Vector2(947, 573)
+texture = ExtResource("3_omx3a")
+script = ExtResource("179_raagw")
+
+[node name="PotPrison" type="Sprite2D" parent="Node/D3/0" groups=["ToScaleWithCamera"]]
+position = Vector2(295, 572)
+texture = ExtResource("3_omx3a")
+script = ExtResource("180_10fpj")
+
+[node name="Pinball" type="Sprite2D" parent="Node/D3/0" groups=["ToScaleWithCamera"]]
+position = Vector2(758, 988)
+texture = ExtResource("3_omx3a")
+script = ExtResource("181_2tbec")
+
+[node name="Compass" type="Sprite2D" parent="Node/D3/0" groups=["ToScaleWithCamera"]]
+position = Vector2(372, 990)
+texture = ExtResource("3_omx3a")
+script = ExtResource("182_2lp1c")
+
+[node name="BigKeyChest" type="Sprite2D" parent="Node/D3/0" groups=["ToScaleWithCamera"]]
+position = Vector2(119, 367)
+texture = ExtResource("3_omx3a")
+script = ExtResource("183_g1bpo")
+
+[node name="WestLobby" type="Sprite2D" parent="Node/D3/0" groups=["ToScaleWithCamera"]]
+position = Vector2(-474, 577)
+texture = ExtResource("3_omx3a")
+script = ExtResource("184_gfisu")
+
+[node name="BridgeKeyChest" type="Sprite2D" parent="Node/D3/0" groups=["ToScaleWithCamera"]]
+position = Vector2(-872, 109)
+texture = ExtResource("3_omx3a")
+script = ExtResource("185_rgv1w")
+
+[node name="GibdoKey" type="Sprite2D" parent="Node/D3/0" groups=["ToScaleWithCamera"]]
+position = Vector2(-951, -949)
+texture = ExtResource("3_omx3a")
+script = ExtResource("186_b7max")
+
 [node name="1" type="Sprite2D" parent="Node/D3"]
 visible = false
 texture = ExtResource("105_elpbt")
+
+[node name="Boss" type="Sprite2D" parent="Node/D3/1" groups=["ToScaleWithCamera"]]
+position = Vector2(-649, -934)
+texture = ExtResource("3_omx3a")
+script = ExtResource("179_ne0ie")
 
 [node name="D4" type="Node2D" parent="Node"]
 visible = false
@@ -1653,13 +1723,63 @@ texture_filter = 1
 visible = false
 texture = ExtResource("106_blohr")
 
+[node name="Attic" type="Sprite2D" parent="Node/D4/0" groups=["ToScaleWithCamera"]]
+position = Vector2(291, -706)
+texture = ExtResource("3_omx3a")
+script = ExtResource("190_gnm6l")
+
 [node name="1" type="Sprite2D" parent="Node/D4"]
 visible = false
 texture = ExtResource("107_b7s5t")
 
+[node name="Boss" type="Sprite2D" parent="Node/D4/1" groups=["ToScaleWithCamera"]]
+position = Vector2(364, -667)
+texture = ExtResource("3_omx3a")
+script = ExtResource("192_78bvg")
+
+[node name="HallwayPot" type="Sprite2D" parent="Node/D4/1" groups=["ToScaleWithCamera"]]
+position = Vector2(398, -446)
+texture = ExtResource("3_omx3a")
+script = ExtResource("193_q2ki2")
+
+[node name="MapChest" type="Sprite2D" parent="Node/D4/1" groups=["ToScaleWithCamera"]]
+position = Vector2(-397, 669)
+texture = ExtResource("3_omx3a")
+script = ExtResource("194_3es4k")
+
+[node name="BigKeyChest" type="Sprite2D" parent="Node/D4/1" groups=["ToScaleWithCamera"]]
+position = Vector2(-129, 863)
+texture = ExtResource("3_omx3a")
+script = ExtResource("195_47quc")
+
+[node name="Compass" type="Sprite2D" parent="Node/D4/1" groups=["ToScaleWithCamera"]]
+position = Vector2(174, 808)
+texture = ExtResource("3_omx3a")
+script = ExtResource("196_u007j")
+
+[node name="Ambush" type="Sprite2D" parent="Node/D4/1" groups=["ToScaleWithCamera"]]
+position = Vector2(-338, 295)
+texture = ExtResource("3_omx3a")
+script = ExtResource("197_fh0gs")
+
+[node name="SpikeSwitch" type="Sprite2D" parent="Node/D4/1"]
+position = Vector2(-440, -650)
+texture = ExtResource("3_omx3a")
+script = ExtResource("198_4bl2x")
+
 [node name="2" type="Sprite2D" parent="Node/D4"]
 visible = false
 texture = ExtResource("108_6xjsq")
+
+[node name="BlindChest" type="Sprite2D" parent="Node/D4/2" groups=["ToScaleWithCamera"]]
+position = Vector2(423, -429)
+texture = ExtResource("3_omx3a")
+script = ExtResource("199_ydvjc")
+
+[node name="BigChest" type="Sprite2D" parent="Node/D4/2" groups=["ToScaleWithCamera"]]
+position = Vector2(-405, -144)
+texture = ExtResource("3_omx3a")
+script = ExtResource("200_u2j3t")
 
 [node name="D5" type="Node2D" parent="Node"]
 visible = false
@@ -1843,7 +1963,7 @@ popup/item_8/id = 8
 popup/item_9/text = "Skull Woods"
 popup/item_9/icon = ExtResource("101_ps4k0")
 popup/item_9/id = 9
-popup/item_10/text = "Thieve's Town"
+popup/item_10/text = "Thieves' Town"
 popup/item_10/icon = ExtResource("101_ps4k0")
 popup/item_10/id = 10
 popup/item_11/text = "Ice Palace"
