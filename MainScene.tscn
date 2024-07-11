@@ -1,4 +1,4 @@
-[gd_scene load_steps=204 format=3 uid="uid://dvluees2b6vw8"]
+[gd_scene load_steps=219 format=3 uid="uid://dvluees2b6vw8"]
 
 [ext_resource type="Script" path="res://src/Initialize.cs" id="1_48g1d"]
 [ext_resource type="Script" path="res://src/MapManager.cs" id="1_rrc4k"]
@@ -203,6 +203,21 @@
 [ext_resource type="Script" path="res://src/AG/AG_DarkArcher.cs" id="138_lf43u"]
 [ext_resource type="Script" path="res://src/AG/AG_DarkMaze.cs" id="140_oulmg"]
 [ext_resource type="Script" path="res://src/AG/AG_Room03.cs" id="142_0b05a"]
+[ext_resource type="Script" path="res://src/D1/D1_BigKeyChest.cs" id="144_lt3mk"]
+[ext_resource type="Script" path="res://src/D1/D1_MapChest.cs" id="145_qwk1t"]
+[ext_resource type="Script" path="res://src/D1/D1_ArenaLedge.cs" id="146_y7k17"]
+[ext_resource type="Script" path="res://src/D1/D1_ArenaBridge.cs" id="147_1rxt6"]
+[ext_resource type="Script" path="res://src/D1/D1_Compass.cs" id="148_n6exf"]
+[ext_resource type="Script" path="res://src/D1/D1_BigChest.cs" id="149_un6y5"]
+[ext_resource type="Script" path="res://src/D1/D1_DarkMazeTop.cs" id="150_h863b"]
+[ext_resource type="Script" path="res://src/D1/D1_DarkMazeBottom.cs" id="151_e65pb"]
+[ext_resource type="Script" path="res://src/D1/D1_Hallway.cs" id="152_vsk7p"]
+[ext_resource type="Script" path="res://src/D1/D1_Boss.cs" id="154_p6jiq"]
+[ext_resource type="Script" path="res://src/D1/D1_BasementLeft.cs" id="155_mk0rw"]
+[ext_resource type="Script" path="res://src/D1/D1_BasementRight.cs" id="156_otjc7"]
+[ext_resource type="Script" path="res://src/D1/D1_StalfosBasement.cs" id="157_46n3i"]
+[ext_resource type="Script" path="res://src/D1/D1_ShooterRoom.cs" id="158_cdh86"]
+[ext_resource type="Script" path="res://src/D2/D2_Entrance.cs" id="160_5fly1"]
 
 [node name="RootNode" type="Node"]
 script = ExtResource("1_48g1d")
@@ -1456,14 +1471,84 @@ script = ExtResource("142_0b05a")
 [node name="D1" type="Node2D" parent="Node"]
 visible = false
 texture_filter = 1
+position = Vector2(2, 0)
 
 [node name="0" type="Sprite2D" parent="Node/D1"]
 visible = false
 texture = ExtResource("99_8cvpl")
 
+[node name="BigKeyChest" type="Sprite2D" parent="Node/D1/0"]
+position = Vector2(-19, 398)
+texture = ExtResource("3_omx3a")
+script = ExtResource("144_lt3mk")
+
+[node name="MapChest" type="Sprite2D" parent="Node/D1/0"]
+position = Vector2(363, 139)
+texture = ExtResource("3_omx3a")
+script = ExtResource("145_qwk1t")
+
+[node name="ArenaLedge" type="Sprite2D" parent="Node/D1/0"]
+position = Vector2(182, 100)
+texture = ExtResource("3_omx3a")
+script = ExtResource("146_y7k17")
+
+[node name="ArenaBridge" type="Sprite2D" parent="Node/D1/0"]
+position = Vector2(103, 91)
+texture = ExtResource("3_omx3a")
+script = ExtResource("147_1rxt6")
+
+[node name="Compass" type="Sprite2D" parent="Node/D1/0"]
+position = Vector2(107, -642)
+texture = ExtResource("3_omx3a")
+script = ExtResource("148_n6exf")
+
+[node name="BigChest" type="Sprite2D" parent="Node/D1/0"]
+position = Vector2(-200, -521)
+texture = ExtResource("3_omx3a")
+script = ExtResource("149_un6y5")
+
+[node name="DarkMazeTop" type="Sprite2D" parent="Node/D1/0"]
+position = Vector2(-512, -699)
+texture = ExtResource("3_omx3a")
+script = ExtResource("150_h863b")
+
+[node name="DarkMazeBottom" type="Sprite2D" parent="Node/D1/0"]
+position = Vector2(-332, -349)
+texture = ExtResource("3_omx3a")
+script = ExtResource("151_e65pb")
+
+[node name="Hallway" type="Sprite2D" parent="Node/D1/0"]
+position = Vector2(46, -393)
+texture = ExtResource("3_omx3a")
+script = ExtResource("152_vsk7p")
+
 [node name="1" type="Sprite2D" parent="Node/D1"]
-visible = false
 texture = ExtResource("100_2dbxg")
+
+[node name="Boss" type="Sprite2D" parent="Node/D1/1"]
+position = Vector2(99, -966)
+texture = ExtResource("3_omx3a")
+script = ExtResource("154_p6jiq")
+
+[node name="BasementLeft" type="Sprite2D" parent="Node/D1/1"]
+position = Vector2(39, -403)
+texture = ExtResource("3_omx3a")
+script = ExtResource("155_mk0rw")
+
+[node name="BasementRight" type="Sprite2D" parent="Node/D1/1"]
+position = Vector2(184, -401)
+texture = ExtResource("3_omx3a")
+script = ExtResource("156_otjc7")
+
+[node name="StalfosBasement" type="Sprite2D" parent="Node/D1/1"]
+position = Vector2(-24, 438)
+texture = ExtResource("3_omx3a")
+script = ExtResource("157_46n3i")
+
+[node name="ShooterRoom" type="Sprite2D" parent="Node/D1/1"]
+position = Vector2(-72, 942)
+texture = ExtResource("3_omx3a")
+script = ExtResource("158_cdh86")
 
 [node name="D2" type="Node2D" parent="Node"]
 visible = false
@@ -1472,6 +1557,11 @@ texture_filter = 1
 [node name="0" type="Sprite2D" parent="Node/D2"]
 visible = false
 texture = ExtResource("101_h0jc0")
+
+[node name="Entrance" type="Sprite2D" parent="Node/D2/0"]
+position = Vector2(935, 348)
+texture = ExtResource("3_omx3a")
+script = ExtResource("160_5fly1")
 
 [node name="1" type="Sprite2D" parent="Node/D2"]
 visible = false
@@ -1618,7 +1708,6 @@ visible = false
 texture = ExtResource("131_cy31m")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-visible = false
 
 [node name="Control" type="Control" parent="CanvasLayer"]
 layout_mode = 3
