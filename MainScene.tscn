@@ -1,4 +1,4 @@
-[gd_scene load_steps=226 format=3 uid="uid://dvluees2b6vw8"]
+[gd_scene load_steps=233 format=3 uid="uid://dvluees2b6vw8"]
 
 [ext_resource type="Script" path="res://src/Initialize.cs" id="1_48g1d"]
 [ext_resource type="Script" path="res://src/MapManager.cs" id="1_rrc4k"]
@@ -222,9 +222,16 @@
 [ext_resource type="Script" path="res://src/D2/D2_MapChest.cs" id="163_rx3mt"]
 [ext_resource type="Script" path="res://src/D2/D2_BigKeyChest.cs" id="164_de267"]
 [ext_resource type="Script" path="res://src/D2/D2_Compass.cs" id="165_fw0y4"]
+[ext_resource type="Script" path="res://src/D2/D2_PotRowPotKey.cs" id="165_vfa8y"]
 [ext_resource type="Script" path="res://src/D2/D2_Trench1.cs" id="166_40g7f"]
 [ext_resource type="Script" path="res://src/D2/D2_Boss.cs" id="166_wuu35"]
+[ext_resource type="Script" path="res://src/D2/D2_HookshotPot.cs" id="167_2uhf8"]
 [ext_resource type="Script" path="res://src/D2/D2_Trench2.cs" id="168_2cdhm"]
+[ext_resource type="Script" path="res://src/D2/D2_WaterfallPot.cs" id="169_8k5mu"]
+[ext_resource type="Script" path="res://src/D2/D2_WestChest.cs" id="171_2svvi"]
+[ext_resource type="Script" path="res://src/D2/D2_FloodedRoomRight.cs" id="173_t34lb"]
+[ext_resource type="Script" path="res://src/D2/D2_FloodedRoomLeft.cs" id="174_xdt3e"]
+[ext_resource type="Script" path="res://src/D2/D2_WaterfallRoom.cs" id="176_n6kxd"]
 
 [node name="RootNode" type="Node"]
 script = ExtResource("1_48g1d")
@@ -233,12 +240,11 @@ script = ExtResource("1_48g1d")
 script = ExtResource("1_rrc4k")
 
 [node name="LightWorld" type="Sprite2D" parent="Node"]
-visible = false
 texture_filter = 1
 texture = ExtResource("2_ch5ax")
 
 [node name="Shop" type="Sprite2D" parent="Node/LightWorld" groups=["ToScaleWithCamera"]]
-position = Vector2(1496, -1436)
+position = Vector2(1456, -1491)
 texture = ExtResource("48_6tg7r")
 
 [node name="Shop2" type="Sprite2D" parent="Node/LightWorld" groups=["ToScaleWithCamera"]]
@@ -641,28 +647,6 @@ script = ExtResource("44_781lj")
 position = Vector2(1408, -1705)
 texture = ExtResource("3_omx3a")
 script = ExtResource("45_dbsqt")
-
-[node name="ParadoxCave" type="Sprite2D" parent="Node/LightWorld" groups=["ToScaleWithCamera"]]
-position = Vector2(1456, -1487)
-texture = ExtResource("6_w28mg")
-
-[node name="Label" type="Label" parent="Node/LightWorld/ParadoxCave"]
-texture_filter = 2
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -52.5
-offset_top = -31.5
-offset_right = -19.5
-offset_bottom = -8.5
-grow_horizontal = 2
-grow_vertical = 2
-text = "0 / 0"
-horizontal_alignment = 1
-vertical_alignment = 1
-script = ExtResource("46_r1m8n")
 
 [node name="ParadoxCave2" type="Sprite2D" parent="Node/LightWorld" groups=["ToScaleWithCamera"]]
 position = Vector2(1488, -1203)
@@ -1559,6 +1543,7 @@ texture = ExtResource("3_omx3a")
 script = ExtResource("158_cdh86")
 
 [node name="D2" type="Node2D" parent="Node"]
+visible = false
 texture_filter = 1
 
 [node name="0" type="Sprite2D" parent="Node/D2"]
@@ -1571,6 +1556,7 @@ texture = ExtResource("3_omx3a")
 script = ExtResource("160_5fly1")
 
 [node name="1" type="Sprite2D" parent="Node/D2"]
+visible = false
 texture = ExtResource("102_3xrh0")
 
 [node name="BigChest" type="Sprite2D" parent="Node/D2/1"]
@@ -1588,27 +1574,30 @@ position = Vector2(-594, 382)
 texture = ExtResource("3_omx3a")
 script = ExtResource("164_de267")
 
-[node name="NotCollected" type="Sprite2D" parent="Node/D2/1"]
+[node name="PotRowPotKey" type="Sprite2D" parent="Node/D2/1"]
 position = Vector2(901, 569)
 texture = ExtResource("3_omx3a")
+script = ExtResource("165_vfa8y")
 
 [node name="Compass" type="Sprite2D" parent="Node/D2/1"]
 position = Vector2(-155, 843)
 texture = ExtResource("3_omx3a")
 script = ExtResource("165_fw0y4")
 
-[node name="NotCollected2" type="Sprite2D" parent="Node/D2/1"]
+[node name="HookshotPot" type="Sprite2D" parent="Node/D2/1"]
 position = Vector2(189, 512)
 texture = ExtResource("3_omx3a")
+script = ExtResource("167_2uhf8")
 
 [node name="Trench1" type="Sprite2D" parent="Node/D2/1"]
 position = Vector2(487, 352)
 texture = ExtResource("3_omx3a")
 script = ExtResource("166_40g7f")
 
-[node name="NotCollected4" type="Sprite2D" parent="Node/D2/1"]
+[node name="WaterfallPot" type="Sprite2D" parent="Node/D2/1"]
 position = Vector2(183, -460)
 texture = ExtResource("3_omx3a")
+script = ExtResource("169_8k5mu")
 
 [node name="Boss" type="Sprite2D" parent="Node/D2/1"]
 position = Vector2(-157, -943)
@@ -1620,25 +1609,29 @@ position = Vector2(-539, 350)
 texture = ExtResource("3_omx3a")
 script = ExtResource("168_2cdhm")
 
-[node name="NotCollected6" type="Sprite2D" parent="Node/D2/1"]
+[node name="WestChest" type="Sprite2D" parent="Node/D2/1"]
 position = Vector2(-1104, 383)
 texture = ExtResource("3_omx3a")
+script = ExtResource("171_2svvi")
 
 [node name="2" type="Sprite2D" parent="Node/D2"]
 visible = false
 texture = ExtResource("103_qvve0")
 
-[node name="NotCollected" type="Sprite2D" parent="Node/D2/2"]
+[node name="FloodedRoomRight" type="Sprite2D" parent="Node/D2/2"]
 position = Vector2(117, 76)
 texture = ExtResource("3_omx3a")
+script = ExtResource("173_t34lb")
 
-[node name="NotCollected2" type="Sprite2D" parent="Node/D2/2"]
+[node name="FloodedRoomLeft" type="Sprite2D" parent="Node/D2/2"]
 position = Vector2(70, 76)
 texture = ExtResource("3_omx3a")
+script = ExtResource("174_xdt3e")
 
-[node name="NotCollected3" type="Sprite2D" parent="Node/D2/2"]
-position = Vector2(6, -389)
+[node name="WaterfallRoom" type="Sprite2D" parent="Node/D2/2"]
+position = Vector2(8, -387)
 texture = ExtResource("3_omx3a")
+script = ExtResource("176_n6kxd")
 
 [node name="D3" type="Node2D" parent="Node"]
 visible = false
@@ -1777,7 +1770,6 @@ visible = false
 texture = ExtResource("131_cy31m")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-visible = false
 
 [node name="Control" type="Control" parent="CanvasLayer"]
 layout_mode = 3
