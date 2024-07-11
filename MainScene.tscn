@@ -1,4 +1,4 @@
-[gd_scene load_steps=200 format=3 uid="uid://dvluees2b6vw8"]
+[gd_scene load_steps=204 format=3 uid="uid://dvluees2b6vw8"]
 
 [ext_resource type="Script" path="res://src/Initialize.cs" id="1_48g1d"]
 [ext_resource type="Script" path="res://src/MapManager.cs" id="1_rrc4k"]
@@ -199,6 +199,10 @@
 [ext_resource type="Texture2D" uid="uid://b1yb1wgo0s8o7" path="res://png/maps/GT/2F.png" id="129_4gm7n"]
 [ext_resource type="Texture2D" uid="uid://c0lbjdv2edjci" path="res://png/maps/GT/1F.png" id="130_j6qa7"]
 [ext_resource type="Texture2D" uid="uid://b282lnm44lgua" path="res://png/maps/GT/B1.png" id="131_cy31m"]
+[ext_resource type="Script" path="res://src/AG/AG_GuardDrop.cs" id="136_aim5o"]
+[ext_resource type="Script" path="res://src/AG/AG_DarkArcher.cs" id="138_lf43u"]
+[ext_resource type="Script" path="res://src/AG/AG_DarkMaze.cs" id="140_oulmg"]
+[ext_resource type="Script" path="res://src/AG/AG_Room03.cs" id="142_0b05a"]
 
 [node name="RootNode" type="Node"]
 script = ExtResource("1_48g1d")
@@ -207,7 +211,6 @@ script = ExtResource("1_48g1d")
 script = ExtResource("1_rrc4k")
 
 [node name="LightWorld" type="Sprite2D" parent="Node"]
-visible = false
 texture_filter = 1
 texture = ExtResource("2_ch5ax")
 
@@ -734,7 +737,31 @@ horizontal_alignment = 1
 vertical_alignment = 1
 script = ExtResource("75_q4j85")
 
+[node name="AG" type="Sprite2D" parent="Node/LightWorld" groups=["ToScaleWithCamera"]]
+position = Vector2(0, -444)
+texture = ExtResource("9_apfwn")
+
+[node name="Label" type="Label" parent="Node/LightWorld/AG"]
+texture_filter = 2
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -52.5
+offset_top = -31.5
+offset_right = -19.5
+offset_bottom = -8.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "0 / 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("79_tj51w")
+
 [node name="DarkWorld" type="Sprite2D" parent="Node"]
+visible = false
 texture_filter = 1
 texture = ExtResource("2_adpej")
 
@@ -923,6 +950,190 @@ position = Vector2(-1456, 640)
 texture = ExtResource("3_omx3a")
 script = ExtResource("65_6xrrj")
 
+[node name="D1" type="Sprite2D" parent="Node/DarkWorld" groups=["ToScaleWithCamera"]]
+position = Vector2(1880, -476)
+texture = ExtResource("9_apfwn")
+
+[node name="Label" type="Label" parent="Node/DarkWorld/D1"]
+texture_filter = 2
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -52.5
+offset_top = -31.5
+offset_right = -19.5
+offset_bottom = -8.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "0 / 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("80_2o4ep")
+
+[node name="D2" type="Sprite2D" parent="Node/DarkWorld" groups=["ToScaleWithCamera"]]
+position = Vector2(-128, 1750)
+texture = ExtResource("9_apfwn")
+
+[node name="Label" type="Label" parent="Node/DarkWorld/D2"]
+texture_filter = 2
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -52.5
+offset_top = -31.5
+offset_right = -19.5
+offset_bottom = -8.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "0 / 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("81_bjian")
+
+[node name="D3" type="Sprite2D" parent="Node/DarkWorld" groups=["ToScaleWithCamera"]]
+position = Vector2(-1888, -1804)
+texture = ExtResource("9_apfwn")
+
+[node name="Label" type="Label" parent="Node/DarkWorld/D3"]
+texture_filter = 2
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -52.5
+offset_top = -31.5
+offset_right = -19.5
+offset_bottom = -8.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "0 / 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("82_1g782")
+
+[node name="D4" type="Sprite2D" parent="Node/DarkWorld" groups=["ToScaleWithCamera"]]
+position = Vector2(-1536, -93)
+texture = ExtResource("9_apfwn")
+
+[node name="Label" type="Label" parent="Node/DarkWorld/D4"]
+texture_filter = 2
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -52.5
+offset_top = -31.5
+offset_right = -19.5
+offset_bottom = -8.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "0 / 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("83_paj8b")
+
+[node name="D5" type="Sprite2D" parent="Node/DarkWorld" groups=["ToScaleWithCamera"]]
+position = Vector2(1216, 1453)
+texture = ExtResource("9_apfwn")
+
+[node name="Label" type="Label" parent="Node/DarkWorld/D5"]
+texture_filter = 2
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -52.5
+offset_top = -31.5
+offset_right = -19.5
+offset_bottom = -8.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "0 / 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("84_a6ueb")
+
+[node name="D6" type="Sprite2D" parent="Node/DarkWorld" groups=["ToScaleWithCamera"]]
+position = Vector2(-1744, 1215)
+texture = ExtResource("9_apfwn")
+
+[node name="Label" type="Label" parent="Node/DarkWorld/D6"]
+texture_filter = 2
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -52.5
+offset_top = -31.5
+offset_right = -19.5
+offset_bottom = -8.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "0 / 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("85_sl8ui")
+
+[node name="D7" type="Sprite2D" parent="Node/DarkWorld" groups=["ToScaleWithCamera"]]
+position = Vector2(1808, -1755)
+texture = ExtResource("9_apfwn")
+
+[node name="Label" type="Label" parent="Node/DarkWorld/D7"]
+texture_filter = 2
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -52.5
+offset_top = -31.5
+offset_right = -19.5
+offset_bottom = -8.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "0 / 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("86_ufw87")
+
+[node name="GT" type="Sprite2D" parent="Node/DarkWorld" groups=["ToScaleWithCamera"]]
+position = Vector2(256, -1895)
+texture = ExtResource("9_apfwn")
+
+[node name="Label" type="Label" parent="Node/DarkWorld/GT"]
+texture_filter = 2
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -52.5
+offset_top = -31.5
+offset_right = -19.5
+offset_bottom = -8.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "0 / 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("87_7612a")
+
 [node name="CA" type="Node2D" parent="Node"]
 visible = false
 texture_filter = 1
@@ -1073,17 +1284,17 @@ texture_filter = 1
 visible = false
 texture = ExtResource("84_h22fc")
 
-[node name="TilesPot2" type="Sprite2D" parent="Node/L2/0"]
+[node name="TilesPot2" type="Sprite2D" parent="Node/L2/0" groups=["ToScaleWithCamera"]]
 position = Vector2(181, -446)
 texture = ExtResource("3_omx3a")
 script = ExtResource("99_x1axr")
 
-[node name="BeamosKeyPot" type="Sprite2D" parent="Node/L2/0"]
+[node name="BeamosKeyPot" type="Sprite2D" parent="Node/L2/0" groups=["ToScaleWithCamera"]]
 position = Vector2(132, -79)
 texture = ExtResource("3_omx3a")
 script = ExtResource("100_b1yys")
 
-[node name="Boss" type="Sprite2D" parent="Node/L2/0"]
+[node name="Boss" type="Sprite2D" parent="Node/L2/0" groups=["ToScaleWithCamera"]]
 position = Vector2(-123, -931)
 texture = ExtResource("3_omx3a")
 script = ExtResource("101_cj7w3")
@@ -1092,7 +1303,7 @@ script = ExtResource("101_cj7w3")
 visible = false
 texture = ExtResource("83_4ogbi")
 
-[node name="TilesPot1" type="Sprite2D" parent="Node/L2/1"]
+[node name="TilesPot1" type="Sprite2D" parent="Node/L2/1" groups=["ToScaleWithCamera"]]
 position = Vector2(-181, -60)
 texture = ExtResource("3_omx3a")
 script = ExtResource("103_57l4m")
@@ -1101,27 +1312,27 @@ script = ExtResource("103_57l4m")
 visible = false
 texture = ExtResource("85_c0drw")
 
-[node name="Compass" type="Sprite2D" parent="Node/L2/2"]
+[node name="Compass" type="Sprite2D" parent="Node/L2/2" groups=["ToScaleWithCamera"]]
 position = Vector2(620, 846)
 texture = ExtResource("3_omx3a")
 script = ExtResource("101_5e861")
 
-[node name="BigKey" type="Sprite2D" parent="Node/L2/2"]
+[node name="BigKey" type="Sprite2D" parent="Node/L2/2" groups=["ToScaleWithCamera"]]
 position = Vector2(622, 333)
 texture = ExtResource("3_omx3a")
 script = ExtResource("106_8nq7c")
 
-[node name="MapChest" type="Sprite2D" parent="Node/L2/2"]
+[node name="MapChest" type="Sprite2D" parent="Node/L2/2" groups=["ToScaleWithCamera"]]
 position = Vector2(-20, 373)
 texture = ExtResource("3_omx3a")
 script = ExtResource("107_xqi5t")
 
-[node name="TorchKey" type="Sprite2D" parent="Node/L2/2"]
+[node name="TorchKey" type="Sprite2D" parent="Node/L2/2" groups=["ToScaleWithCamera"]]
 position = Vector2(-424, 364)
 texture = ExtResource("3_omx3a")
 script = ExtResource("108_3tvgg")
 
-[node name="BigChest" type="Sprite2D" parent="Node/L2/2"]
+[node name="BigChest" type="Sprite2D" parent="Node/L2/2" groups=["ToScaleWithCamera"]]
 position = Vector2(-660, 367)
 texture = ExtResource("3_omx3a")
 script = ExtResource("109_bptng")
@@ -1135,7 +1346,7 @@ visible = false
 position = Vector2(152, -56)
 texture = ExtResource("91_w08ii")
 
-[node name="Boss" type="Sprite2D" parent="Node/L3/0"]
+[node name="Boss" type="Sprite2D" parent="Node/L3/0" groups=["ToScaleWithCamera"]]
 position = Vector2(2, -38)
 texture = ExtResource("3_omx3a")
 script = ExtResource("102_weukm")
@@ -1150,12 +1361,12 @@ visible = false
 position = Vector2(152, -56)
 texture = ExtResource("89_3j3eh")
 
-[node name="Compass" type="Sprite2D" parent="Node/L3/2"]
+[node name="Compass" type="Sprite2D" parent="Node/L3/2" groups=["ToScaleWithCamera"]]
 position = Vector2(-20, 30)
 texture = ExtResource("3_omx3a")
 script = ExtResource("105_qprj1")
 
-[node name="BigChest" type="Sprite2D" parent="Node/L3/2"]
+[node name="BigChest" type="Sprite2D" parent="Node/L3/2" groups=["ToScaleWithCamera"]]
 position = Vector2(-20, -183)
 texture = ExtResource("3_omx3a")
 script = ExtResource("106_do3at")
@@ -1170,7 +1381,7 @@ visible = false
 position = Vector2(152, -56)
 texture = ExtResource("87_uttgm")
 
-[node name="MapChest" type="Sprite2D" parent="Node/L3/4"]
+[node name="MapChest" type="Sprite2D" parent="Node/L3/4" groups=["ToScaleWithCamera"]]
 position = Vector2(-22, -137)
 texture = ExtResource("3_omx3a")
 script = ExtResource("109_0cb0y")
@@ -1180,12 +1391,12 @@ visible = false
 position = Vector2(152, -56)
 texture = ExtResource("86_8o83r")
 
-[node name="KeyInCage" type="Sprite2D" parent="Node/L3/5"]
+[node name="KeyInCage" type="Sprite2D" parent="Node/L3/5" groups=["ToScaleWithCamera"]]
 position = Vector2(-100, 161)
 texture = ExtResource("3_omx3a")
 script = ExtResource("111_5ffmv")
 
-[node name="BigKey" type="Sprite2D" parent="Node/L3/5"]
+[node name="BigKey" type="Sprite2D" parent="Node/L3/5" groups=["ToScaleWithCamera"]]
 position = Vector2(151, 156)
 texture = ExtResource("3_omx3a")
 script = ExtResource("112_culc2")
@@ -1208,20 +1419,39 @@ visible = false
 texture = ExtResource("97_71x24")
 
 [node name="2" type="Sprite2D" parent="Node/AG"]
-visible = false
 texture = ExtResource("96_vaom3")
+
+[node name="GuardDrop" type="Sprite2D" parent="Node/AG/2"]
+position = Vector2(-140, 373)
+texture = ExtResource("3_omx3a")
+script = ExtResource("136_aim5o")
 
 [node name="3" type="Sprite2D" parent="Node/AG"]
 visible = false
 texture = ExtResource("95_7xnij")
 
+[node name="DarkArcher" type="Sprite2D" parent="Node/AG/3"]
+position = Vector2(53, 163)
+texture = ExtResource("3_omx3a")
+script = ExtResource("138_lf43u")
+
 [node name="4" type="Sprite2D" parent="Node/AG"]
 visible = false
 texture = ExtResource("94_akbly")
 
+[node name="DarkMaze" type="Sprite2D" parent="Node/AG/4"]
+position = Vector2(-217, 203)
+texture = ExtResource("3_omx3a")
+script = ExtResource("140_oulmg")
+
 [node name="5" type="Sprite2D" parent="Node/AG"]
 visible = false
 texture = ExtResource("93_jklwa")
+
+[node name="Room03" type="Sprite2D" parent="Node/AG/5"]
+position = Vector2(169, 174)
+texture = ExtResource("3_omx3a")
+script = ExtResource("142_0b05a")
 
 [node name="D1" type="Node2D" parent="Node"]
 visible = false
@@ -1388,6 +1618,7 @@ visible = false
 texture = ExtResource("131_cy31m")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="Control" type="Control" parent="CanvasLayer"]
 layout_mode = 3
