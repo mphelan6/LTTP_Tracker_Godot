@@ -1,4 +1,4 @@
-[gd_scene load_steps=172 format=3 uid="uid://dvluees2b6vw8"]
+[gd_scene load_steps=200 format=3 uid="uid://dvluees2b6vw8"]
 
 [ext_resource type="Script" path="res://src/Initialize.cs" id="1_48g1d"]
 [ext_resource type="Script" path="res://src/MapManager.cs" id="1_rrc4k"]
@@ -11,6 +11,7 @@
 [ext_resource type="Script" path="res://src/Overworld/Label/SecretPassage.cs" id="7_q3ihe"]
 [ext_resource type="Script" path="res://src/Overworld/Label/HyruleCastle.cs" id="8_ptjtw"]
 [ext_resource type="Script" path="res://src/Overworld/Sprite/SickKid.cs" id="9_1exji"]
+[ext_resource type="Texture2D" uid="uid://cm581y5esneru" path="res://png/mapUI/dungeon_label.png" id="9_apfwn"]
 [ext_resource type="Script" path="res://src/Overworld/Sprite/MazeRace.cs" id="10_cowyx"]
 [ext_resource type="Script" path="res://src/Overworld/Sprite/BottleMerchant.cs" id="10_v3jxg"]
 [ext_resource type="Script" path="res://src/Overworld/Label/KakWell.cs" id="11_qte54"]
@@ -74,6 +75,7 @@
 [ext_resource type="Script" path="res://src/GUI/Total.cs" id="67_q3dah"]
 [ext_resource type="Texture2D" uid="uid://c7sxgysmr8t2x" path="res://png/maps/CA/B2.png" id="68_0jrll"]
 [ext_resource type="Script" path="res://src/L1/L1_Boss.cs" id="68_t1mcc"]
+[ext_resource type="Script" path="res://src/CA/CA_Sanctuary.cs" id="69_k1vdy"]
 [ext_resource type="Script" path="res://src/L1/L1_CannonballChest.cs" id="69_me78a"]
 [ext_resource type="Texture2D" uid="uid://bj5uf4sqnxp8b" path="res://png/maps/L1/B1.png" id="69_ur0wf"]
 [ext_resource type="Texture2D" uid="uid://cswmkact8tx2" path="res://png/maps/CA/B1.png" id="69_x37ps"]
@@ -84,22 +86,31 @@
 [ext_resource type="Script" path="res://src/L1/L1_BigKey.cs" id="70_j6liq"]
 [ext_resource type="Texture2D" uid="uid://da8yd6vcj7s65" path="res://png/L1_boss.png" id="70_lerh2"]
 [ext_resource type="Texture2D" uid="uid://cx2e40c5xnajt" path="res://png/L2_boss.png" id="71_02cpt"]
+[ext_resource type="Script" path="res://src/CA/CA_MapChest.cs" id="71_8nght"]
 [ext_resource type="Script" path="res://src/GUI/CA.cs" id="71_bh2aw"]
 [ext_resource type="Script" path="res://src/L1/L1_Map.cs" id="71_cdavd"]
 [ext_resource type="Texture2D" uid="uid://cncqodevwea4a" path="res://png/maps/CA/2F.png" id="71_rhxyo"]
 [ext_resource type="Script" path="res://src/GUI/L1.cs" id="71_wj0ic"]
 [ext_resource type="Script" path="res://src/L1/L1_PotKey.cs" id="72_epqnb"]
 [ext_resource type="Texture2D" uid="uid://du2ggiirnfdvh" path="res://png/L3_boss.png" id="72_lb34s"]
+[ext_resource type="Script" path="res://src/CA/CA_MapGuard.cs" id="72_yhpgv"]
+[ext_resource type="Script" path="res://src/CA/CA_Boomerang.cs" id="73_7lpch"]
 [ext_resource type="Script" path="res://src/GUI/L2.cs" id="73_qm2um"]
 [ext_resource type="Script" path="res://src/L1/L1_BigChest.cs" id="73_sid87"]
 [ext_resource type="Script" path="res://src/L1/L1_EyegoreKey.cs" id="74_u20xn"]
+[ext_resource type="Script" path="res://src/CA/CA_BoomerangGuard.cs" id="74_wxna7"]
 [ext_resource type="Script" path="res://src/GUI/L3.cs" id="75_q4j85"]
 [ext_resource type="Script" path="res://src/L1/L1_Compass.cs" id="75_x7jyl"]
+[ext_resource type="Script" path="res://src/CA/CA_S_DarkCross.cs" id="76_8p0ea"]
+[ext_resource type="Script" path="res://src/CA/CA_S_RatKey.cs" id="77_clku8"]
 [ext_resource type="Script" path="res://src/GUI/FloorSelectBorder.cs" id="78_a331i"]
+[ext_resource type="Script" path="res://src/CA/CA_S_Left.cs" id="78_n4ted"]
 [ext_resource type="Texture2D" uid="uid://j168otwyprye" path="res://png/AG_boss.png" id="78_oieeo"]
+[ext_resource type="Script" path="res://src/CA/CA_S_Middle.cs" id="79_a0vgx"]
 [ext_resource type="Script" path="res://src/GUI/FloorSelect.cs" id="79_tg6ot"]
 [ext_resource type="Script" path="res://src/GUI/AG.cs" id="79_tj51w"]
 [ext_resource type="Script" path="res://src/GUI/D1.cs" id="80_2o4ep"]
+[ext_resource type="Script" path="res://src/CA/CA_S_Right.cs" id="80_2qd62"]
 [ext_resource type="Texture2D" uid="uid://bi6ad7h8varr" path="res://png/D1_boss.png" id="80_mpnm7"]
 [ext_resource type="Texture2D" uid="uid://dphvdftj4ik0c" path="res://png/L1_icon.png" id="80_qyk53"]
 [ext_resource type="Script" path="res://src/GUI/D2.cs" id="81_bjian"]
@@ -108,8 +119,10 @@
 [ext_resource type="Texture2D" uid="uid://xo7s638vu1s8" path="res://png/D2_boss.png" id="82_xmrof"]
 [ext_resource type="Texture2D" uid="uid://dpgui3sb2k4ea" path="res://png/maps/L2/1F.png" id="83_4ogbi"]
 [ext_resource type="Script" path="res://src/GUI/D4.cs" id="83_paj8b"]
+[ext_resource type="Script" path="res://src/CA/CA_BigKey.cs" id="83_s38vw"]
 [ext_resource type="Script" path="res://src/GUI/D5.cs" id="84_a6ueb"]
 [ext_resource type="Texture2D" uid="uid://b2h8ointmn26i" path="res://png/maps/L2/2F.png" id="84_h22fc"]
+[ext_resource type="Script" path="res://src/CA/CA_ZeldaChest.cs" id="84_ktigg"]
 [ext_resource type="Texture2D" uid="uid://bnrij0noyxhge" path="res://png/D3_boss.png" id="84_yuppn"]
 [ext_resource type="Texture2D" uid="uid://hflm558usqv4" path="res://png/maps/L2/B1.png" id="85_c0drw"]
 [ext_resource type="Script" path="res://src/GUI/D6.cs" id="85_sl8ui"]
@@ -136,21 +149,36 @@
 [ext_resource type="Texture2D" uid="uid://fno5vn54gpdm" path="res://png/maps/AG/6F.png" id="97_71x24"]
 [ext_resource type="Texture2D" uid="uid://0ewrcid4k2g7" path="res://png/maps/AG/7F.png" id="98_utvyo"]
 [ext_resource type="Texture2D" uid="uid://bv8il2i6vsoai" path="res://png/maps/D1/1F.png" id="99_8cvpl"]
+[ext_resource type="Script" path="res://src/L2/L2_TilesPot2.cs" id="99_x1axr"]
 [ext_resource type="Texture2D" uid="uid://h8i76he2k4vr" path="res://png/maps/D1/B1.png" id="100_2dbxg"]
 [ext_resource type="Texture2D" uid="uid://nkekkm8hcdme" path="res://png/L3_icon.png" id="100_a0w7q"]
+[ext_resource type="Script" path="res://src/L2/L2_BeamosKeyPot.cs" id="100_b1yys"]
 [ext_resource type="Texture2D" uid="uid://bkrsyxih5dkq" path="res://png/maps/L1/1F.png" id="100_ckhcg"]
+[ext_resource type="Script" path="res://src/L2/L2_Compass.cs" id="101_5e861"]
+[ext_resource type="Script" path="res://src/L2/L2_Boss.cs" id="101_cj7w3"]
 [ext_resource type="Texture2D" uid="uid://dgxxfgocvqp8a" path="res://png/maps/D2/1F.png" id="101_h0jc0"]
 [ext_resource type="Texture2D" uid="uid://cegwe5ts0rhsi" path="res://png/crystal_icon.png" id="101_ps4k0"]
 [ext_resource type="Texture2D" uid="uid://bo2w17xj5djgj" path="res://png/maps/D2/B1.png" id="102_3xrh0"]
+[ext_resource type="Script" path="res://src/L3/L3_Boss.cs" id="102_weukm"]
+[ext_resource type="Script" path="res://src/L2/L2_TilesPot1.cs" id="103_57l4m"]
 [ext_resource type="Texture2D" uid="uid://bpf0i7ml3pwy1" path="res://png/maps/D2/B2.png" id="103_qvve0"]
 [ext_resource type="Texture2D" uid="uid://deuear7y113cp" path="res://png/maps/D3/B1.png" id="104_0ka0d"]
 [ext_resource type="Texture2D" uid="uid://dmeof1wt8js2s" path="res://png/maps/D3/B2.png" id="105_elpbt"]
+[ext_resource type="Script" path="res://src/L3/L3_Compass.cs" id="105_qprj1"]
+[ext_resource type="Script" path="res://src/L2/L2_BigKey.cs" id="106_8nq7c"]
 [ext_resource type="Texture2D" uid="uid://b602nxofpqw5x" path="res://png/maps/D4/1F.png" id="106_blohr"]
+[ext_resource type="Script" path="res://src/L3/L3_BigChest.cs" id="106_do3at"]
 [ext_resource type="Texture2D" uid="uid://dqcuhqj3k8xg2" path="res://png/maps/D4/B1.png" id="107_b7s5t"]
+[ext_resource type="Script" path="res://src/L2/L2_MapChest.cs" id="107_xqi5t"]
+[ext_resource type="Script" path="res://src/L2/L2_TorchKey.cs" id="108_3tvgg"]
 [ext_resource type="Texture2D" uid="uid://cy64q5vles8ml" path="res://png/maps/D4/B2.png" id="108_6xjsq"]
+[ext_resource type="Script" path="res://src/L3/L3_MapChest.cs" id="109_0cb0y"]
 [ext_resource type="Texture2D" uid="uid://b68035vsr6i4y" path="res://png/maps/D5/1F.png" id="109_7y8s3"]
+[ext_resource type="Script" path="res://src/L2/L2_BigChest.cs" id="109_bptng"]
 [ext_resource type="Texture2D" uid="uid://cey5otdiy8qge" path="res://png/maps/D5/B1.png" id="110_evqim"]
+[ext_resource type="Script" path="res://src/L3/L3_KeyInCage.cs" id="111_5ffmv"]
 [ext_resource type="Texture2D" uid="uid://b46qmwsstt32h" path="res://png/maps/D5/B2.png" id="111_hgyfy"]
+[ext_resource type="Script" path="res://src/L3/L3_BigKey.cs" id="112_culc2"]
 [ext_resource type="Texture2D" uid="uid://bge5cvgftv2c5" path="res://png/maps/D5/B3.png" id="112_ygr4x"]
 [ext_resource type="Texture2D" uid="uid://b7dsqy05127ja" path="res://png/maps/D5/B4.png" id="113_i2xr0"]
 [ext_resource type="Texture2D" uid="uid://cpqj38ofcmaqw" path="res://png/maps/D5/B5.png" id="114_3a7ad"]
@@ -179,6 +207,7 @@ script = ExtResource("1_48g1d")
 script = ExtResource("1_rrc4k")
 
 [node name="LightWorld" type="Sprite2D" parent="Node"]
+visible = false
 texture_filter = 1
 texture = ExtResource("2_ch5ax")
 
@@ -245,7 +274,7 @@ script = ExtResource("7_q3ihe")
 
 [node name="LabelHyruleCastle" type="Sprite2D" parent="Node/LightWorld" groups=["ToScaleWithCamera"]]
 position = Vector2(1, -281)
-texture = ExtResource("6_w28mg")
+texture = ExtResource("9_apfwn")
 
 [node name="Label" type="Label" parent="Node/LightWorld/LabelHyruleCastle"]
 texture_filter = 2
@@ -260,6 +289,7 @@ offset_right = -19.5
 offset_bottom = -8.5
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "0 / 0"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -267,7 +297,7 @@ script = ExtResource("8_ptjtw")
 
 [node name="LabelHyruleCastle2" type="Sprite2D" parent="Node/LightWorld" groups=["ToScaleWithCamera"]]
 position = Vector2(-160, -984)
-texture = ExtResource("6_w28mg")
+texture = ExtResource("9_apfwn")
 
 [node name="Label" type="Label" parent="Node/LightWorld/LabelHyruleCastle2"]
 texture_filter = 2
@@ -282,6 +312,7 @@ offset_right = -19.5
 offset_bottom = -8.5
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "0 / 0"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -634,8 +665,76 @@ position = Vector2(1267, -1967)
 texture = ExtResource("3_omx3a")
 script = ExtResource("47_k4d5j")
 
+[node name="L1" type="Sprite2D" parent="Node/LightWorld" groups=["ToScaleWithCamera"]]
+position = Vector2(1880, -488)
+texture = ExtResource("9_apfwn")
+
+[node name="Label" type="Label" parent="Node/LightWorld/L1"]
+texture_filter = 2
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -52.5
+offset_top = -31.5
+offset_right = -19.5
+offset_bottom = -8.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "0 / 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("71_wj0ic")
+
+[node name="L2" type="Sprite2D" parent="Node/LightWorld" groups=["ToScaleWithCamera"]]
+position = Vector2(-1744, 1183)
+texture = ExtResource("9_apfwn")
+
+[node name="Label" type="Label" parent="Node/LightWorld/L2"]
+texture_filter = 2
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -52.5
+offset_top = -31.5
+offset_right = -19.5
+offset_bottom = -8.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "0 / 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("73_qm2um")
+
+[node name="L3" type="Sprite2D" parent="Node/LightWorld" groups=["ToScaleWithCamera"]]
+position = Vector2(248, -1943)
+texture = ExtResource("9_apfwn")
+
+[node name="Label" type="Label" parent="Node/LightWorld/L3"]
+texture_filter = 2
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -52.5
+offset_top = -31.5
+offset_right = -19.5
+offset_bottom = -8.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "0 / 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("75_q4j85")
+
 [node name="DarkWorld" type="Sprite2D" parent="Node"]
-visible = false
 texture_filter = 1
 texture = ExtResource("2_adpej")
 
@@ -836,17 +935,76 @@ texture = ExtResource("71_rhxyo")
 visible = false
 texture = ExtResource("70_3tjc5")
 
+[node name="Sanctuary" type="Sprite2D" parent="Node/CA/1" groups=["ToScaleWithCamera"]]
+position = Vector2(-558, -946)
+texture = ExtResource("3_omx3a")
+script = ExtResource("69_k1vdy")
+
 [node name="2" type="Sprite2D" parent="Node/CA"]
 visible = false
 texture = ExtResource("69_x37ps")
+
+[node name="MapChest" type="Sprite2D" parent="Node/CA/2" groups=["ToScaleWithCamera"]]
+position = Vector2(-31, 654)
+texture = ExtResource("3_omx3a")
+script = ExtResource("71_8nght")
+
+[node name="MapGuard" type="Sprite2D" parent="Node/CA/2" groups=["ToScaleWithCamera"]]
+position = Vector2(46, 608)
+texture = ExtResource("3_omx3a")
+script = ExtResource("72_yhpgv")
+
+[node name="Boomerang" type="Sprite2D" parent="Node/CA/2" groups=["ToScaleWithCamera"]]
+position = Vector2(-405, 893)
+texture = ExtResource("3_omx3a")
+script = ExtResource("73_7lpch")
+
+[node name="BoomerangGuard" type="Sprite2D" parent="Node/CA/2" groups=["ToScaleWithCamera"]]
+position = Vector2(-326, 892)
+texture = ExtResource("3_omx3a")
+script = ExtResource("74_wxna7")
+
+[node name="S_DarkCross" type="Sprite2D" parent="Node/CA/2" groups=["ToScaleWithCamera"]]
+position = Vector2(154, -307)
+texture = ExtResource("3_omx3a")
+script = ExtResource("76_8p0ea")
+
+[node name="S_RatKey" type="Sprite2D" parent="Node/CA/2" groups=["ToScaleWithCamera"]]
+position = Vector2(-661, -929)
+texture = ExtResource("3_omx3a")
+script = ExtResource("77_clku8")
+
+[node name="S_Left" type="Sprite2D" parent="Node/CA/2" groups=["ToScaleWithCamera"]]
+position = Vector2(-696, -1240)
+texture = ExtResource("3_omx3a")
+script = ExtResource("78_n4ted")
+
+[node name="S_Middle" type="Sprite2D" parent="Node/CA/2" groups=["ToScaleWithCamera"]]
+position = Vector2(-664, -1240)
+texture = ExtResource("3_omx3a")
+script = ExtResource("79_a0vgx")
+
+[node name="S_Right" type="Sprite2D" parent="Node/CA/2" groups=["ToScaleWithCamera"]]
+position = Vector2(-632, -1240)
+texture = ExtResource("3_omx3a")
+script = ExtResource("80_2qd62")
 
 [node name="3" type="Sprite2D" parent="Node/CA"]
 visible = false
 texture = ExtResource("68_0jrll")
 
 [node name="4" type="Sprite2D" parent="Node/CA"]
-visible = false
 texture = ExtResource("67_6ebva")
+
+[node name="BigKey" type="Sprite2D" parent="Node/CA/4" groups=["ToScaleWithCamera"]]
+position = Vector2(-365, 650)
+texture = ExtResource("3_omx3a")
+script = ExtResource("83_s38vw")
+
+[node name="ZeldaChest" type="Sprite2D" parent="Node/CA/4" groups=["ToScaleWithCamera"]]
+position = Vector2(-417, 592)
+texture = ExtResource("3_omx3a")
+script = ExtResource("84_ktigg")
 
 [node name="L1" type="Node2D" parent="Node"]
 visible = false
@@ -912,13 +1070,61 @@ visible = false
 texture_filter = 1
 
 [node name="0" type="Sprite2D" parent="Node/L2"]
+visible = false
 texture = ExtResource("84_h22fc")
 
+[node name="TilesPot2" type="Sprite2D" parent="Node/L2/0"]
+position = Vector2(181, -446)
+texture = ExtResource("3_omx3a")
+script = ExtResource("99_x1axr")
+
+[node name="BeamosKeyPot" type="Sprite2D" parent="Node/L2/0"]
+position = Vector2(132, -79)
+texture = ExtResource("3_omx3a")
+script = ExtResource("100_b1yys")
+
+[node name="Boss" type="Sprite2D" parent="Node/L2/0"]
+position = Vector2(-123, -931)
+texture = ExtResource("3_omx3a")
+script = ExtResource("101_cj7w3")
+
 [node name="1" type="Sprite2D" parent="Node/L2"]
+visible = false
 texture = ExtResource("83_4ogbi")
 
+[node name="TilesPot1" type="Sprite2D" parent="Node/L2/1"]
+position = Vector2(-181, -60)
+texture = ExtResource("3_omx3a")
+script = ExtResource("103_57l4m")
+
 [node name="2" type="Sprite2D" parent="Node/L2"]
+visible = false
 texture = ExtResource("85_c0drw")
+
+[node name="Compass" type="Sprite2D" parent="Node/L2/2"]
+position = Vector2(620, 846)
+texture = ExtResource("3_omx3a")
+script = ExtResource("101_5e861")
+
+[node name="BigKey" type="Sprite2D" parent="Node/L2/2"]
+position = Vector2(622, 333)
+texture = ExtResource("3_omx3a")
+script = ExtResource("106_8nq7c")
+
+[node name="MapChest" type="Sprite2D" parent="Node/L2/2"]
+position = Vector2(-20, 373)
+texture = ExtResource("3_omx3a")
+script = ExtResource("107_xqi5t")
+
+[node name="TorchKey" type="Sprite2D" parent="Node/L2/2"]
+position = Vector2(-424, 364)
+texture = ExtResource("3_omx3a")
+script = ExtResource("108_3tvgg")
+
+[node name="BigChest" type="Sprite2D" parent="Node/L2/2"]
+position = Vector2(-660, 367)
+texture = ExtResource("3_omx3a")
+script = ExtResource("109_bptng")
 
 [node name="L3" type="Node2D" parent="Node"]
 visible = false
@@ -928,6 +1134,11 @@ texture_filter = 1
 visible = false
 position = Vector2(152, -56)
 texture = ExtResource("91_w08ii")
+
+[node name="Boss" type="Sprite2D" parent="Node/L3/0"]
+position = Vector2(2, -38)
+texture = ExtResource("3_omx3a")
+script = ExtResource("102_weukm")
 
 [node name="1" type="Sprite2D" parent="Node/L3"]
 visible = false
@@ -939,6 +1150,16 @@ visible = false
 position = Vector2(152, -56)
 texture = ExtResource("89_3j3eh")
 
+[node name="Compass" type="Sprite2D" parent="Node/L3/2"]
+position = Vector2(-20, 30)
+texture = ExtResource("3_omx3a")
+script = ExtResource("105_qprj1")
+
+[node name="BigChest" type="Sprite2D" parent="Node/L3/2"]
+position = Vector2(-20, -183)
+texture = ExtResource("3_omx3a")
+script = ExtResource("106_do3at")
+
 [node name="3" type="Sprite2D" parent="Node/L3"]
 visible = false
 position = Vector2(152, -56)
@@ -949,10 +1170,25 @@ visible = false
 position = Vector2(152, -56)
 texture = ExtResource("87_uttgm")
 
+[node name="MapChest" type="Sprite2D" parent="Node/L3/4"]
+position = Vector2(-22, -137)
+texture = ExtResource("3_omx3a")
+script = ExtResource("109_0cb0y")
+
 [node name="5" type="Sprite2D" parent="Node/L3"]
 visible = false
 position = Vector2(152, -56)
 texture = ExtResource("86_8o83r")
+
+[node name="KeyInCage" type="Sprite2D" parent="Node/L3/5"]
+position = Vector2(-100, 161)
+texture = ExtResource("3_omx3a")
+script = ExtResource("111_5ffmv")
+
+[node name="BigKey" type="Sprite2D" parent="Node/L3/5"]
+position = Vector2(151, 156)
+texture = ExtResource("3_omx3a")
+script = ExtResource("112_culc2")
 
 [node name="6" type="Sprite2D" parent="Node/L3"]
 visible = false
