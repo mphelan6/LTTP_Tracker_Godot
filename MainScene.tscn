@@ -1,4 +1,4 @@
-[gd_scene load_steps=290 format=3 uid="uid://dvluees2b6vw8"]
+[gd_scene load_steps=321 format=3 uid="uid://dvluees2b6vw8"]
 
 [ext_resource type="Script" path="res://src/Initialize.cs" id="1_48g1d"]
 [ext_resource type="Script" path="res://src/MapManager.cs" id="1_rrc4k"]
@@ -289,6 +289,37 @@
 [ext_resource type="Script" path="res://src/D7/D7_BridgeTopRight.cs" id="250_du7wn"]
 [ext_resource type="Script" path="res://src/D7/D7_BridgeTopLeft.cs" id="251_6n7ba"]
 [ext_resource type="Script" path="res://src/D7/D7_Boss.cs" id="253_7ovjk"]
+[ext_resource type="Script" path="res://src/GT/GT_Validation.cs" id="256_nabme"]
+[ext_resource type="Script" path="res://src/GT/GT_PreMoldorm.cs" id="257_5rq8b"]
+[ext_resource type="Script" path="res://src/GT/GT_HelmKey.cs" id="258_e6ocp"]
+[ext_resource type="Script" path="res://src/GT/GT_HelmLeft.cs" id="259_4j3bi"]
+[ext_resource type="Script" path="res://src/GT/GT_HelmRight.cs" id="260_41ga6"]
+[ext_resource type="Script" path="res://src/GT/GT_MapChest.cs" id="261_am4bp"]
+[ext_resource type="Script" path="res://src/GT/GT_BigChest.cs" id="262_i6y5k"]
+[ext_resource type="Script" path="res://src/GT/GT_RandoTopLeft.cs" id="263_gex4c"]
+[ext_resource type="Script" path="res://src/GT/GT_RandoTopRight.cs" id="264_yb3qq"]
+[ext_resource type="Script" path="res://src/GT/GT_RandoBotLeft.cs" id="265_s08cc"]
+[ext_resource type="Script" path="res://src/GT/GT_RandoBotRight.cs" id="266_8ikjd"]
+[ext_resource type="Script" path="res://src/GT/GT_CompassTopLeft.cs" id="267_64sxi"]
+[ext_resource type="Script" path="res://src/GT/GT_BobsChest.cs" id="268_4611n"]
+[ext_resource type="Script" path="res://src/GT/GT_CompassTopRight.cs" id="268_w0mqg"]
+[ext_resource type="Script" path="res://src/GT/GT_ConveyorStar.cs" id="269_0hnva"]
+[ext_resource type="Script" path="res://src/GT/GT_CompassBotLeft.cs" id="269_8aqry"]
+[ext_resource type="Script" path="res://src/GT/GT_CompassBotRight.cs" id="270_fdbdf"]
+[ext_resource type="Script" path="res://src/GT/GT_BigKeyChest.cs" id="272_1p78j"]
+[ext_resource type="Script" path="res://src/GT/GT_BigKeyLeft.cs" id="273_dml78"]
+[ext_resource type="Script" path="res://src/GT/GT_BigKeyRight.cs" id="274_b33f1"]
+[ext_resource type="Script" path="res://src/GT/GT_FireSnake.cs" id="274_femox"]
+[ext_resource type="Script" path="res://src/GT/GT_DmsTopLeft.cs" id="275_3ol6j"]
+[ext_resource type="Script" path="res://src/GT/GT_DmsBotLeft.cs" id="276_42714"]
+[ext_resource type="Script" path="res://src/GT/GT_DmsTopRight.cs" id="277_ua7xx"]
+[ext_resource type="Script" path="res://src/GT/GT_DmsBotRight.cs" id="278_hc5cf"]
+[ext_resource type="Script" path="res://src/GT/GT_ConveyorCross.cs" id="279_t5ulh"]
+[ext_resource type="Script" path="res://src/GT/GT_BobsTorch.cs" id="280_07kwo"]
+[ext_resource type="Script" path="res://src/GT/GT_HopeLeft.cs" id="281_qp2mn"]
+[ext_resource type="Script" path="res://src/GT/GT_HopeRight.cs" id="282_kmiy6"]
+[ext_resource type="Script" path="res://src/GT/GT_TileRoom.cs" id="283_ebj40"]
+[ext_resource type="Script" path="res://src/GT/GT_DoubleSwitch.cs" id="284_oimvy"]
 
 [node name="RootNode" type="Node"]
 script = ExtResource("1_48g1d")
@@ -297,7 +328,6 @@ script = ExtResource("1_48g1d")
 script = ExtResource("1_rrc4k")
 
 [node name="LightWorld" type="Sprite2D" parent="Node"]
-visible = false
 texture_filter = 1
 texture = ExtResource("2_ch5ax")
 
@@ -1270,6 +1300,7 @@ visible = false
 texture = ExtResource("68_0jrll")
 
 [node name="4" type="Sprite2D" parent="Node/CA"]
+visible = false
 texture = ExtResource("67_6ebva")
 
 [node name="BigKey" type="Sprite2D" parent="Node/CA/4" groups=["ToScaleWithCamera"]]
@@ -1484,6 +1515,7 @@ visible = false
 texture = ExtResource("97_71x24")
 
 [node name="2" type="Sprite2D" parent="Node/AG"]
+visible = false
 texture = ExtResource("96_vaom3")
 
 [node name="GuardDrop" type="Sprite2D" parent="Node/AG/2" groups=["ToScaleWithCamera"]]
@@ -1573,6 +1605,7 @@ texture = ExtResource("3_omx3a")
 script = ExtResource("152_vsk7p")
 
 [node name="1" type="Sprite2D" parent="Node/D1"]
+visible = false
 texture = ExtResource("100_2dbxg")
 
 [node name="Boss" type="Sprite2D" parent="Node/D1/1" groups=["ToScaleWithCamera"]]
@@ -1824,6 +1857,7 @@ visible = false
 texture_filter = 1
 
 [node name="0" type="Sprite2D" parent="Node/D5"]
+visible = false
 texture = ExtResource("109_7y8s3")
 
 [node name="Jelly" type="Sprite2D" parent="Node/D5/0" groups=["ToScaleWithCamera"]]
@@ -1926,57 +1960,57 @@ texture = ExtResource("117_dcuwe")
 visible = false
 texture = ExtResource("118_0l6dy")
 
-[node name="BigKeyChest" type="Sprite2D" parent="Node/D6/1"]
+[node name="BigKeyChest" type="Sprite2D" parent="Node/D6/1" groups=["ToScaleWithCamera"]]
 position = Vector2(-148, 1138)
 texture = ExtResource("3_omx3a")
 script = ExtResource("224_ygd07")
 
-[node name="Compass" type="Sprite2D" parent="Node/D6/1"]
+[node name="Compass" type="Sprite2D" parent="Node/D6/1" groups=["ToScaleWithCamera"]]
 position = Vector2(-404, 365)
 texture = ExtResource("3_omx3a")
 script = ExtResource("225_t2qij")
 
-[node name="Boss" type="Sprite2D" parent="Node/D6/1"]
+[node name="Boss" type="Sprite2D" parent="Node/D6/1" groups=["ToScaleWithCamera"]]
 position = Vector2(-915, -959)
 texture = ExtResource("3_omx3a")
 script = ExtResource("226_p4mps")
 
-[node name="Fishbone" type="Sprite2D" parent="Node/D6/1"]
+[node name="Fishbone" type="Sprite2D" parent="Node/D6/1" groups=["ToScaleWithCamera"]]
 position = Vector2(-434, -662)
 texture = ExtResource("3_omx3a")
 script = ExtResource("227_waf1g")
 
-[node name="BridgeChest" type="Sprite2D" parent="Node/D6/1"]
+[node name="BridgeChest" type="Sprite2D" parent="Node/D6/1" groups=["ToScaleWithCamera"]]
 position = Vector2(368, -625)
 texture = ExtResource("3_omx3a")
 script = ExtResource("228_e7pso")
 
-[node name="SpikesPot" type="Sprite2D" parent="Node/D6/1"]
+[node name="SpikesPot" type="Sprite2D" parent="Node/D6/1" groups=["ToScaleWithCamera"]]
 position = Vector2(552, 70)
 texture = ExtResource("3_omx3a")
 script = ExtResource("229_270ij")
 
-[node name="SpikeChest" type="Sprite2D" parent="Node/D6/1"]
+[node name="SpikeChest" type="Sprite2D" parent="Node/D6/1" groups=["ToScaleWithCamera"]]
 position = Vector2(648, 127)
 texture = ExtResource("3_omx3a")
 script = ExtResource("230_3qjbt")
 
-[node name="BigChest" type="Sprite2D" parent="Node/D6/1"]
+[node name="BigChest" type="Sprite2D" parent="Node/D6/1" groups=["ToScaleWithCamera"]]
 position = Vector2(880, 313)
 texture = ExtResource("3_omx3a")
 script = ExtResource("227_xn88k")
 
-[node name="MapChest" type="Sprite2D" parent="Node/D6/1"]
+[node name="MapChest" type="Sprite2D" parent="Node/D6/1" groups=["ToScaleWithCamera"]]
 position = Vector2(562, 381)
 texture = ExtResource("3_omx3a")
 script = ExtResource("228_1s03r")
 
-[node name="Conveyor" type="Sprite2D" parent="Node/D6/1"]
+[node name="Conveyor" type="Sprite2D" parent="Node/D6/1" groups=["ToScaleWithCamera"]]
 position = Vector2(-217, 677)
 texture = ExtResource("3_omx3a")
 script = ExtResource("233_1jwrl")
 
-[node name="MainLobby" type="Sprite2D" parent="Node/D6/1"]
+[node name="MainLobby" type="Sprite2D" parent="Node/D6/1" groups=["ToScaleWithCamera"]]
 position = Vector2(281, 319)
 texture = ExtResource("3_omx3a")
 script = ExtResource("234_j0bt6")
@@ -1993,27 +2027,27 @@ texture_filter = 1
 visible = false
 texture = ExtResource("120_nceid")
 
-[node name="Compass" type="Sprite2D" parent="Node/D7/0"]
+[node name="Compass" type="Sprite2D" parent="Node/D7/0" groups=["ToScaleWithCamera"]]
 position = Vector2(107, 1051)
 texture = ExtResource("3_omx3a")
 script = ExtResource("237_e8oi0")
 
-[node name="RollerLeft" type="Sprite2D" parent="Node/D7/0"]
+[node name="RollerLeft" type="Sprite2D" parent="Node/D7/0" groups=["ToScaleWithCamera"]]
 position = Vector2(596, -180)
 texture = ExtResource("3_omx3a")
 script = ExtResource("238_rd7wx")
 
-[node name="RollerRight" type="Sprite2D" parent="Node/D7/0"]
+[node name="RollerRight" type="Sprite2D" parent="Node/D7/0" groups=["ToScaleWithCamera"]]
 position = Vector2(684, -180)
 texture = ExtResource("3_omx3a")
 script = ExtResource("239_mp5s4")
 
-[node name="Pokey1" type="Sprite2D" parent="Node/D7/0"]
+[node name="Pokey1" type="Sprite2D" parent="Node/D7/0" groups=["ToScaleWithCamera"]]
 position = Vector2(100, 56)
 texture = ExtResource("3_omx3a")
 script = ExtResource("240_fvuap")
 
-[node name="ChainChomps" type="Sprite2D" parent="Node/D7/0"]
+[node name="ChainChomps" type="Sprite2D" parent="Node/D7/0" groups=["ToScaleWithCamera"]]
 position = Vector2(112, -179)
 texture = ExtResource("3_omx3a")
 script = ExtResource("241_3gd02")
@@ -2022,22 +2056,22 @@ script = ExtResource("241_3gd02")
 visible = false
 texture = ExtResource("121_03ekt")
 
-[node name="Pokey2" type="Sprite2D" parent="Node/D7/1"]
+[node name="Pokey2" type="Sprite2D" parent="Node/D7/1" groups=["ToScaleWithCamera"]]
 position = Vector2(-682, 104)
 texture = ExtResource("3_omx3a")
 script = ExtResource("243_btsta")
 
-[node name="BigChest" type="Sprite2D" parent="Node/D7/1"]
+[node name="BigChest" type="Sprite2D" parent="Node/D7/1" groups=["ToScaleWithCamera"]]
 position = Vector2(-149, 599)
 texture = ExtResource("3_omx3a")
 script = ExtResource("244_4ha1o")
 
-[node name="BigKeyChest" type="Sprite2D" parent="Node/D7/1"]
+[node name="BigKeyChest" type="Sprite2D" parent="Node/D7/1" groups=["ToScaleWithCamera"]]
 position = Vector2(-316, -63)
 texture = ExtResource("3_omx3a")
 script = ExtResource("245_4f76y")
 
-[node name="CrystalRoller" type="Sprite2D" parent="Node/D7/1"]
+[node name="CrystalRoller" type="Sprite2D" parent="Node/D7/1" groups=["ToScaleWithCamera"]]
 position = Vector2(-474, -644)
 texture = ExtResource("3_omx3a")
 script = ExtResource("246_n3whx")
@@ -2046,22 +2080,22 @@ script = ExtResource("246_n3whx")
 visible = false
 texture = ExtResource("122_xk62i")
 
-[node name="BridgeBotLeft" type="Sprite2D" parent="Node/D7/2"]
+[node name="BridgeBotLeft" type="Sprite2D" parent="Node/D7/2" groups=["ToScaleWithCamera"]]
 position = Vector2(-474, 559)
 texture = ExtResource("3_omx3a")
 script = ExtResource("248_3t7nw")
 
-[node name="BridgeBotRight" type="Sprite2D" parent="Node/D7/2"]
+[node name="BridgeBotRight" type="Sprite2D" parent="Node/D7/2" groups=["ToScaleWithCamera"]]
 position = Vector2(-329, 494)
 texture = ExtResource("3_omx3a")
 script = ExtResource("249_64npe")
 
-[node name="BridgeTopRight" type="Sprite2D" parent="Node/D7/2"]
+[node name="BridgeTopRight" type="Sprite2D" parent="Node/D7/2" groups=["ToScaleWithCamera"]]
 position = Vector2(-475, 430)
 texture = ExtResource("3_omx3a")
 script = ExtResource("250_du7wn")
 
-[node name="BridgeTopLeft" type="Sprite2D" parent="Node/D7/2"]
+[node name="BridgeTopLeft" type="Sprite2D" parent="Node/D7/2" groups=["ToScaleWithCamera"]]
 position = Vector2(-328, 365)
 texture = ExtResource("3_omx3a")
 script = ExtResource("251_6n7ba")
@@ -2070,12 +2104,13 @@ script = ExtResource("251_6n7ba")
 visible = false
 texture = ExtResource("123_pjr1p")
 
-[node name="Boss" type="Sprite2D" parent="Node/D7/3"]
+[node name="Boss" type="Sprite2D" parent="Node/D7/3" groups=["ToScaleWithCamera"]]
 position = Vector2(-919, -998)
 texture = ExtResource("3_omx3a")
 script = ExtResource("253_7ovjk")
 
 [node name="GT" type="Node2D" parent="Node"]
+visible = false
 texture_filter = 1
 
 [node name="0" type="Sprite2D" parent="Node/GT"]
@@ -2083,7 +2118,33 @@ visible = false
 texture = ExtResource("124_a6k2m")
 
 [node name="1" type="Sprite2D" parent="Node/GT"]
+visible = false
 texture = ExtResource("125_y0dhq")
+
+[node name="Validation" type="Sprite2D" parent="Node/GT/1" groups=["ToScaleWithCamera"]]
+position = Vector2(526, 108)
+texture = ExtResource("3_omx3a")
+script = ExtResource("256_nabme")
+
+[node name="PreMoldorm" type="Sprite2D" parent="Node/GT/1" groups=["ToScaleWithCamera"]]
+position = Vector2(364, -369)
+texture = ExtResource("3_omx3a")
+script = ExtResource("257_5rq8b")
+
+[node name="HelmKey" type="Sprite2D" parent="Node/GT/1" groups=["ToScaleWithCamera"]]
+position = Vector2(615, -659)
+texture = ExtResource("3_omx3a")
+script = ExtResource("258_e6ocp")
+
+[node name="HelmLeft" type="Sprite2D" parent="Node/GT/1" groups=["ToScaleWithCamera"]]
+position = Vector2(548, -707)
+texture = ExtResource("3_omx3a")
+script = ExtResource("259_4j3bi")
+
+[node name="HelmRight" type="Sprite2D" parent="Node/GT/1" groups=["ToScaleWithCamera"]]
+position = Vector2(690, -708)
+texture = ExtResource("3_omx3a")
+script = ExtResource("260_41ga6")
 
 [node name="2" type="Sprite2D" parent="Node/GT"]
 visible = false
@@ -2105,12 +2166,141 @@ texture = ExtResource("129_4gm7n")
 visible = false
 texture = ExtResource("130_j6qa7")
 
+[node name="MapChest" type="Sprite2D" parent="Node/GT/6" groups=["ToScaleWithCamera"]]
+position = Vector2(-397, 127)
+texture = ExtResource("3_omx3a")
+script = ExtResource("261_am4bp")
+
+[node name="BigChest" type="Sprite2D" parent="Node/GT/6" groups=["ToScaleWithCamera"]]
+position = Vector2(-150, 109)
+texture = ExtResource("3_omx3a")
+script = ExtResource("262_i6y5k")
+
+[node name="BobsChest" type="Sprite2D" parent="Node/GT/6" groups=["ToScaleWithCamera"]]
+position = Vector2(182, 175)
+texture = ExtResource("3_omx3a")
+script = ExtResource("268_4611n")
+
+[node name="ConveyorStar" type="Sprite2D" parent="Node/GT/6" groups=["ToScaleWithCamera"]]
+position = Vector2(-486, -707)
+texture = ExtResource("3_omx3a")
+script = ExtResource("269_0hnva")
+
+[node name="RandoTopLeft" type="Sprite2D" parent="Node/GT/6" groups=["ToScaleWithCamera"]]
+position = Vector2(83, -647)
+texture = ExtResource("3_omx3a")
+script = ExtResource("263_gex4c")
+
+[node name="RandoTopRight" type="Sprite2D" parent="Node/GT/6" groups=["ToScaleWithCamera"]]
+position = Vector2(172, -648)
+texture = ExtResource("3_omx3a")
+script = ExtResource("264_yb3qq")
+
+[node name="RandoBotLeft" type="Sprite2D" parent="Node/GT/6" groups=["ToScaleWithCamera"]]
+position = Vector2(84, -605)
+texture = ExtResource("3_omx3a")
+script = ExtResource("265_s08cc")
+
+[node name="RandoBotRight" type="Sprite2D" parent="Node/GT/6" groups=["ToScaleWithCamera"]]
+position = Vector2(173, -604)
+texture = ExtResource("3_omx3a")
+script = ExtResource("266_8ikjd")
+
+[node name="FireSnake" type="Sprite2D" parent="Node/GT/6" groups=["ToScaleWithCamera"]]
+position = Vector2(359, -646)
+texture = ExtResource("3_omx3a")
+script = ExtResource("274_femox")
+
+[node name="DmsTopLeft" type="Sprite2D" parent="Node/GT/6" groups=["ToScaleWithCamera"]]
+position = Vector2(-731, -455)
+texture = ExtResource("3_omx3a")
+script = ExtResource("275_3ol6j")
+
+[node name="DmsBotLeft" type="Sprite2D" parent="Node/GT/6" groups=["ToScaleWithCamera"]]
+position = Vector2(-731, -387)
+texture = ExtResource("3_omx3a")
+script = ExtResource("276_42714")
+
+[node name="DmsTopRight" type="Sprite2D" parent="Node/GT/6" groups=["ToScaleWithCamera"]]
+position = Vector2(-548, -457)
+texture = ExtResource("3_omx3a")
+script = ExtResource("277_ua7xx")
+
+[node name="DmsBotRight" type="Sprite2D" parent="Node/GT/6" groups=["ToScaleWithCamera"]]
+position = Vector2(-549, -390)
+texture = ExtResource("3_omx3a")
+script = ExtResource("278_hc5cf")
+
+[node name="ConveyorCross" type="Sprite2D" parent="Node/GT/6" groups=["ToScaleWithCamera"]]
+position = Vector2(-293, -66)
+texture = ExtResource("3_omx3a")
+script = ExtResource("279_t5ulh")
+
+[node name="BobsTorch" type="Sprite2D" parent="Node/GT/6" groups=["ToScaleWithCamera"]]
+position = Vector2(-84, -135)
+texture = ExtResource("3_omx3a")
+script = ExtResource("280_07kwo")
+
+[node name="HopeLeft" type="Sprite2D" parent="Node/GT/6" groups=["ToScaleWithCamera"]]
+position = Vector2(76, -201)
+texture = ExtResource("3_omx3a")
+script = ExtResource("281_qp2mn")
+
+[node name="HopeRight" type="Sprite2D" parent="Node/GT/6" groups=["ToScaleWithCamera"]]
+position = Vector2(222, -197)
+texture = ExtResource("3_omx3a")
+script = ExtResource("282_kmiy6")
+
+[node name="TileRoom" type="Sprite2D" parent="Node/GT/6" groups=["ToScaleWithCamera"]]
+position = Vector2(411, -198)
+texture = ExtResource("3_omx3a")
+script = ExtResource("283_ebj40")
+
+[node name="DoubleSwitch" type="Sprite2D" parent="Node/GT/6" groups=["ToScaleWithCamera"]]
+position = Vector2(-552, 447)
+texture = ExtResource("3_omx3a")
+script = ExtResource("284_oimvy")
+
+[node name="CompassTopLeft" type="Sprite2D" parent="Node/GT/6" groups=["ToScaleWithCamera"]]
+position = Vector2(342, 345)
+texture = ExtResource("3_omx3a")
+script = ExtResource("267_64sxi")
+
+[node name="CompassTopRight" type="Sprite2D" parent="Node/GT/6" groups=["ToScaleWithCamera"]]
+position = Vector2(427, 344)
+texture = ExtResource("3_omx3a")
+script = ExtResource("268_w0mqg")
+
+[node name="CompassBotLeft" type="Sprite2D" parent="Node/GT/6" groups=["ToScaleWithCamera"]]
+position = Vector2(342, 408)
+texture = ExtResource("3_omx3a")
+script = ExtResource("269_8aqry")
+
+[node name="CompassBotRight" type="Sprite2D" parent="Node/GT/6" groups=["ToScaleWithCamera"]]
+position = Vector2(427, 408)
+texture = ExtResource("3_omx3a")
+script = ExtResource("270_fdbdf")
+
 [node name="7" type="Sprite2D" parent="Node/GT"]
 visible = false
 texture = ExtResource("131_cy31m")
 
+[node name="BigKeyChest" type="Sprite2D" parent="Node/GT/7" groups=["ToScaleWithCamera"]]
+position = Vector2(110, -161)
+texture = ExtResource("3_omx3a")
+script = ExtResource("272_1p78j")
+
+[node name="BigKeyLeft" type="Sprite2D" parent="Node/GT/7" groups=["ToScaleWithCamera"]]
+position = Vector2(82, -199)
+texture = ExtResource("3_omx3a")
+script = ExtResource("273_dml78")
+
+[node name="BigKeyRight" type="Sprite2D" parent="Node/GT/7" groups=["ToScaleWithCamera"]]
+position = Vector2(176, -201)
+texture = ExtResource("3_omx3a")
+script = ExtResource("274_b33f1")
+
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-visible = false
 
 [node name="Control" type="Control" parent="CanvasLayer"]
 layout_mode = 3
