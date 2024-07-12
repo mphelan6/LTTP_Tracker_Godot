@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bgfujdb8ulhoh"
-path="res://.godot/imported/dark_chicken.png-a2b57d62daecdea7066c4433584d6cb3.ctex"
+uid="uid://du2ggiirnfdvh"
+path="res://.godot/imported/L3_boss.png-d968a85bb1dac928577cb6ada1934c1d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://png/dark_chicken.png"
-dest_files=["res://.godot/imported/dark_chicken.png-a2b57d62daecdea7066c4433584d6cb3.ctex"]
+source_file="res://png/misc/L3_boss.png"
+dest_files=["res://.godot/imported/L3_boss.png-d968a85bb1dac928577cb6ada1934c1d.ctex"]
 
 [params]
 

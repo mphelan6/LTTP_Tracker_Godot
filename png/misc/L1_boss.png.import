@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ceiu1c26ubsqs"
-path="res://.godot/imported/D5_boss.png-403b51f5b26b7c0eb58b2b9cbcd1bc6d.ctex"
+uid="uid://da8yd6vcj7s65"
+path="res://.godot/imported/L1_boss.png-115c97e6fad642cb527f69ba01a8e99a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://png/D5_boss.png"
-dest_files=["res://.godot/imported/D5_boss.png-403b51f5b26b7c0eb58b2b9cbcd1bc6d.ctex"]
+source_file="res://png/misc/L1_boss.png"
+dest_files=["res://.godot/imported/L1_boss.png-115c97e6fad642cb527f69ba01a8e99a.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cokrh6y7txhn6"
-path="res://.godot/imported/GT_boss.png-929600e1df6d898044689722206f5260.ctex"
+uid="uid://bgfujdb8ulhoh"
+path="res://.godot/imported/dark_chicken.png-c49bb6a41adfbe3f2b3ee7d9ac530603.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://png/GT_boss.png"
-dest_files=["res://.godot/imported/GT_boss.png-929600e1df6d898044689722206f5260.ctex"]
+source_file="res://png/misc/dark_chicken.png"
+dest_files=["res://.godot/imported/dark_chicken.png-c49bb6a41adfbe3f2b3ee7d9ac530603.ctex"]
 
 [params]
 

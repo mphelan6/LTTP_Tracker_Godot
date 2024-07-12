@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cgdp2yrdyy4ih"
-path="res://.godot/imported/L2_icon.png-31d754b7a9e60ae32033938ec2cf2d74.ctex"
+uid="uid://dca4cgul2qen4"
+path="res://.godot/imported/Zelda.png-03f8ba2f256265dc3637ba9845fed18b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://png/L2_icon.png"
-dest_files=["res://.godot/imported/L2_icon.png-31d754b7a9e60ae32033938ec2cf2d74.ctex"]
+source_file="res://png/misc/Zelda.png"
+dest_files=["res://.godot/imported/Zelda.png-03f8ba2f256265dc3637ba9845fed18b.ctex"]
 
 [params]
 
