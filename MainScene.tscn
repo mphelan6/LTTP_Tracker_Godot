@@ -1,4 +1,4 @@
-[gd_scene load_steps=265 format=3 uid="uid://dvluees2b6vw8"]
+[gd_scene load_steps=290 format=3 uid="uid://dvluees2b6vw8"]
 
 [ext_resource type="Script" path="res://src/Initialize.cs" id="1_48g1d"]
 [ext_resource type="Script" path="res://src/MapManager.cs" id="1_rrc4k"]
@@ -264,6 +264,31 @@
 [ext_resource type="Script" path="res://src/D5/D5_FreezorChest.cs" id="212_02pdm"]
 [ext_resource type="Script" path="res://src/D5/D5_IceT.cs" id="215_7rydp"]
 [ext_resource type="Script" path="res://src/D5/D5_ManyPots.cs" id="215_8aho7"]
+[ext_resource type="Script" path="res://src/D6/D6_BigKeyChest.cs" id="224_ygd07"]
+[ext_resource type="Script" path="res://src/D6/D6_Compass.cs" id="225_t2qij"]
+[ext_resource type="Script" path="res://src/D6/D6_Boss.cs" id="226_p4mps"]
+[ext_resource type="Script" path="res://src/D6/D6_Fishbone.cs" id="227_waf1g"]
+[ext_resource type="Script" path="res://src/D6/D6_BigChest.cs" id="227_xn88k"]
+[ext_resource type="Script" path="res://src/D6/D6_MapChest.cs" id="228_1s03r"]
+[ext_resource type="Script" path="res://src/D6/D6_BridgeChest.cs" id="228_e7pso"]
+[ext_resource type="Script" path="res://src/D6/D6_SpikesPot.cs" id="229_270ij"]
+[ext_resource type="Script" path="res://src/D6/D6_SpikeChest.cs" id="230_3qjbt"]
+[ext_resource type="Script" path="res://src/D6/D6_Conveyor.cs" id="233_1jwrl"]
+[ext_resource type="Script" path="res://src/D6/D6_MainLobby.cs" id="234_j0bt6"]
+[ext_resource type="Script" path="res://src/D7/D7_Compass.cs" id="237_e8oi0"]
+[ext_resource type="Script" path="res://src/D7/D7_RollerLeft.cs" id="238_rd7wx"]
+[ext_resource type="Script" path="res://src/D7/D7_RollerRight.cs" id="239_mp5s4"]
+[ext_resource type="Script" path="res://src/D7/D7_Pokey1.cs" id="240_fvuap"]
+[ext_resource type="Script" path="res://src/D7/D7_ChainChomps.cs" id="241_3gd02"]
+[ext_resource type="Script" path="res://src/D7/D7_Pokey2.cs" id="243_btsta"]
+[ext_resource type="Script" path="res://src/D7/D7_BigChest.cs" id="244_4ha1o"]
+[ext_resource type="Script" path="res://src/D7/D7_BigKeyChest.cs" id="245_4f76y"]
+[ext_resource type="Script" path="res://src/D7/D7_CrystalRoller.cs" id="246_n3whx"]
+[ext_resource type="Script" path="res://src/D7/D7_BridgeBotLeft.cs" id="248_3t7nw"]
+[ext_resource type="Script" path="res://src/D7/D7_BridgeBotRight.cs" id="249_64npe"]
+[ext_resource type="Script" path="res://src/D7/D7_BridgeTopRight.cs" id="250_du7wn"]
+[ext_resource type="Script" path="res://src/D7/D7_BridgeTopLeft.cs" id="251_6n7ba"]
+[ext_resource type="Script" path="res://src/D7/D7_Boss.cs" id="253_7ovjk"]
 
 [node name="RootNode" type="Node"]
 script = ExtResource("1_48g1d")
@@ -272,6 +297,7 @@ script = ExtResource("1_48g1d")
 script = ExtResource("1_rrc4k")
 
 [node name="LightWorld" type="Sprite2D" parent="Node"]
+visible = false
 texture_filter = 1
 texture = ExtResource("2_ch5ax")
 
@@ -1900,6 +1926,61 @@ texture = ExtResource("117_dcuwe")
 visible = false
 texture = ExtResource("118_0l6dy")
 
+[node name="BigKeyChest" type="Sprite2D" parent="Node/D6/1"]
+position = Vector2(-148, 1138)
+texture = ExtResource("3_omx3a")
+script = ExtResource("224_ygd07")
+
+[node name="Compass" type="Sprite2D" parent="Node/D6/1"]
+position = Vector2(-404, 365)
+texture = ExtResource("3_omx3a")
+script = ExtResource("225_t2qij")
+
+[node name="Boss" type="Sprite2D" parent="Node/D6/1"]
+position = Vector2(-915, -959)
+texture = ExtResource("3_omx3a")
+script = ExtResource("226_p4mps")
+
+[node name="Fishbone" type="Sprite2D" parent="Node/D6/1"]
+position = Vector2(-434, -662)
+texture = ExtResource("3_omx3a")
+script = ExtResource("227_waf1g")
+
+[node name="BridgeChest" type="Sprite2D" parent="Node/D6/1"]
+position = Vector2(368, -625)
+texture = ExtResource("3_omx3a")
+script = ExtResource("228_e7pso")
+
+[node name="SpikesPot" type="Sprite2D" parent="Node/D6/1"]
+position = Vector2(552, 70)
+texture = ExtResource("3_omx3a")
+script = ExtResource("229_270ij")
+
+[node name="SpikeChest" type="Sprite2D" parent="Node/D6/1"]
+position = Vector2(648, 127)
+texture = ExtResource("3_omx3a")
+script = ExtResource("230_3qjbt")
+
+[node name="BigChest" type="Sprite2D" parent="Node/D6/1"]
+position = Vector2(880, 313)
+texture = ExtResource("3_omx3a")
+script = ExtResource("227_xn88k")
+
+[node name="MapChest" type="Sprite2D" parent="Node/D6/1"]
+position = Vector2(562, 381)
+texture = ExtResource("3_omx3a")
+script = ExtResource("228_1s03r")
+
+[node name="Conveyor" type="Sprite2D" parent="Node/D6/1"]
+position = Vector2(-217, 677)
+texture = ExtResource("3_omx3a")
+script = ExtResource("233_1jwrl")
+
+[node name="MainLobby" type="Sprite2D" parent="Node/D6/1"]
+position = Vector2(281, 319)
+texture = ExtResource("3_omx3a")
+script = ExtResource("234_j0bt6")
+
 [node name="2" type="Sprite2D" parent="Node/D6"]
 visible = false
 texture = ExtResource("119_upwj3")
@@ -1912,20 +1993,89 @@ texture_filter = 1
 visible = false
 texture = ExtResource("120_nceid")
 
+[node name="Compass" type="Sprite2D" parent="Node/D7/0"]
+position = Vector2(107, 1051)
+texture = ExtResource("3_omx3a")
+script = ExtResource("237_e8oi0")
+
+[node name="RollerLeft" type="Sprite2D" parent="Node/D7/0"]
+position = Vector2(596, -180)
+texture = ExtResource("3_omx3a")
+script = ExtResource("238_rd7wx")
+
+[node name="RollerRight" type="Sprite2D" parent="Node/D7/0"]
+position = Vector2(684, -180)
+texture = ExtResource("3_omx3a")
+script = ExtResource("239_mp5s4")
+
+[node name="Pokey1" type="Sprite2D" parent="Node/D7/0"]
+position = Vector2(100, 56)
+texture = ExtResource("3_omx3a")
+script = ExtResource("240_fvuap")
+
+[node name="ChainChomps" type="Sprite2D" parent="Node/D7/0"]
+position = Vector2(112, -179)
+texture = ExtResource("3_omx3a")
+script = ExtResource("241_3gd02")
+
 [node name="1" type="Sprite2D" parent="Node/D7"]
 visible = false
 texture = ExtResource("121_03ekt")
+
+[node name="Pokey2" type="Sprite2D" parent="Node/D7/1"]
+position = Vector2(-682, 104)
+texture = ExtResource("3_omx3a")
+script = ExtResource("243_btsta")
+
+[node name="BigChest" type="Sprite2D" parent="Node/D7/1"]
+position = Vector2(-149, 599)
+texture = ExtResource("3_omx3a")
+script = ExtResource("244_4ha1o")
+
+[node name="BigKeyChest" type="Sprite2D" parent="Node/D7/1"]
+position = Vector2(-316, -63)
+texture = ExtResource("3_omx3a")
+script = ExtResource("245_4f76y")
+
+[node name="CrystalRoller" type="Sprite2D" parent="Node/D7/1"]
+position = Vector2(-474, -644)
+texture = ExtResource("3_omx3a")
+script = ExtResource("246_n3whx")
 
 [node name="2" type="Sprite2D" parent="Node/D7"]
 visible = false
 texture = ExtResource("122_xk62i")
 
+[node name="BridgeBotLeft" type="Sprite2D" parent="Node/D7/2"]
+position = Vector2(-474, 559)
+texture = ExtResource("3_omx3a")
+script = ExtResource("248_3t7nw")
+
+[node name="BridgeBotRight" type="Sprite2D" parent="Node/D7/2"]
+position = Vector2(-329, 494)
+texture = ExtResource("3_omx3a")
+script = ExtResource("249_64npe")
+
+[node name="BridgeTopRight" type="Sprite2D" parent="Node/D7/2"]
+position = Vector2(-475, 430)
+texture = ExtResource("3_omx3a")
+script = ExtResource("250_du7wn")
+
+[node name="BridgeTopLeft" type="Sprite2D" parent="Node/D7/2"]
+position = Vector2(-328, 365)
+texture = ExtResource("3_omx3a")
+script = ExtResource("251_6n7ba")
+
 [node name="3" type="Sprite2D" parent="Node/D7"]
 visible = false
 texture = ExtResource("123_pjr1p")
 
+[node name="Boss" type="Sprite2D" parent="Node/D7/3"]
+position = Vector2(-919, -998)
+texture = ExtResource("3_omx3a")
+script = ExtResource("253_7ovjk")
+
 [node name="GT" type="Node2D" parent="Node"]
-visible = false
 texture_filter = 1
 
 [node name="0" type="Sprite2D" parent="Node/GT"]
@@ -1933,7 +2083,6 @@ visible = false
 texture = ExtResource("124_a6k2m")
 
 [node name="1" type="Sprite2D" parent="Node/GT"]
-visible = false
 texture = ExtResource("125_y0dhq")
 
 [node name="2" type="Sprite2D" parent="Node/GT"]
@@ -1961,6 +2110,7 @@ visible = false
 texture = ExtResource("131_cy31m")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="Control" type="Control" parent="CanvasLayer"]
 layout_mode = 3
