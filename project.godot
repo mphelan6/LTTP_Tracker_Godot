@@ -10,10 +10,11 @@ config_version=5
 
 [application]
 
-config/name="LTTP_Tracker"
+config/name="Rando Tracker"
+config/version="0.1"
 run/main_scene="res://MainScene.tscn"
 config/features=PackedStringArray("4.2", "C#", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://png/misc/chest.png"
 
 [dotnet]
 
@@ -21,5 +22,6 @@ project/assembly_name="LTTP_Tracker"
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
